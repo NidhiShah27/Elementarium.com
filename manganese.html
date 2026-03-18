@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manganese - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #fffcdd;
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      background-color: #d4a017;
+    }
+    .element-header {
+      background-color: #e6b800;
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(212, 160, 23, 0.1);
+      border-top: 4px solid #e6b800;
+      height: 100%; /* Ensures equal height in a row */
+    }
+    .property-box {
+      background: #fff9e6;
+      border-left: 4px solid #d4a017;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 8px;
+      border-radius: 5px;
+      background-color: #fff9e6;
+    }
+    .use-item i {
+      color: #d4a017;
+      margin-right: 10px;
+      font-size: 1.2rem;
+      width: 25px;
+      text-align: center;
+    }
+    footer {
+      background-color: #d4a017;
+      color: white;
+      padding: 20px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #000000;
+      border-bottom: 2px solid #f5e8b3;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+    /* Reaction box styles */
+    .reaction-box {
+      background: #fff9e6;
+      border: 1px solid #e6b800;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(212, 160, 23, 0.2);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+      color: white;
+    }
+    .navbar-brand {
+      color: #333 !important;
+      font-weight: 700;
+    }
+    .nav-link {
+      color: #333 !important;
+    }
+    /* Add some spacing for rows */
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation with logo -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="80" class="me-2">
+  <span class="fw-bold">Elementarium</span>
+</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Manganese (Mn)</h1>
+      <h3>Atomic Number: 25</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> Mn
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> 54.938044 u
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Transition Metal (Group 7)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Solid
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              [Ar] 3d⁵ 4s² [citation:1][citation:2]
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-gem"></i> Hard, brittle, silvery-grey metal, tarnishes easily [citation:1]</li>
+            <li><i class="fas fa-temperature-high"></i> Melting point: 1246°C, Boiling point: 2061°C [citation:5]</li>
+            <li><i class="fas fa-shield-alt"></i> Reacts slowly with water, dissolves in dilute acids [citation:3]</li>
+            <li><i class="fas fa-bolt"></i> Exists in many oxidation states (+2 to +7), most of any element [citation:7]</li>
+            <li><i class="fas fa-leaf"></i> Essential trace element for all known life [citation:2]</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> Manganese dioxide (pyrolusite) has been used since ancient times for glassmaking. In the 1700s, it was confused with magnetic iron ore. In 1774, Johan Gottlieb Gahn in Sweden first isolated pure manganese metal by reducing the dioxide with carbon [citation:4][citation:8].</p>
+          <p><i class="fas fa-industry"></i> The name derives from the Latin "magnes" (magnet), due to confusion with magnetic iron ores, and from the Italian "manganese" for the mineral [citation:1].</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>Antiquity:</strong> MnO₂ used to decolorize glass (Egypt, Rome) [citation:4]</li>
+              <li><strong>1774:</strong> Gahn isolates pure manganese [citation:1]</li>
+              <li><strong>1856:</strong> Bessemer process requires manganese to remove sulfur from steel [citation:3]</li>
+              <li><strong>20th c.:</strong> Essential for dry cell batteries and steel production [citation:8]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-industry"></i> Steel production (90% of Mn) – deoxidizer, desulfurizer [citation:3]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-battery-full"></i> Dry cell batteries (MnO₂ cathode) [citation:2]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-flask"></i> Potassium permanganate (KMnO₄) – disinfectant, oxidizer [citation:5]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-crown"></i> Aluminum alloys (increase strength) [citation:7]
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-paint-brush"></i> Pigments (manganese violet, umber) [citation:1]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-flask"></i> Water treatment and bleaching [citation:4]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-microscope"></i> Fertilizer additive (essential nutrient) [citation:8]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-crown"></i> Organic synthesis oxidizer [citation:6]
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-crown"></i> Manganese has the widest range of oxidation states of any element – from -3 to +7. This makes its chemistry incredibly rich and colorful, from pale pink Mn²⁺ to deep purple MnO₄⁻ (permanganate) [citation:2].</li>
+            <li><i class="fas fa-dragon"></i> Ancient glassmakers used manganese dioxide (pyrolusite) to decolorize glass – it oxidizes the green tint from iron impurities. They also used it to make purple glass [citation:4].</li>
+            <li><i class="fas fa-flask"></i> Manganese is essential for photosynthesis – it's at the heart of the oxygen-evolving complex in plants, where it catalyzes the splitting of water into oxygen [citation:7].</li>
+            <li><i class="fas fa-atom"></i> Manganese nodules on the ocean floor contain vast amounts of manganese (along with iron, nickel, copper, and cobalt). These potato-sized lumps could be a future source of these metals [citation:5].</li>
+            <li><i class="fas fa-bolt"></i> Steel cannot be made without manganese – it removes sulfur and oxygen during production, preventing brittleness. About 90% of all manganese mined goes into steel [citation:3].</li>
+            <li><i class="fas fa-gem"></i> Potassium permanganate (KMnO₄) is a powerful disinfectant and is still used in some water treatment plants. Its deep purple color is so intense that a single crystal can color liters of water [citation:8].</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Manganese25.png" alt="Manganese Atom" class="img-fluid" style="max-width: 400px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 25 protons, 30 neutrons (in <sup>55</sup>Mn), 25 electrons</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Manganese Reactions</h3>
+          <p class="mb-4">Manganese's multiple oxidation states create a beautiful series of color changes. The +7 state (permanganate) is a powerful oxidizing agent, while +2 (manganous) is the most stable [citation:1]. Here are some combinations to explore:</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #c0a080; color: black;">Mn</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">O</span>
+                </div>
+                <h5 class="mb-2">Mn + Oxygen (MnO₂)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #c0a080; color: black;">Mn</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #66BB6A; color: white;">Cl</span>
+                </div>
+                <h5 class="mb-2">Mn + Chlorine (MnCl₂)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #c0a080; color: black;">Mn</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #5D4037; color: white;">Fe</span>
+                </div>
+                <h5 class="mb-2">Mn + Iron (ferromanganese)</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #c0a080; color: black;">Mn</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FFA726; color: white;">KMnO₄</span>
+                </div>
+                <h5 class="mb-2">Mn + Permanganate (redox)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #c0a080; color: black;">Mn</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #9C27B0; color: white;">SO₄²⁻</span>
+                </div>
+                <h5 class="mb-2">Mn + Sulfate (MnSO₄)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #c0a080; color: black;">Mn</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">H₂O</span>
+                </div>
+                <h5 class="mb-2">Mn + Water (slow reaction)</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert mt-3" style="background-color: #fff9e6; border-color: #d4a017; color: #333; border: 1px solid #e6b800;">
+            <i class="fas fa-flask" style="color: #d4a017;"></i> <strong>Experiment Idea (Conceptual):</strong> The "manganese rainbow" is a classic oxidation state demonstration. Start with deep purple potassium permanganate (KMnO₄, Mn⁷⁺). Reduce it stepwise with sodium sulfite or oxalic acid: first to green Mn⁶⁺ (manganate), then to brown Mn⁴⁺ (MnO₂), and finally to pale pink Mn²⁺ (manganous ion). Each step produces a distinct color change, showcasing manganese's remarkable range of oxidation states and its value as a redox indicator [citation:1].
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

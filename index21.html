@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Periodic Table - Equation Builder</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #FFD1DC;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container {
+      max-width: 1200px;
+    }
+    .element {
+      border: 1px solid #dee2e6;
+      padding: 5px;
+      font-size: 0.75rem;
+      text-align: center;
+      border-radius: 4px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .element:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 10;
+    }
+    .periodic-grid {
+      display: grid;
+      grid-template-columns: repeat(18, 60px);
+      grid-template-rows: repeat(10, 60px);
+      gap: 2px;
+      justify-content: center;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .grid-cell {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      z-index: 0;
+    }
+    .bg-purple { background-color: #d6b3ff !important; }
+    .bg-indigo { background-color: #b3c6ff !important; }
+    .bg-brown { background-color: #d2b48c !important; }
+    .bg-gray { background-color: #e2e2e2 !important; }
+    .bg-warning-subtle { background-color: #fff3cd !important; }
+    .legend-item {
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+    .element-number {
+      font-size: 0.6rem;
+      position: absolute;
+      top: 3px;
+      left: 3px;
+    }
+    .element-symbol {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .navbar {
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #d63384;
+      font-weight: 700;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+    footer {
+      box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    }
+    .alkali-metal{
+      background-color: #febfbf !important;
+    }
+    .bg-custom-hydrogen { background-color: #B8F5D8 !important; }
+  </style>
+</head>
+<body class="p-3">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">IPT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
+          <a class="nav-link" href="AboutUs.html">About Us</a>
+          <a class="nav-link" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">
+    <h2 class="text-center mb-4">Periodic Table of Elements</h2>
+    
+    <div class="periodic-grid" id="periodic-grid">
+      <!-- Elements will be inserted here by JavaScript -->
+    </div>
+    
+    <h4 class="mt-5">Legend</h4>
+    <div class="d-flex flex-wrap gap-2 mb-4">
+      <span class="legend-item alkali-metal">Alkali Metal</span>
+      <span class="legend-item bg-warning">Alkaline Earth</span>
+      <span class="legend-item bg-warning-subtle">Transition Metal</span>
+      <span class="legend-item bg-primary text-white">Post-Transition</span>
+      <span class="legend-item bg-info text-dark">Metalloid</span>
+      <span class="legend-item bg-success text-white">Nonmetal</span>
+      <span class="legend-item bg-purple text-dark">Halogen</span>
+      <span class="legend-item bg-indigo text-dark">Noble Gas</span>
+      <span class="legend-item bg-brown text-dark">Lanthanide</span>
+      <span class="legend-item bg-gray text-dark">Actinide</span>
+    </div>
+  </div>
+
+ 
+
+  <script>
+    const elements = [
+      // Format: [number, symbol, category, gridColumn, gridRow, name, valence]
+      [1, 'H', 'bg-custom-color1', 1, 1, 'Hydrogen', 1],
+      [2, 'He', 'bg-indigo', 18, 1, 'Helium', 0],
+      [3, 'Li', 'bg-danger', 1, 2, 'Lithium', 1],
+      [4, 'Be', 'bg-warning', 2, 2, 'Beryllium', 2],
+      [5, 'B', 'bg-info', 13, 2, 'Boron', 3],
+      [6, 'C', 'bg-success', 14, 2, 'Carbon', 4],
+      [7, 'N', 'bg-success', 15, 2, 'Nitrogen', 3],
+      [8, 'O', 'bg-success', 16, 2, 'Oxygen', 2],
+      [9, 'F', 'bg-purple', 17, 2, 'Fluorine', 1],
+      [10, 'Ne', 'bg-indigo', 18, 2, 'Neon', 0],
+      [11, 'Na', 'bg-danger', 1, 3, 'Sodium', 1],
+      [12, 'Mg', 'bg-warning', 2, 3, 'Magnesium', 2],
+      [13, 'Al', 'bg-primary', 13, 3, 'Aluminum', 3],
+      [14, 'Si', 'bg-info', 14, 3, 'Silicon', 4],
+      [15, 'P', 'bg-success', 15, 3, 'Phosphorus', 3],
+      [16, 'S', 'bg-success', 16, 3, 'Sulfur', 2],
+      [17, 'Cl', 'bg-purple', 17, 3, 'Chlorine', 1],
+      [18, 'Ar', 'bg-indigo', 18, 3, 'Argon', 0],
+      [19, 'K', 'bg-danger', 1, 4, 'Potassium', 1],
+      [20, 'Ca', 'bg-warning', 2, 4, 'Calcium', 2],
+      [21, 'Sc', 'bg-warning-subtle', 3, 4, 'Scandium', 3],
+      [22, 'Ti', 'bg-warning-subtle', 4, 4, 'Titanium', 4],
+      [23, 'V', 'bg-warning-subtle', 5, 4, 'Vanadium', 5],
+      [24, 'Cr', 'bg-warning-subtle', 6, 4, 'Chromium', 6],
+      [25, 'Mn', 'bg-warning-subtle', 7, 4, 'Manganese', 7],
+      [26, 'Fe', 'bg-warning-subtle', 8, 4, 'Iron', 2],
+      [27, 'Co', 'bg-warning-subtle', 9, 4, 'Cobalt', 2],
+      [28, 'Ni', 'bg-warning-subtle', 10, 4, 'Nickel', 2],
+      [29, 'Cu', 'bg-warning-subtle', 11, 4, 'Copper', 2],
+      [30, 'Zn', 'bg-warning-subtle', 12, 4, 'Zinc', 2],
+      [31, 'Ga', 'bg-primary', 13, 4, 'Gallium', 3],
+      [32, 'Ge', 'bg-info', 14, 4, 'Germanium', 4],
+      [33, 'As', 'bg-info', 15, 4, 'Arsenic', 3],
+      [34, 'Se', 'bg-success', 16, 4, 'Selenium', 2],
+      [35, 'Br', 'bg-purple', 17, 4, 'Bromine', 1],
+      [36, 'Kr', 'bg-indigo', 18, 4, 'Krypton', 0],
+      [37, 'Rb', 'bg-danger', 1, 5, 'Rubidium', 1],
+      [38, 'Sr', 'bg-warning', 2, 5, 'Strontium', 2],
+      [39, 'Y', 'bg-warning-subtle', 3, 5, 'Yttrium', 3],
+      [40, 'Zr', 'bg-warning-subtle', 4, 5, 'Zirconium', 4],
+      [41, 'Nb', 'bg-warning-subtle', 5, 5, 'Niobium', 5],
+      [42, 'Mo', 'bg-warning-subtle', 6, 5, 'Molybdenum', 6],
+      [43, 'Tc', 'bg-warning-subtle', 7, 5, 'Technetium', 7],
+      [44, 'Ru', 'bg-warning-subtle', 8, 5, 'Ruthenium', 8],
+      [45, 'Rh', 'bg-warning-subtle', 9, 5, 'Rhodium', 3],
+      [46, 'Pd', 'bg-warning-subtle', 10, 5, 'Palladium', 2],
+      [47, 'Ag', 'bg-warning-subtle', 11, 5, 'Silver', 1],
+      [48, 'Cd', 'bg-warning-subtle', 12, 5, 'Cadmium', 2],
+      [49, 'In', 'bg-primary', 13, 5, 'Indium', 3],
+      [50, 'Sn', 'bg-primary', 14, 5, 'Tin', 4],
+      [51, 'Sb', 'bg-info', 15, 5, 'Antimony', 3],
+      [52, 'Te', 'bg-info', 16, 5, 'Tellurium', 2],
+      [53, 'I', 'bg-purple', 17, 5, 'Iodine', 1],
+      [54, 'Xe', 'bg-indigo', 18, 5, 'Xenon', 0],
+      [55, 'Cs', 'bg-danger', 1, 6, 'Cesium', 1],
+      [56, 'Ba', 'bg-warning', 2, 6, 'Barium', 2],
+      [57, 'La', 'bg-brown', 3, 9, 'Lanthanum', 3],
+      [58, 'Ce', 'bg-brown', 4, 9, 'Cerium', 4],
+      [59, 'Pr', 'bg-brown', 5, 9, 'Praseodymium', 3],
+      [60, 'Nd', 'bg-brown', 6, 9, 'Neodymium', 3],
+      [61, 'Pm', 'bg-brown', 7, 9, 'Promethium', 3],
+      [62, 'Sm', 'bg-brown', 8, 9, 'Samarium', 3],
+      [63, 'Eu', 'bg-brown', 9, 9, 'Europium', 3],
+      [64, 'Gd', 'bg-brown', 10, 9, 'Gadolinium', 3],
+      [65, 'Tb', 'bg-brown', 11, 9, 'Terbium', 3],
+      [66, 'Dy', 'bg-brown', 12, 9, 'Dysprosium', 3],
+      [67, 'Ho', 'bg-brown', 13, 9, 'Holmium', 3],
+      [68, 'Er', 'bg-brown', 14, 9, 'Erbium', 3],
+      [69, 'Tm', 'bg-brown', 15, 9, 'Thulium', 3],
+      [70, 'Yb', 'bg-brown', 16, 9, 'Ytterbium', 3],
+      [71, 'Lu', 'bg-brown', 17, 9, 'Lutetium', 3],
+      [72, 'Hf', 'bg-warning-subtle', 4, 6, 'Hafnium', 4],
+      [73, 'Ta', 'bg-warning-subtle', 5, 6, 'Tantalum', 5],
+      [74, 'W', 'bg-warning-subtle', 6, 6, 'Tungsten', 6],
+      [75, 'Re', 'bg-warning-subtle', 7, 6, 'Rhenium', 7],
+      [76, 'Os', 'bg-warning-subtle', 8, 6, 'Osmium', 8],
+      [77, 'Ir', 'bg-warning-subtle', 9, 6, 'Iridium', 3],
+      [78, 'Pt', 'bg-warning-subtle', 10, 6, 'Platinum', 2],
+      [79, 'Au', 'bg-warning-subtle', 11, 6, 'Gold', 1],
+      [80, 'Hg', 'bg-warning-subtle', 12, 6, 'Mercury', 2],
+      [81, 'Tl', 'bg-primary', 13, 6, 'Thallium', 3],
+      [82, 'Pb', 'bg-primary', 14, 6, 'Lead', 4],
+      [83, 'Bi', 'bg-primary', 15, 6, 'Bismuth', 3],
+      [84, 'Po', 'bg-info', 16, 6, 'Polonium', 2],
+      [85, 'At', 'bg-purple', 17, 6, 'Astatine', 1],
+      [86, 'Rn', 'bg-indigo', 18, 6, 'Radon', 0],
+      [87, 'Fr', 'bg-danger', 1, 7, 'Francium', 1],
+      [88, 'Ra', 'bg-warning', 2, 7, 'Radium', 2],
+      [89, 'Ac', 'bg-gray', 3, 10, 'Actinium', 3],
+      [90, 'Th', 'bg-gray', 4, 10, 'Thorium', 4],
+      [91, 'Pa', 'bg-gray', 5, 10, 'Protactinium', 5],
+      [92, 'U', 'bg-gray', 6, 10, 'Uranium', 6],
+      [93, 'Np', 'bg-gray', 7, 10, 'Neptunium', 7],
+      [94, 'Pu', 'bg-gray', 8, 10, 'Plutonium', 8],
+      [95, 'Am', 'bg-gray', 9, 10, 'Americium', 3],
+      [96, 'Cm', 'bg-gray', 10, 10, 'Curium', 3],
+      [97, 'Bk', 'bg-gray', 11, 10, 'Berkelium', 3],
+      [98, 'Cf', 'bg-gray', 12, 10, 'Californium', 3],
+      [99, 'Es', 'bg-gray', 13, 10, 'Einsteinium', 3],
+      [100, 'Fm', 'bg-gray', 14, 10, 'Fermium', 3],
+      [101, 'Md', 'bg-gray', 15, 10, 'Mendelevium', 3],
+      [102, 'No', 'bg-gray', 16, 10, 'Nobelium', 3],
+      [103, 'Lr', 'bg-gray', 17, 10, 'Lawrencium', 3],
+      [104, 'Rf', 'bg-warning-subtle', 4, 7, 'Rutherfordium', 4],
+      [105, 'Db', 'bg-warning-subtle', 5, 7, 'Dubnium', 5],
+      [106, 'Sg', 'bg-warning-subtle', 6, 7, 'Seaborgium', 6],
+      [107, 'Bh', 'bg-warning-subtle', 7, 7, 'Bohrium', 7],
+      [108, 'Hs', 'bg-warning-subtle', 8, 7, 'Hassium', 8],
+      [109, 'Mt', 'bg-warning-subtle', 9, 7, 'Meitnerium', 9],
+      [110, 'Ds', 'bg-warning-subtle', 10, 7, 'Darmstadtium', 10],
+      [111, 'Rg', 'bg-warning-subtle', 11, 7, 'Roentgenium', 11],
+      [112, 'Cn', 'bg-warning-subtle', 12, 7, 'Copernicium', 12],
+      [113, 'Nh', 'bg-primary', 13, 7, 'Nihonium', 3],
+      [114, 'Fl', 'bg-primary', 14, 7, 'Flerovium', 4],
+      [115, 'Mc', 'bg-primary', 15, 7, 'Moscovium', 5],
+      [116, 'Lv', 'bg-info', 16, 7, 'Livermorium', 6],
+      [117, 'Ts', 'bg-purple', 17, 7, 'Tennessine', 7],
+      [118, 'Og', 'bg-indigo', 18, 7, 'Oganesson', 8]
+    ];
+
+    const grid = document.getElementById('periodic-grid');
+    let elementData = {};
+    let draggedElement = null;
+    let filledSlots = 0;
+     
+    // First create empty grid cells
+    for (let row = 1; row <= 10; row++) {
+      for (let col = 1; col <= 18; col++) {
+        const cell = document.createElement('div');
+        cell.className = 'grid-cell';
+        cell.style.gridColumn = col;
+        cell.style.gridRow = row;
+        grid.appendChild(cell);
+      }
+    }
+
+    // Then add the elements with proper functionality
+    elements.forEach(([num, sym, category, col, row, name, valence]) => {
+      const el = document.createElement('div');
+      el.className = `element ${category}`;
+      el.style.gridColumn = col;
+      el.style.gridRow = row;
+      el.innerHTML = `<div class="element-number">${num}</div><div class="element-symbol">${sym}</div>`;
+      el.id = `element-${sym}`;
+      el.setAttribute('data-symbol', sym);
+      el.setAttribute('data-name', name);
+      el.setAttribute('data-valence', valence);
+    
+      elementData[sym] = { number: num, name, valence, category, symbol: sym };
+
+      // Add click event for navigation
+      el.addEventListener('click', (e) => {
+        // Prevent navigation when dragging
+        if (e.target !== el && !e.target.classList.contains('element-number') && 
+            !e.target.classList.contains('element-symbol')) {
+          return;
+        }
+        
+        const elementPage = `${name.toLowerCase()}.html`;
+        window.location.href = elementPage;
+      });
+      
+      // Append the element to the grid
+      grid.appendChild(el);
+    });
+  </script>
+   <footer class="bg-light text-dark text-center py-3 mt-5">
+    <div class="container">
+      <small>&copy; 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+</body>
+</html>

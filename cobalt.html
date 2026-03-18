@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cobalt - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #fffcdd;
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      background-color: #d4a017;
+    }
+    .element-header {
+      background-color: #e6b800;
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(212, 160, 23, 0.1);
+      border-top: 4px solid #e6b800;
+      height: 100%; /* Ensures equal height in a row */
+    }
+    .property-box {
+      background: #fff9e6;
+      border-left: 4px solid #d4a017;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 8px;
+      border-radius: 5px;
+      background-color: #fff9e6;
+    }
+    .use-item i {
+      color: #d4a017;
+      margin-right: 10px;
+      font-size: 1.2rem;
+      width: 25px;
+      text-align: center;
+    }
+    footer {
+      background-color: #d4a017;
+      color: white;
+      padding: 20px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #000000;
+      border-bottom: 2px solid #f5e8b3;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+    /* Reaction box styles */
+    .reaction-box {
+      background: #fff9e6;
+      border: 1px solid #e6b800;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(212, 160, 23, 0.2);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+      color: white;
+    }
+    .navbar-brand {
+      color: #333 !important;
+      font-weight: 700;
+    }
+    .nav-link {
+      color: #333 !important;
+    }
+    /* Add some spacing for rows */
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation with logo -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="80" class="me-2">
+  <span class="fw-bold">Elementarium</span>
+</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Cobalt (Co)</h1>
+      <h3>Atomic Number: 27</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> Co
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> 58.933194 u
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Transition Metal (Group 9)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Solid
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              [Ar] 3d⁷ 4s² [citation:1][citation:2]
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-gem"></i> Hard, lustrous, bluish-gray metal [citation:1]</li>
+            <li><i class="fas fa-temperature-high"></i> Melting point: 1495°C, Boiling point: 2927°C [citation:5]</li>
+            <li><i class="fas fa-shield-alt"></i> Oxidation-resistant and stable in air [citation:3]</li>
+            <li><i class="fas fa-magnet"></i> Ferromagnetic (retains magnetism at high temperatures) [citation:7]</li>
+            <li><i class="fas fa-palette"></i> Imparts brilliant blue color to glass and ceramics [citation:2]</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> Discovered in 1735 by Georg Brandt in Sweden. He was the first person to discover a metal unknown in ancient times. The name comes from the German word "kobold" meaning goblin or evil spirit [citation:4][citation:8].</p>
+          <p><i class="fas fa-industry"></i> Miners gave it this name because cobalt-containing ores were difficult to smelt and released toxic arsenic fumes, which they blamed on mischievous goblins [citation:1].</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>Ancient:</strong> Cobalt compounds used to color glass (Egypt, Persia) [citation:4]</li>
+              <li><strong>1735:</strong> Brandt isolates and identifies cobalt as a new element [citation:1]</li>
+              <li><strong>1780:</strong> Cobalt becomes popular for coloring porcelain [citation:3]</li>
+              <li><strong>20th c.:</strong> Vital for jet engines and rechargeable batteries [citation:8]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-battery-full"></i> Lithium-ion batteries [citation:3]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-fan"></i> Jet engine superalloys [citation:2]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-paint-brush"></i> Blue pigments (cobalt blue) [citation:5]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-cut"></i> Hard metals (carbide tools) [citation:7]
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-headphones"></i> Magnetic recording media [citation:1]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-microscope"></i> Radiation therapy (Co-60) [citation:4]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-ring"></i> Electroplating (jewelry) [citation:8]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-flask"></i> Catalysts (petroleum) [citation:6]
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-crown"></i> "Cobalt blue" is a famous, stable pigment used by artists like Van Gogh and Vermeer. It's made by mixing cobalt oxide with alumina – the resulting blue is both intense and permanent [citation:4].</li>
+            <li><i class="fas fa-dragon"></i> Cobalt-60 is a radioactive isotope used to treat cancer (gamma rays). It's produced by bombarding cobalt-59 with neutrons in nuclear reactors and is a mainstay of radiation therapy [citation:2].</li>
+            <li><i class="fas fa-flask"></i> Cobalt is essential for modern electric vehicle batteries – most lithium-ion batteries use lithium cobalt oxide (LiCoO₂) as the cathode material [citation:3].</li>
+            <li><i class="fas fa-atom"></i> Cobalt is essential for ruminant animals (sheep, cattle) as part of vitamin B12. The bacteria in their stomachs use cobalt to synthesize this vitamin, which is why cobalt salts are added to animal feed [citation:5].</li>
+            <li><i class="fas fa-bolt"></i> Vitamin B12 (cobalamin) is the only vitamin that contains a metal atom (cobalt). It's crucial for nerve function and blood cell formation in humans [citation:7].</li>
+            <li><i class="fas fa-gem"></i> Ancient Persians created cobalt-blue glass around 2000 BCE. Cobalt-colored glass has been found in Egyptian tombs and Mesopotamian artifacts, prized for its rich, stable color [citation:8].</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Cobalt27.png" alt="Cobalt Atom" class="img-fluid" style="max-width: 400px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 27 protons, 32 neutrons (in <sup>59</sup>Co), 27 electrons</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Cobalt Reactions</h3>
+          <p class="mb-4">Cobalt commonly exhibits +2 and +3 oxidation states, forming colorful compounds, particularly deep blue complexes. The color changes are sensitive to hydration and coordination environment [citation:1]. Here are some combinations to explore:</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #5f9ea0; color: black;">Co</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">O</span>
+                </div>
+                <h5 class="mb-2">Co + Oxygen (CoO, Co₃O₄)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #5f9ea0; color: black;">Co</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #66BB6A; color: white;">Cl</span>
+                </div>
+                <h5 class="mb-2">Co + Chlorine (CoCl₂)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #5f9ea0; color: black;">Co</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #5D4037; color: white;">Al</span>
+                </div>
+                <h5 class="mb-2">Co + Aluminum (Alnico magnets)</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #5f9ea0; color: black;">Co</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FFA726; color: white;">S</span>
+                </div>
+                <h5 class="mb-2">Co + Sulfur (CoS)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #5f9ea0; color: black;">Co</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #9C27B0; color: white;">N</span>
+                </div>
+                <h5 class="mb-2">Co + Nitrogen (Co-N complexes)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #5f9ea0; color: black;">Co</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">Cr</span>
+                </div>
+                <h5 class="mb-2">Co + Chromium (stellite alloys)</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert mt-3" style="background-color: #fff9e6; border-color: #d4a017; color: #333; border: 1px solid #e6b800;">
+            <i class="fas fa-flask" style="color: #d4a017;"></i> <strong>Experiment Idea (Conceptual):</strong> Cobalt chloride (CoCl₂) is a humidity indicator – it changes color from blue (dry, anhydrous) to pink (hydrated, CoCl₂·6H₂O). This reversible reaction is used in desiccant silica gel to show when it's saturated with moisture. The color change occurs because the coordination environment around Co²⁺ changes from tetrahedral (blue) to octahedral (pink) – a beautiful demonstration of coordination chemistry and the effect of hydration on color [citation:1].
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

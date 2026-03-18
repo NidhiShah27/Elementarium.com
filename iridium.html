@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Iridium -Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #fffcdd;
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      background-color: #d4a017;
+    }
+    .element-header {
+      background-color: #e6b800;
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(212, 160, 23, 0.1);
+      border-top: 4px solid #e6b800;
+      height: 100%; /* Ensures equal height in a row */
+    }
+    .property-box {
+      background: #fff9e6;
+      border-left: 4px solid #d4a017;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 8px;
+      border-radius: 5px;
+      background-color: #fff9e6;
+    }
+    .use-item i {
+      color: #d4a017;
+      margin-right: 10px;
+      font-size: 1.2rem;
+      width: 25px;
+      text-align: center;
+    }
+    footer {
+      background-color: #d4a017;
+      color: white;
+      padding: 20px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #000000;
+      border-bottom: 2px solid #f5e8b3;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+    /* Reaction box styles */
+    .reaction-box {
+      background: #fff9e6;
+      border: 1px solid #e6b800;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(212, 160, 23, 0.2);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+      color: white;
+    }
+    .navbar-brand {
+      color: #333 !important;
+      font-weight: 700;
+    }
+    .nav-link {
+      color: #333 !important;
+    }
+    /* Add some spacing for rows */
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation with logo -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="80" class="me-2">
+  <span class="fw-bold">Elementarium</span>
+</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Iridium (Ir)</h1>
+      <h3>Atomic Number: 77</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> Ir
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> 192.217 u
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Transition Metal (Platinum Group)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Solid
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              [Xe] 4f¹⁴ 5d⁷ 6s² [citation:1][citation:2]
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-gem"></i> Dense, silvery-white, extremely hard and brittle [citation:1]</li>
+            <li><i class="fas fa-shield-alt"></i> Most corrosion-resistant metal known [citation:5]</li>
+            <li><i class="fas fa-temperature-high"></i> 2nd highest melting point of metals: 2446°C [citation:3]</li>
+            <li><i class="fas fa-crown"></i> 2nd densest element (22.56 g/cm³) after osmium [citation:7]</li>
+            <li><i class="fas fa-leaf"></i> Extremely high modulus of elasticity [citation:2]</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> Discovered in 1803 by Smithson Tennant in London, England, simultaneously with osmium. He found it in the black residue left after dissolving platinum ore in aqua regia. The name comes from the Greek "iris" (rainbow) [citation:4][citation:8].</p>
+          <p><i class="fas fa-industry"></i> The famous "Iridium Point" was the original international prototype kilogram – a 90% platinum / 10% iridium cylinder that defined the kilogram from 1889 to 2019 [citation:1].</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>1803:</strong> Tennant discovers iridium in platinum residues [citation:4]</li>
+              <li><strong>1889:</strong> Iridium-platinum alloy for kilogram prototype [citation:1]</li>
+              <li><strong>1970s:</strong> Iridium critical for spark plugs & crucibles [citation:3]</li>
+              <li><strong>1980:</strong> Alvarez proposes iridium layer as dinosaur impact evidence [citation:8]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-fire"></i> High-temperature crucibles & spark plugs [citation:3]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-gem"></i> Hardening platinum for jewelry & tools [citation:2]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-pen"></i> Fountain pen nib tipping (with osmium) [citation:5]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-compass"></i> Compass bearings & watch balance wheels [citation:7]
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-crown"></i> Standard weights & measures (meter bars) [citation:1]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-flask"></i> Catalyst for acetic acid (Cativa process) [citation:4]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-x-ray"></i> Gamma-ray detectors & X-ray optics [citation:8]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-satellite"></i> Satellite & deep-sea components [citation:6]
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-crown"></i> Iridium is the most corrosion-resistant element ever discovered. It is completely unaffected by any single acid, including boiling aqua regia (which dissolves gold and platinum). It only reacts with molten bases like sodium hydroxide or with chlorine at high temperatures [citation:2].</li>
+            <li><i class="fas fa-dragon"></i> The Cretaceous-Paleogene extinction layer (the "K-Pg boundary") contains a thin layer of iridium-rich clay found worldwide. This discovery by Luis and Walter Alvarez in 1980 provided the first strong evidence that an asteroid impact killed the dinosaurs [citation:3].</li>
+            <li><i class="fas fa-flask"></i> The original standard kilogram, the "International Prototype Kilogram" (Le Grand K), was made of 90% platinum and 10% iridium. It was the last physical artifact used to define a base unit until 2019 [citation:5].</li>
+            <li><i class="fas fa-atom"></i> Iridium spark plugs last much longer than standard platinum plugs because iridium is six times harder and has a higher melting point. The fine iridium tip allows for better ignition and efficiency [citation:7].</li>
+            <li><i class="fas fa-bolt"></i> Iridium forms beautiful, colorful salts – from yellow to red to green – which is how it got its name from the Greek goddess Iris, personification of the rainbow [citation:1].</li>
+            <li><i class="fas fa-gem"></i> Iridium is extremely rare in Earth's crust – about 1,000 times rarer than gold. Most of the iridium on Earth sank to the core during planetary formation. What little remains in the crust arrived via asteroid impacts [citation:4].</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Iridium77.png" alt="Iridium Atom" class="img-fluid" style="max-width: 400px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 77 protons, 115 neutrons (in <sup>192</sup>Ir), 77 electrons</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Iridium Reactions</h3>
+          <p class="mb-4">Iridium exhibits oxidation states from -3 to +9, with +3 and +4 being most common. It's notoriously unreactive, but forms colorful complexes [citation:1]. Here are some combinations to explore:</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6b7d8c; color: white;">Ir</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">O</span>
+                </div>
+                <h5 class="mb-2">Ir + Oxygen (IrO₂)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6b7d8c; color: white;">Ir</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #66BB6A; color: white;">F</span>
+                </div>
+                <h5 class="mb-2">Ir + Fluorine (IrF₆)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6b7d8c; color: white;">Ir</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #6a7e8c; color: white;">Os</span>
+                </div>
+                <h5 class="mb-2">Ir + Osmium (alloy)</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6b7d8c; color: white;">Ir</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FFA726; color: white;">Pt</span>
+                </div>
+                <h5 class="mb-2">Ir + Platinum (standard alloy)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6b7d8c; color: white;">Ir</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #9C27B0; color: white;">Cl</span>
+                </div>
+                <h5 class="mb-2">Ir + Chlorine (IrCl₃)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6b7d8c; color: white;">Ir</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">CO</span>
+                </div>
+                <h5 class="mb-2">Ir + Carbonyl (Ir₄(CO)₁₂)</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert mt-3" style="background-color: #fff9e6; border-color: #d4a017; color: #333; border: 1px solid #e6b800;">
+            <i class="fas fa-flask" style="color: #d4a017;"></i> <strong>Experiment Idea (Conceptual):</strong> The "Cativa process" is a modern industrial showcase of iridium catalysis. It produces acetic acid (vinegar) from methanol and carbon monoxide. Unlike the older rhodium-based Monsanto process, the iridium catalyst is more stable, more efficient, and uses less water. The iridium cycles between Ir(I) and Ir(III) states, and the key intermediate, [Ir(CO)₂I₂]⁻, is a classic example of a square-planar d⁸ complex. This process now produces millions of tons of acetic acid annually [citation:1].
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

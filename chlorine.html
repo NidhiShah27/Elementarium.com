@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chlorine - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f0f9ff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #b9e5ff;
+    }
+    .element-header {
+      background-color: #9ad0f5;
+      color: #1a3a4a;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: #ffffff;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(185, 229, 255, 0.3);
+      border: 1px solid #d4edff;
+      height: 100%; /* Ensures equal height in a row */
+    }
+    .property-box {
+      background: #f0f9ff;
+      border-left: 3px solid #b9e5ff;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #f0f9ff;
+    }
+    .use-item i {
+      color: #2c7a9e;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #b9e5ff;
+      color: #1a3a4a;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #1a3a4a;
+      border-bottom: 1px solid #d4edff;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: white;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #1a3a4a !important;
+    }
+    .navbar-brand {
+      color: #1a3a4a !important;
+      font-weight: 700;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .reaction-box {
+      background: #f0f9ff;
+      border: 1px solid #b9e5ff;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(185, 229, 255, 0.4);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    /* Add some spacing for rows */
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+    .alert-info {
+      background-color: #f0f9ff;
+      border-color: #b9e5ff;
+      color: #1a3a4a;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+        <span class="fw-bold">Elementarium</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Chlorine (Cl)</h1>
+      <h3>Atomic Number: 17</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> Cl
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> 35.45 u
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Halogen
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Gas
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              [Ne] 3s² 3p⁵
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-wind"></i> Greenish-yellow gas with pungent odor</li>
+            <li><i class="fas fa-skull"></i> Highly toxic and reactive</li>
+            <li><i class="fas fa-tint"></i> Used as disinfectant (water treatment)</li>
+            <li><i class="fas fa-bolt"></i> Second most reactive halogen</li>
+            <li><i class="fas fa-crown"></i> Essential for life as chloride ion</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> Discovered in 1774 by Carl Wilhelm Scheele in Sweden, who thought it contained oxygen. Named and identified as an element by Humphry Davy in 1810.</p>
+          <p><i class="fas fa-industry"></i> The name comes from Greek "chloros" meaning greenish-yellow, referring to its color.</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>1774:</strong> Scheele produces chlorine gas</li>
+              <li><strong>1810:</strong> Davy confirms it's an element</li>
+              <li><strong>1915:</strong> Used as chemical weapon (WWI)</li>
+              <li><strong>20th c.:</strong> Becomes essential for water purification</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-tint"></i> Water disinfection
+              </div>
+              <div class="use-item">
+                <i class="fas fa-swimming-pool"></i> Swimming pool sanitizer
+              </div>
+              <div class="use-item">
+                <i class="fas fa-flask"></i> PVC plastic production
+              </div>
+              <div class="use-item">
+                <i class="fas fa-industry"></i> Bleaching paper and textiles
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-pills"></i> Pharmaceuticals
+              </div>
+              <div class="use-item">
+                <i class="fas fa-spray-can"></i> Solvents (chloroform, methylene chloride)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-skull"></i> Chemical warfare (historical)</li>
+              </div>
+              <div class="use-item">
+                <i class="fas fa-utensils"></i> Table salt (NaCl)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-skull"></i> Chlorine gas was the first chemical weapon used in warfare (WWI, 1915) – it caused panic and suffocation</li>
+            <li><i class="fas fa-tint"></i> Chlorine is added to drinking water worldwide – it has saved millions of lives from waterborne diseases</li>
+            <li><i class="fas fa-crown"></i> The element gets its name from its color – "chloros" is Greek for greenish-yellow</li>
+            <li><i class="fas fa-atom"></i> Chlorine has two stable isotopes: Cl-35 (76%) and Cl-37 (24%) – their ratio is used in hydrology studies</li>
+            <li><i class="fas fa-bolt"></i> Common salt (NaCl) is the source of most chlorine – it's produced by electrolysis of brine</li>
+            <li><i class="fas fa-flask"></i> Chlorine is essential for making PVC – the third most widely used plastic in the world</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Chlorine17.png" alt="Chlorine Atom" class="img-fluid" style="max-width: 350px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 17 protons, 18 neutrons, 17 electrons</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Chlorine Reactions</h3>
+          <p class="mb-4">Chlorine is highly reactive and toxic – these reactions should only be performed by professionals with proper safety equipment.</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">Cl</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #66BB6A; color: white;">Na</span>
+                </div>
+                <h5 class="mb-2">Sodium + Chlorine</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">Cl</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">H₂</span>
+                </div>
+                <h5 class="mb-2">Hydrogen + Chlorine</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">Cl</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FFA726; color: white;">H₂O</span>
+                </div>
+                <h5 class="mb-2">Chlorine + Water</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">Cl</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #AB47BC; color: white;">CH₄</span>
+                </div>
+                <h5 class="mb-2">Chlorine + Methane</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">Cl</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FF6B6B; color: white;">Br</span>
+                </div>
+                <h5 class="mb-2">Chlorine + Bromine</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">Cl</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #8D6E63; color: white;">F</span>
+                </div>
+                <h5 class="mb-2">Chlorine + Fluorine</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert alert-info mt-3" style="background-color: #f0f9ff; border-color: #b9e5ff; color: #1a3a4a;">
+            <i class="fas fa-flask" style="color: #2c7a9e;"></i> <strong>Chemical Note:</strong> The reaction between sodium and chlorine is spectacular – sodium burns brightly in chlorine gas to form table salt (NaCl). This is a classic demonstration of ionic bonding.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

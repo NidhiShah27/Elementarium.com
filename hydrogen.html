@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hydrogen - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #FFF9FB;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #FFB6C1;
+    }
+    .element-header {
+      background-color: #FFC0CB;
+      color: #333;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: #FFFFFF;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(255, 182, 193, 0.1);
+      border: 1px solid #FFE4E9;
+      height: 100%; /* Ensures equal height in a row */
+    }
+    .property-box {
+      background: #FFF9FB;
+      border-left: 3px solid #FFB6C1;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #FFF9FB;
+    }
+    .use-item i {
+      color: #FF69B4;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #FFB6C1;
+      color: #333;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #333;
+      border-bottom: 1px solid #FFD1DC;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #333 !important;
+    }
+    .navbar-brand {
+      color: #333 !important;
+      font-weight: 700;
+    }
+    .reaction-box {
+      background: #FFF0F5;
+      border: 1px solid #FFB6C1;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(255, 182, 193, 0.2);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    /* Add some spacing for rows */
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+  <span class="fw-bold">Elementarium</span>
+</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  <div class="navbar-nav ms-auto">
+    <a class="nav-link active fs-5" href="Index.html">Home</a>
+    <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+    <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+
+  </div>
+</div>
+</div>
+</nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Hydrogen (H)</h1>
+      <h3>Atomic Number: 1</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> H
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> 1.008 u
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Nonmetal
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Gas
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              1s¹
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-weight"></i> Lightest element in the universe</li>
+            <li><i class="fas fa-fire"></i> Highly flammable gas</li>
+            <li><i class="fas fa-tint"></i> Colorless, odorless, tasteless</li>
+            <li><i class="fas fa-atom"></i> Simplest atomic structure</li>
+            <li><i class="fas fa-temperature-low"></i> Becomes liquid at -252.87°C</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> First recognized as a distinct element by Henry Cavendish in 1766.</p>
+          <p><i class="fas fa-industry"></i> Most abundant element in the universe (~75% of elemental mass).</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>1766:</strong> Cavendish identifies "inflammable air"</li>
+              <li><strong>1783:</strong> Lavoisier names it "hydrogen"</li>
+              <li><strong>1931:</strong> Deuterium discovered</li>
+              <li><strong>1934:</strong> Tritium discovered</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-rocket"></i> Rocket fuel
+              </div>
+              <div class="use-item">
+                <i class="fas fa-industry"></i> Ammonia production
+              </div>
+              <div class="use-item">
+                <i class="fas fa-oil-can"></i> Petroleum refining
+              </div>
+              <div class="use-item">
+                <i class="fas fa-flask"></i> Laboratory reagent
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-car"></i> Fuel cells
+              </div>
+              <div class="use-item">
+                <i class="fas fa-temperature-high"></i> Welding gas
+              </div>
+              <div class="use-item">
+                <i class="fas fa-weight"></i> Balloon filling
+              </div>
+              <div class="use-item">
+                <i class="fas fa-leaf"></i> Clean energy
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-sun"></i> Makes up 90% of all atoms in the universe</li>
+            <li><i class="fas fa-water"></i> Name means "water-former" in Greek</li>
+            <li><i class="fas fa-star"></i> Fuel for stars through nuclear fusion</li>
+            <li><i class="fas fa-rocket"></i> Used in Space Shuttle main engines</li>
+            <li><i class="fas fa-atom"></i> Has three isotopes: Protium, Deuterium, Tritium</li>
+            <li><i class="fas fa-bolt"></i> Promising clean energy source for the future</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Hydrogen1.png" alt="Hydrogen Atom" class="img-fluid" style="max-width: 350px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 1 proton, 0 neutrons, 1 electron (Protium isotope)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Hydrogen Reactions</h3>
+          <p class="mb-4">Hydrogen reacts with various elements to form important compounds. Here are some combinations to explore:</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #FF6B6B; color: white;">H</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FFA726; color: white;">O</span>
+                </div>
+                <h5 class="mb-2">Hydrogen + Oxygen</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #FF6B6B; color: white;">H</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #66BB6A; color: white;">Cl</span>
+                </div>
+                <h5 class="mb-2">Hydrogen + Chlorine</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #FF6B6B; color: white;">H</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">N</span>
+                </div>
+                <h5 class="mb-2">Hydrogen + Nitrogen</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #FF6B6B; color: white;">H</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #5D4037; color: white;">C</span>
+                </div>
+                <h5 class="mb-2">Hydrogen + Carbon</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #FF6B6B; color: white;">H</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #AB47BC; color: white;">F</span>
+                </div>
+                <h5 class="mb-2">Hydrogen + Fluorine</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #FF6B6B; color: white;">H</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #8D6E63; color: white;">Na</span>
+                </div>
+                <h5 class="mb-2">Hydrogen + Sodium</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert alert-info mt-3" style="background-color: #FFF0F5; border-color: #FFB6C1; color: #333;">
+            <i class="fas fa-flask" style="color: #FF69B4;"></i> <strong>Experiment Idea:</strong> Try combining hydrogen with oxygen to create water! This is the same reaction that powers rocket engines and fuel cells.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fluorine - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f0f9ff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #b9e5ff;
+    }
+    .element-header {
+      background-color: #9ad0f5;
+      color: #1a3a4a;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: #ffffff;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(185, 229, 255, 0.3);
+      border: 1px solid #d4edff;
+      height: 100%; /* Ensures equal height in a row */
+    }
+    .property-box {
+      background: #f0f9ff;
+      border-left: 3px solid #b9e5ff;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #f0f9ff;
+    }
+    .use-item i {
+      color: #2c7a9e;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #b9e5ff;
+      color: #1a3a4a;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #1a3a4a;
+      border-bottom: 1px solid #d4edff;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: white;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #1a3a4a !important;
+    }
+    .navbar-brand {
+      color: #1a3a4a !important;
+      font-weight: 700;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .reaction-box {
+      background: #f0f9ff;
+      border: 1px solid #b9e5ff;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(185, 229, 255, 0.4);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    /* Add some spacing for rows */
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+    .alert-info {
+      background-color: #f0f9ff;
+      border-color: #b9e5ff;
+      color: #1a3a4a;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+        <span class="fw-bold">Elementarium</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Fluorine (F)</h1>
+      <h3>Atomic Number: 9</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> F
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> 18.998403 u
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Halogen
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Gas
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              [He] 2s² 2p⁵
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-fire"></i> Most reactive and electronegative element</li>
+            <li><i class="fas fa-skull"></i> Extremely toxic and corrosive</li>
+            <li><i class="fas fa-wind"></i> Pale yellow gas at room temperature</li>
+            <li><i class="fas fa-bolt"></i> Forms compounds with almost all elements</li>
+            <li><i class="fas fa-crown"></i> 13th most abundant element in Earth's crust</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> Isolated in 1886 by Henri Moissan in France after 74 years of attempts by other chemists (many died). He electrolyzed potassium bifluoride (KHF₂) in liquid HF.</p>
+          <p><i class="fas fa-industry"></i> The name comes from Latin "fluere" meaning to flow, because fluorite (CaF₂) was used as a flux in metal smelting.</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>1810:</strong> Ampère proposes existence of fluorine</li>
+              <li><strong>1886:</strong> Moissan finally isolates fluorine</li>
+              <li><strong>1906:</strong> Moissan receives Nobel Prize</li>
+              <li><strong>1930s:</strong> Fluorocarbons developed for refrigeration</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-tooth"></i> Toothpaste (fluoride)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-snowflake"></i> Refrigerants (Freon)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-flask"></i> Teflon (non-stick coating)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-atom"></i> Uranium enrichment (UF₆)
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-medkit"></i> Fluorinated drugs (Prozac, Lipitor)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-bolt"></i> Lithium-ion battery electrolytes
+              </div>
+              <div class="use-item">
+                <i class="fas fa-industry"></i> Aluminum production (cryolite)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-wind"></i> Etching glass
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-fire"></i> Fluorine is so reactive it can cause glass and even water to burn – it reacts explosively with almost everything</li>
+            <li><i class="fas fa-skull"></i> Many early fluorine researchers died from poisoning – it was called the "chemist's graveyard"</li>
+            <li><i class="fas fa-tooth"></i> Fluoride in toothpaste prevents cavities by strengthening tooth enamel (forming fluorapatite)</li>
+            <li><i class="fas fa-crown"></i> Teflon (PTFE) was discovered accidentally by DuPont in 1938 – it's now used everywhere from cookware to space suits</li>
+            <li><i class="fas fa-atom"></i> Fluorine is the 13th most abundant element in Earth's crust, but very reactive so rarely found pure</li>
+            <li><i class="fas fa-bolt"></i> Uranium hexafluoride (UF₆) is the only uranium compound that is gaseous at room temperature – essential for enrichment</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Fluorine9.png" alt="Fluorine Atom" class="img-fluid" style="max-width: 350px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 9 protons, 10 neutrons, 9 electrons</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Fluorine Reactions</h3>
+          <p class="mb-4">Fluorine is far too dangerous for home experiments – these reactions are for educational purposes only and are extremely violent.</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">F</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FFA726; color: white;">H₂</span>
+                </div>
+                <h5 class="mb-2">Fluorine + Hydrogen</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">F</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #66BB6A; color: white;">Cl</span>
+                </div>
+                <h5 class="mb-2">Fluorine + Chlorine</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">F</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FF6B6B; color: white;">C</span>
+                </div>
+                <h5 class="mb-2">Fluorine + Carbon</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">F</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">U</span>
+                </div>
+                <h5 class="mb-2">Fluorine + Uranium (UF₆)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">F</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #AB47BC; color: white;">H₂O</span>
+                </div>
+                <h5 class="mb-2">Fluorine + Water (explosive)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">F</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #8D6E63; color: white;">Xe</span>
+                </div>
+                <h5 class="mb-2">Fluorine + Xenon (first noble gas compound)</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert alert-info mt-3" style="background-color: #f0f9ff; border-color: #b9e5ff; color: #1a3a4a;">
+            <i class="fas fa-flask" style="color: #2c7a9e;"></i> <strong>Chemical Note:</strong> Fluorine's extreme reactivity is demonstrated by its reaction with xenon – in 1962, Neil Bartlett synthesized XePtF₆, shattering the belief that noble gases were completely inert.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

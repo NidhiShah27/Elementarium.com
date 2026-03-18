@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Xenon - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #F0F8FF;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #A7C7E7;
+    }
+    .element-header {
+      background-color: #B0D4F0;
+      color: #1A2F4E;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: #FFFFFF;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(167, 199, 231, 0.2);
+      border: 1px solid #C9E0F0;
+      height: 100%; /* Ensures equal height in a row */
+    }
+    .property-box {
+      background: #F0F8FF;
+      border-left: 3px solid #A7C7E7;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #F0F8FF;
+    }
+    .use-item i {
+      color: #4A7DB5;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #A7C7E7;
+      color: #1A2F4E;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #1A2F4E;
+      border-bottom: 1px solid #C9E0F0;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: #1A2F4E;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #1A2F4E !important;
+    }
+    .navbar-brand {
+      color: #1A2F4E !important;
+      font-weight: 700;
+    }
+    .reaction-box {
+      background: #E1F0FA;
+      border: 1px solid #A7C7E7;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(167, 199, 231, 0.3);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    /* Add some spacing for rows */
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+    .alert-info {
+      background-color: #E1F0FA;
+      border-color: #A7C7E7;
+      color: #1A2F4E;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="80" class="me-2">
+  <span class="fw-bold">Elementarium</span>
+</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  <div class="navbar-nav ms-auto">
+    <a class="nav-link active fs-5" href="Index.html">Home</a>
+    <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+    <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+
+  </div>
+</div>
+</div>
+</nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Xenon (Xe)</h1>
+      <h3>Atomic Number: 54</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> Xe
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> 131.293 u
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Noble Gas
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Gas
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              [Kr] 4d¹⁰ 5s² 5p⁶
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-wind"></i> Colorless, odorless, tasteless noble gas</li>
+            <li><i class="fas fa-bolt"></i> Emits bright blue light when electrified</li>
+            <li><i class="fas fa-leaf"></i> One of the few noble gases that forms compounds</li>
+            <li><i class="fas fa-crown"></i> Extremely rare in Earth's atmosphere (0.09 ppm)</li>
+            <li><i class="fas fa-snowflake"></i> Boils at -108.1°C, melts at -111.8°C</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> Discovered in 1898 by Sir William Ramsay and Morris Travers in London, England. They found it in the residue of evaporated liquid air.</p>
+          <p><i class="fas fa-industry"></i> The name comes from Greek "xenos" meaning "stranger" – because it was so rare and unexpected.</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>1898:</strong> Ramsay and Travers discover xenon</li>
+              <li><strong>1962:</strong> First xenon compound (XePtF₆) synthesized by Neil Bartlett</li>
+              <li><strong>1990s:</strong> Xenon becomes an anesthetic</li>
+              <li><strong>21st c.:</strong> Used in ion thrusters for spacecraft</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-lightbulb"></i> High-intensity flash lamps
+              </div>
+              <div class="use-item">
+                <i class="fas fa-car"></i> High-performance headlights (HID)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-laser"></i> Xenon lasers (medical)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-microscope"></i> Electron microscopes (coating)
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-rocket"></i> Ion propulsion (spacecraft)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-medkit"></i> Anesthetic (inhalation)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-brain"></i> Neuroprotection (stroke research)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-flask"></i> NMR spectroscopy (hyperpolarized Xe)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-crown"></i> Xenon was the first noble gas to have a compound synthesized (XePtF₆) in 1962, shattering the belief that noble gases were completely inert</li>
+            <li><i class="fas fa-bolt"></i> Xenon flash lamps produce brilliant white light and are used in high-speed photography, strobe lights, and camera flashes</li>
+            <li><i class="fas fa-dragon"></i> Xenon is an excellent anesthetic – it's non-toxic and doesn't cause side effects, but it's too expensive for routine use</li>
+            <li><i class="fas fa-rocket"></i> NASA's Dawn spacecraft used xenon ion thrusters to travel to Vesta and Ceres – it's ideal because it's heavy and easy to ionize</li>
+            <li><i class="fas fa-atom"></i> Xenon-135 is a powerful neutron absorber and affects the operation of nuclear reactors (the "xenon pit")</li>
+            <li><i class="fas fa-bolt"></i> Hyperpolarized xenon is used in MRI to image lungs – it's inhaled and provides detailed images of air spaces</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Xenon54.png" alt="Xenon Atom" class="img-fluid" style="max-width: 350px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 54 protons, 77 neutrons, 54 electrons</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Xenon Reactions</h3>
+          <p class="mb-4">Xenon is the most reactive noble gas and forms compounds with fluorine and oxygen. Here are some combinations to explore (conceptually):</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #4A7DB5; color: white;">Xe</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FFA726; color: white;">F</span>
+                </div>
+                <h5 class="mb-2">Xenon + Fluorine</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #4A7DB5; color: white;">Xe</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #66BB6A; color: white;">O</span>
+                </div>
+                <h5 class="mb-2">Xenon + Oxygen</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #4A7DB5; color: white;">Xe</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #5D4037; color: white;">PtF₆</span>
+                </div>
+                <h5 class="mb-2">Xenon + Platinum hexafluoride</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #4A7DB5; color: white;">Xe</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">Flash</span>
+                </div>
+                <h5 class="mb-2">Xenon + Flash (strobe)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #4A7DB5; color: white;">Xe</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #AB47BC; color: white;">Kr</span>
+                </div>
+                <h5 class="mb-2">Xenon + Krypton (lighting)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #4A7DB5; color: white;">Xe</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #8D6E63; color: white;">Ion</span>
+                </div>
+                <h5 class="mb-2">Xenon + Electricity (ion thruster)</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert alert-info mt-3" style="background-color: #E1F0FA; border-color: #A7C7E7; color: #1A2F4E;">
+            <i class="fas fa-flask" style="color: #4A7DB5;"></i> <strong>Experiment Idea (Conceptual):</strong> Xenon flash lamps are common in camera flashes and strobe lights. While you can't experiment with pure xenon, you can observe its brilliant blue-white light in a photographic flash or a xenon headlamp.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

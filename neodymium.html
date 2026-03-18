@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Neodymium - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #faf3e8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #dfcfba;
+    }
+    .element-header {
+      background-color: #d2bfa8;
+      color: #3a2e1f;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: #ffffff;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(223, 207, 186, 0.4);
+      border: 1px solid #dfcfba;
+      height: 100%;
+    }
+    .property-box {
+      background: #faf3e8;
+      border-left: 3px solid #dfcfba;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #faf3e8;
+    }
+    .use-item i {
+      color: #8b6e4b;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #dfcfba;
+      color: #3a2e1f;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #3a2e1f;
+      border-bottom: 1px solid #dfcfba;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: white;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #3a2e1f !important;
+    }
+    .navbar-brand {
+      color: #3a2e1f !important;
+      font-weight: 700;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .reaction-box {
+      background: #faf3e8;
+      border: 1px solid #dfcfba;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(223, 207, 186, 0.6);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+    .alert-info {
+      background-color: #faf3e8;
+      border-color: #dfcfba;
+      color: #3a2e1f;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+        <span class="fw-bold">Elementarium</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Neodymium (Nd)</h1>
+      <h3>Atomic Number: 60</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> Nd
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> 144.242 u
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Lanthanide
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Solid
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              [Xe] 4f⁴ 6s²
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-bolt"></i> Bright silvery metal, tarnishes in air</li>
+            <li><i class="fas fa-magnet"></i> Forms the strongest permanent magnets (Nd₂Fe₁₄B)</li>
+            <li><i class="fas fa-palette"></i> Salts are purple-red</li>
+            <li><i class="fas fa-fire"></i> Pyrophoric; chips can ignite in air</li>
+            <li><i class="fas fa-crown"></i> Name from Greek "neos" (new) + "didymos" (twin)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> Discovered in 1885 by Austrian chemist Carl Auer von Welsbach. He separated the previously thought element "didymium" into praseodymium and neodymium.</p>
+          <p><i class="fas fa-industry"></i> Name comes from Greek <em>neos</em> (new) + <em>didymos</em> (twin), reflecting that it was the "new twin" extracted from didymium alongside praseodymium.</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>1841:</strong> Mosander extracts "didymium" (mixture)</li>
+              <li><strong>1885:</strong> Auer von Welsbach splits didymium into Pr & Nd</li>
+              <li><strong>1925:</strong> First relatively pure neodymium metal produced</li>
+              <li><strong>Modern:</strong> Essential for super-strong magnets and lasers</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-magnet"></i> Nd₂Fe₁₄B permanent magnets
+              </div>
+              <div class="use-item">
+                <i class="fas fa-car"></i> Motors in electric vehicles
+              </div>
+              <div class="use-item">
+                <i class="fas fa-microchip"></i> Hard disk drive actuators
+              </div>
+              <div class="use-item">
+                <i class="fas fa-wind"></i> Wind turbine generators
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-laser"></i> Nd:YAG and Nd:glass lasers
+              </div>
+              <div class="use-item">
+                <i class="fas fa-glasses"></i> Didymium glass for welding goggles
+              </div>
+              <div class="use-item">
+                <i class="fas fa-paint-brush"></i> Purple glass and ceramic glazes
+              </div>
+              <div class="use-item">
+                <i class="fas fa-microscope"></i> Contrast agent in microscopy
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-crown"></i> Neodymium magnets are so strong that a tiny cube can lift 1000x its own weight – but they are brittle and corrode easily.</li>
+            <li><i class="fas fa-bolt"></i> The Nd:YAG laser is the workhorse of industrial lasers, used for engraving, welding, and even eye surgery.</li>
+            <li><i class="fas fa-leaf"></i> Its salts are a beautiful purple-red, used to color glass for decorative vases and art pieces.</li>
+            <li><i class="fas fa-atom"></i> Natural neodymium is a mix of seven isotopes; <sup>142</sup>Nd, <sup>143</sup>Nd, and <sup>144</sup>Nd are the most abundant.</li>
+            <li><i class="fas fa-fire"></i> Like other lanthanides, it is pyrophoric: neodymium chips can ignite spontaneously in air.</li>
+            <li><i class="fas fa-globe"></i> Abundance in Earth's crust is about 38 ppm, similar to copper and more common than lead.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Neodymium60.png" alt="Neodymium Atom" class="img-fluid" style="max-width: 350px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 60 protons, 84 neutrons (in <sup>144</sup>Nd), 60 electrons</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Neodymium Reactions</h3>
+          <p class="mb-4">Neodymium is a reactive metal that quickly forms a pink/violet oxide layer. It dissolves in acids and reacts with halogens.</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #8b6e4b; color: white;">Nd</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #b0b0b0; color: black;">O₂</span>
+                </div>
+                <h5 class="mb-2">Neodymium + Oxygen</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #8b6e4b; color: white;">Nd</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #3b9e6d; color: white;">H₂O</span>
+                </div>
+                <h5 class="mb-2">Neodymium + Water</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #8b6e4b; color: white;">Nd</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #a8431d; color: white;">Cl₂</span>
+                </div>
+                <h5 class="mb-2">Neodymium + Chlorine</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #8b6e4b; color: white;">Nd</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #d9b382; color: black;">H⁺</span>
+                </div>
+                <h5 class="mb-2">Neodymium + Acid</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #8b6e4b; color: white;">Nd</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #607d8b; color: white;">Fe</span>
+                </div>
+                <h5 class="mb-2">Neodymium + Iron + Boron</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #8b6e4b; color: white;">Nd³⁺</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #bc8f8f; color: white;">YAG</span>
+                </div>
+                <h5 class="mb-2">Nd³⁺:YAG (laser crystal)</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert alert-info mt-3" style="background-color: #faf3e8; border-color: #dfcfba; color: #3a2e1f;">
+            <i class="fas fa-flask" style="color: #8b6e4b;"></i> <strong>Experiment Idea:</strong> Neodymium metal reacts slowly with cold water but rapidly with dilute acids, producing hydrogen gas. Finely divided neodymium can ignite in air. Its compounds are typically purple-red.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

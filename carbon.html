@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Carbon - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #FFF9FB;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #FFB6C1;
+    }
+    .element-header {
+      background-color: #FFC0CB;
+      color: #333;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: #FFFFFF;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(255, 182, 193, 0.1);
+      border: 1px solid #FFE4E9;
+      height: 100%; /* Ensures equal height in a row */
+    }
+    .property-box {
+      background: #FFF9FB;
+      border-left: 3px solid #FFB6C1;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #FFF9FB;
+    }
+    .use-item i {
+      color: #FF69B4;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #FFB6C1;
+      color: #333;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #333;
+      border-bottom: 1px solid #FFD1DC;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #333 !important;
+    }
+    .navbar-brand {
+      color: #333 !important;
+      font-weight: 700;
+    }
+    .reaction-box {
+      background: #FFF0F5;
+      border: 1px solid #FFB6C1;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(255, 182, 193, 0.2);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    /* Add some spacing for rows */
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+  <span class="fw-bold">Elementarium</span>
+</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  <div class="navbar-nav ms-auto">
+    <a class="nav-link active fs-5" href="Index.html">Home</a>
+    <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+    <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+
+  </div>
+</div>
+</div>
+</nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Carbon (C)</h1>
+      <h3>Atomic Number: 6</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> C
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> 12.011 u
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Nonmetal
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Solid
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              [He] 2s² 2p²
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-gem"></i> Forms diamonds (hardest natural material)</li>
+            <li><i class="fas fa-pencil-alt"></i> Forms graphite (soft, conductive)</li>
+            <li><i class="fas fa-dice-d6"></i> Basis of organic chemistry</li>
+            <li><i class="fas fa-temperature-high"></i> Sublimes at 3652°C (does not melt)</li>
+            <li><i class="fas fa-leaf"></i> Fourth most abundant element in the universe</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> Known since ancient times (charcoal, soot). Recognized as an element by Antoine Lavoisier in 1789.</p>
+          <p><i class="fas fa-industry"></i> Name comes from Latin "carbo" meaning charcoal.</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>Ancient:</strong> Charcoal used for metal smelting</li>
+              <li><strong>1789:</strong> Lavoisier lists carbon as an element</li>
+              <li><strong>1796:</strong> Smithson Tennant proves diamond is pure carbon</li>
+              <li><strong>1985:</strong> Fullerenes (C60) discovered</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-gem"></i> Diamond jewelry & cutting tools
+              </div>
+              <div class="use-item">
+                <i class="fas fa-pencil-alt"></i> Pencil "lead" (graphite)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-oil-can"></i> Fossil fuels (coal, oil, gas)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-flask"></i> Laboratory electrodes
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-filter"></i> Water purification (activated carbon)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-industry"></i> Steel production
+              </div>
+              <div class="use-item">
+                <i class="fas fa-microchip"></i> Carbon fiber composites
+              </div>
+              <div class="use-item">
+                <i class="fas fa-dna"></i> Basis of all life (organic chemistry)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-gem"></i> Diamonds and graphite are both pure carbon – they differ only in crystal structure</li>
+            <li><i class="fas fa-dragon"></i> Carbon has the highest melting/sublimation point of all elements (3652°C)</li>
+            <li><i class="fas fa-bolt"></i> Graphene – a single layer of graphite – is 200 times stronger than steel</li>
+            <li><i class="fas fa-atom"></i> Carbon-14 dating can determine the age of organic materials up to 60,000 years</li>
+            <li><i class="fas fa-star"></i> Carbon is the fourth most abundant element in the universe</li>
+            <li><i class="fas fa-dice-d6"></i> Fullerenes (buckyballs) are spherical carbon molecules used in nanotechnology</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Carbon6.png" alt="Carbon Atom" class="img-fluid" style="max-width: 350px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 6 protons, 6 neutrons, 6 electrons</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Carbon Reactions</h3>
+          <p class="mb-4">Carbon forms millions of compounds – the basis of organic chemistry. Here are some fundamental reactions to explore:</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6B8E23; color: white;">C</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FFA726; color: white;">O</span>
+                </div>
+                <h5 class="mb-2">Carbon + Oxygen</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6B8E23; color: white;">C</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #66BB6A; color: white;">H</span>
+                </div>
+                <h5 class="mb-2">Carbon + Hydrogen</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6B8E23; color: white;">C</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">Fe</span>
+                </div>
+                <h5 class="mb-2">Carbon + Iron</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6B8E23; color: white;">C</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #5D4037; color: white;">S</span>
+                </div>
+                <h5 class="mb-2">Carbon + Sulfur</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6B8E23; color: white;">C</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #AB47BC; color: white;">Cl</span>
+                </div>
+                <h5 class="mb-2">Carbon + Chlorine</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6B8E23; color: white;">C</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #8D6E63; color: white;">Ca</span>
+                </div>
+                <h5 class="mb-2">Carbon + Calcium</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert alert-info mt-3" style="background-color: #FFF0F5; border-color: #FFB6C1; color: #333;">
+            <i class="fas fa-flask" style="color: #FF69B4;"></i> <strong>Experiment Idea:</strong> Burn charcoal (carbon) in air to form carbon dioxide. Pass the gas through limewater (calcium hydroxide solution) – it turns milky, proving CO₂ production.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

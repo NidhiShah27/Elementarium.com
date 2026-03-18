@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rhenium -Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #fffcdd;
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      background-color: #d4a017;
+    }
+    .element-header {
+      background-color: #e6b800;
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(212, 160, 23, 0.1);
+      border-top: 4px solid #e6b800;
+      height: 100%; /* Ensures equal height in a row */
+    }
+    .property-box {
+      background: #fff9e6;
+      border-left: 4px solid #d4a017;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 8px;
+      border-radius: 5px;
+      background-color: #fff9e6;
+    }
+    .use-item i {
+      color: #d4a017;
+      margin-right: 10px;
+      font-size: 1.2rem;
+      width: 25px;
+      text-align: center;
+    }
+    footer {
+      background-color: #d4a017;
+      color: white;
+      padding: 20px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #000000;
+      border-bottom: 2px solid #f5e8b3;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+    /* Reaction box styles */
+    .reaction-box {
+      background: #fff9e6;
+      border: 1px solid #e6b800;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(212, 160, 23, 0.2);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+      color: white;
+    }
+    .navbar-brand {
+      color: #333 !important;
+      font-weight: 700;
+    }
+    .nav-link {
+      color: #333 !important;
+    }
+    /* Add some spacing for rows */
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation with logo -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="80" class="me-2">
+  <span class="fw-bold">Elementarium</span>
+</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Rhenium (Re)</h1>
+      <h3>Atomic Number: 75</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> Re
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> 186.207 u
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Transition Metal (Group 7)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Solid
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              [Xe] 4f¹⁴ 5d⁵ 6s² [citation:1][citation:2]
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-gem"></i> Silvery-white, dense, lustrous refractory metal [citation:1]</li>
+            <li><i class="fas fa-temperature-high"></i> 3rd highest melting point: 3186°C (after W & C) [citation:5]</li>
+            <li><i class="fas fa-shield-alt"></i> Exceptional corrosion and wear resistance [citation:3]</li>
+            <li><i class="fas fa-bolt"></i> Highest boiling point of any element: 5596°C [citation:7]</li>
+            <li><i class="fas fa-leaf"></i> Superconducting below 1.7 K [citation:2]</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> Discovered in 1925 by Walter Noddack, Ida Tacke, and Otto Berg in Germany. They detected it in platinum ores and columbite using X-ray spectroscopy. It was the last stable, non-radioactive element to be discovered [citation:4][citation:8].</p>
+          <p><i class="fas fa-industry"></i> The name comes from the Rhine River in Germany ("Rhenus" in Latin). Ida Tacke (later Noddack) was one of the few women scientists of her era and also proposed the idea of nuclear fission years before it was confirmed [citation:1].</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>1925:</strong> Noddack, Tacke, Berg discover rhenium [citation:4]</li>
+              <li><strong>1928:</strong> Extract 1g from 660 kg of molybdenite [citation:1]</li>
+              <li><strong>1940s:</strong> Rhenium catalysts for high-octane gasoline [citation:3]</li>
+              <li><strong>21st c.:</strong> Superalloys for jet engines primary use [citation:8]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-fan"></i> Superalloys for jet engine blades [citation:3]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-flask"></i> Platinum-rhenium catalysts [citation:2]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-fire"></i> High-temperature thermocouples [citation:5]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-pen"></i> Fountain pen nibs & electrical contacts [citation:7]
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-bolt"></i> Electron emitters & filaments [citation:1]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-crown"></i> Additive to tungsten for X-ray tubes [citation:4]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-microscope"></i> Ion implantation & semiconductors [citation:8]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-shield"></i> Gyroscope components in aerospace [citation:6]
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-crown"></i> Rhenium is one of the rarest elements in Earth's crust – average concentration about 1 part per billion. It's the last discovered stable element and was the "missing" element in the periodic table for decades [citation:2].</li>
+            <li><i class="fas fa-dragon"></i> Rhenium has the third-highest melting point (3186°C) and the highest boiling point (5596°C) of any element. It retains its strength at temperatures that would melt most metals [citation:3].</li>
+            <li><i class="fas fa-flask"></i> Jet engines couldn't achieve today's fuel efficiency without rhenium. Adding rhenium to nickel-based superalloys allows turbine blades to operate at temperatures approaching 2000°C [citation:5].</li>
+            <li><i class="fas fa-atom"></i> The "rhenium effect" in petroleum refining: Rhenium-platinum catalysts revolutionized the production of lead-free, high-octane gasoline. The rhenium dramatically extends catalyst life and efficiency [citation:7].</li>
+            <li><i class="fas fa-bolt"></i> Some high-end fountain pen nibs are tipped with rhenium-tungsten alloys because they're incredibly hard and wear-resistant, providing a smooth writing experience that lasts decades [citation:1].</li>
+            <li><i class="fas fa-gem"></i> Rhenium was the last element to be discovered in nature – all elements after it (atomic numbers 84 and above) were first produced artificially before being found in trace amounts [citation:4].</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Rhenium75.png" alt="Rhenium Atom" class="img-fluid" style="max-width: 400px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 75 protons, 111 neutrons (in <sup>186</sup>Re), 75 electrons</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Rhenium Reactions</h3>
+          <p class="mb-4">Rhenium exhibits oxidation states from -1 to +7, with +7, +6, and +4 being most common. It forms a variety of colorful oxides and complexes [citation:1]. Here are some combinations to explore:</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6d7f8c; color: white;">Re</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">O</span>
+                </div>
+                <h5 class="mb-2">Re + Oxygen (Re₂O₇)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6d7f8c; color: white;">Re</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #66BB6A; color: white;">F</span>
+                </div>
+                <h5 class="mb-2">Re + Fluorine (ReF₆)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6d7f8c; color: white;">Re</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #5a6d7c; color: white;">W</span>
+                </div>
+                <h5 class="mb-2">Re + Tungsten (alloy)</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6d7f8c; color: white;">Re</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FFA726; color: white;">S</span>
+                </div>
+                <h5 class="mb-2">Re + Sulfur (ReS₂)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6d7f8c; color: white;">Re</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #9C27B0; color: white;">Cl</span>
+                </div>
+                <h5 class="mb-2">Re + Chlorine (ReCl₆)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6d7f8c; color: white;">Re</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">CO</span>
+                </div>
+                <h5 class="mb-2">Re + Carbonyl (Re₂(CO)₁₀)</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert mt-3" style="background-color: #fff9e6; border-color: #d4a017; color: #333; border: 1px solid #e6b800;">
+            <i class="fas fa-flask" style="color: #d4a017;"></i> <strong>Experiment Idea (Conceptual):</strong> Rhenium's colorful oxides are a visual treat. Rhenium(VII) oxide (Re₂O₇) is a pale yellow solid that is highly hygroscopic. When dissolved in water, it forms perrhenic acid (HReO₄), which can be reduced to produce a series of colored rhenium complexes in lower oxidation states – from green Re(IV) to red Re(VI). The variety of colors reflects the complex d-orbital electron transitions available to this late transition metal [citation:1].
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

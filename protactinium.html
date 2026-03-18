@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Protactinium - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f8f0ff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #e1c5ff;
+    }
+    .element-header {
+      background-color: #d1b0f5;
+      color: #2d1f3a;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: #ffffff;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(193, 165, 225, 0.4);
+      border: 1px solid #d9bfff;
+      height: 100%;
+    }
+    .property-box {
+      background: #f8f0ff;
+      border-left: 3px solid #c7a9ff;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #f8f0ff;
+    }
+    .use-item i {
+      color: #6d4f8f;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #e1c5ff;
+      color: #2d1f3a;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #2d1f3a;
+      border-bottom: 1px solid #d9bfff;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: white;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 4px rgba(45, 31, 58, 0.2);
+    }
+    .nav-link {
+      color: #2d1f3a !important;
+      font-weight: 500;
+    }
+    .navbar-brand {
+      color: #2d1f3a !important;
+      font-weight: 700;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .reaction-box {
+      background: #f8f0ff;
+      border: 1px solid #d9bfff;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(193, 165, 225, 0.6);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+    .alert-info {
+      background-color: #f8f0ff;
+      border-color: #d9bfff;
+      color: #2d1f3a;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+        <span class="fw-bold">Elementarium</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Protactinium (Pa)</h1>
+      <h3>Atomic Number: 91</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> Pa
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> 231.03588 u (most stable isotope)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Actinide
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Solid
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              [Rn] 5f² 6d¹ 7s²
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-bolt"></i> Dense, silvery-gray radioactive metal</li>
+            <li><i class="fas fa-crown"></i> Name means "parent of actinium" (²³¹Pa decays to ²²⁷Ac)</li>
+            <li><i class="fas fa-atom"></i> One of the rarest and most expensive naturally occurring elements</li>
+            <li><i class="fas fa-fire"></i> Superconducting below 1.4 K</li>
+            <li><i class="fas fa-flask"></i> Exhibits multiple oxidation states (+4, +5) in aqueous solution</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> First identified in 1913 by Kasimir Fajans and Oswald Helmuth Göhring, who named it "brevium" due to the short half-life of ²³⁴Pa. The longer-lived isotope ²³¹Pa was discovered in 1918 by Otto Hahn and Lise Meitner (Germany) and independently by Frederick Soddy and John Cranston (UK).</p>
+          <p><i class="fas fa-industry"></i> The name was changed to protactinium in 1918 because it decays to actinium. It was the last of the naturally occurring radioactive elements to be discovered.</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>1913:</strong> Fajans & Göhring discover ²³⁴Pa ("brevium")</li>
+              <li><strong>1918:</strong> Hahn/Meitner and Soddy/Cranston discover ²³¹Pa</li>
+              <li><strong>1927:</strong> Aristid von Grosse isolates Pa₂O₅</li>
+              <li><strong>1961:</strong> First preparation of pure protactinium metal (UKAEA)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-atom"></i> Nuclear physics research
+              </div>
+              <div class="use-item">
+                <i class="fas fa-flask"></i> Tracer in geochemistry (²³¹Pa-²³⁵U dating)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-dna"></i> Rarely used outside scientific research
+              </div>
+              <div class="use-item">
+                <i class="fas fa-microscope"></i> Study of actinide chemistry
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-bolt"></i> Possible precursor to ²³³U in thorium fuel cycle
+              </div>
+              <div class="use-item">
+                <i class="fas fa-radiation"></i> Calibration sources
+              </div>
+              <div class="use-item">
+                <i class="fas fa-crown"></i> No commercial applications due to scarcity
+              </div>
+              <div class="use-item">
+                <i class="fas fa-dragon"></i> Ocean sediment dating (paleoceanography)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-crown"></i> Protactinium is one of the rarest elements in Earth's crust (about 0.1 parts per trillion), typically extracted from uranium ores.</li>
+            <li><i class="fas fa-bolt"></i> ²³¹Pa has a half-life of 32,760 years – long enough to be isolated but still intensely radioactive.</li>
+            <li><i class="fas fa-leaf"></i> It costs around $280 per gram, making it one of the most expensive natural elements.</li>
+            <li><i class="fas fa-atom"></i> The name "protactinium" means "before actinium" because ²³¹Pa decays to ²²⁷Ac.</li>
+            <li><i class="fas fa-dragon"></i> Only a few hundred grams of protactinium have ever been produced worldwide.</li>
+            <li><i class="fas fa-globe"></i> It exhibits complex chemical behavior, with both +4 and +5 oxidation states stable in solution.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Protactinium91.png" alt="Protactinium Atom" class="img-fluid" style="max-width: 350px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 91 protons, 140 neutrons (in <sup>231</sup>Pa), 91 electrons</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Protactinium Reactions</h3>
+          <p class="mb-4">Protactinium chemistry is complex, with both +4 and +5 oxidation states. Pa(V) hydrolyzes easily and forms stable complexes. Due to its rarity and radioactivity, most work is done on tracer scale.</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6d4f8f; color: white;">Pa</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #b0b0b0; color: black;">O₂</span>
+                </div>
+                <h5 class="mb-2">Protactinium + Oxygen</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6d4f8f; color: white;">Pa</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #3b9e6d; color: white;">H₂O</span>
+                </div>
+                <h5 class="mb-2">Protactinium + Water</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6d4f8f; color: white;">Pa</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #a8431d; color: white;">F₂</span>
+                </div>
+                <h5 class="mb-2">Protactinium + Fluorine</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6d4f8f; color: white;">Pa⁴⁺</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #d9b382; color: black;">OH⁻</span>
+                </div>
+                <h5 class="mb-2">Pa(OH)₄ precipitation</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6d4f8f; color: white;">Pa⁵⁺</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #4682b4; color: white;">F⁻</span>
+                </div>
+                <h5 class="mb-2">PaF₅ / PaF₆⁻ complexes</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #bc8f8f; color: white;">α</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #607d8b; color: white;">²³¹Pa</span>
+                </div>
+                <h5 class="mb-2">²³¹Pa → ²²⁷Ac (alpha decay)</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert alert-info mt-3" style="background-color: #f8f0ff; border-color: #d9bfff; color: #2d1f3a;">
+            <i class="fas fa-flask" style="color: #6d4f8f;"></i> <strong>Experiment Idea:</strong> Due to its extreme rarity and radioactivity, protactinium is handled in specialized labs. Its +5 state readily hydrolyzes, forming Pa₂O₅·xH₂O. In concentrated HCl, it forms anionic chloro complexes that can be extracted into organic solvents – a method used to separate it from uranium ores.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

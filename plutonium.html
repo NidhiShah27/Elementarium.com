@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plutonium - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f8f0ff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #e1c5ff;
+    }
+    .element-header {
+      background-color: #d1b0f5;
+      color: #2d1f3a;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: #ffffff;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(193, 165, 225, 0.4);
+      border: 1px solid #d9bfff;
+      height: 100%;
+    }
+    .property-box {
+      background: #f8f0ff;
+      border-left: 3px solid #c7a9ff;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #f8f0ff;
+    }
+    .use-item i {
+      color: #6d4f8f;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #e1c5ff;
+      color: #2d1f3a;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #2d1f3a;
+      border-bottom: 1px solid #d9bfff;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: white;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 4px rgba(45, 31, 58, 0.2);
+    }
+    .nav-link {
+      color: #2d1f3a !important;
+      font-weight: 500;
+    }
+    .navbar-brand {
+      color: #2d1f3a !important;
+      font-weight: 700;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .reaction-box {
+      background: #f8f0ff;
+      border: 1px solid #d9bfff;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(193, 165, 225, 0.6);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+    .alert-info {
+      background-color: #f8f0ff;
+      border-color: #d9bfff;
+      color: #2d1f3a;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+        <span class="fw-bold">Elementarium</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Plutonium (Pu)</h1>
+      <h3>Atomic Number: 94</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> Pu
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> [244] u (most stable isotope)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Actinide
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Solid
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              [Rn] 5f⁶ 7s²
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-bolt"></i> Silvery-white metal that tarnishes rapidly, glowing red in the dark</li>
+            <li><i class="fas fa-crown"></i> Named after the dwarf planet Pluto (after Uranus and Neptune)</li>
+            <li><i class="fas fa-atom"></i> First element produced in quantity by nuclear reactors</li>
+            <li><i class="fas fa-fire"></i> Six allotropes with wildly different densities (pyrophoric in some forms)</li>
+            <li><i class="fas fa-flask"></i> Fissile isotope ²³⁹Pu is the primary material for nuclear weapons</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> Discovered in 1940–41 by Glenn T. Seaborg, Edwin McMillan, Joseph W. Kennedy, and Arthur C. Wahl at UC Berkeley. They bombarded uranium-238 with deuterons to create neptunium-238, which beta-decayed to plutonium-238.</p>
+          <p><i class="fas fa-industry"></i> The discovery was kept secret until after WWII. Plutonium-239 was produced in industrial quantities at the Hanford Site and used in the "Trinity" test and the "Fat Man" bomb dropped on Nagasaki.</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>1940:</strong> First synthesis of ²³⁸Pu at Berkeley</li>
+              <li><strong>1944:</strong> Hanford Site begins large-scale production</li>
+              <li><strong>1945:</strong> Trinity test (July 16); Nagasaki bomb (August 9)</li>
+              <li><strong>1951:</strong> Seaborg wins Nobel Prize for transuranium work</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-atom"></i> Nuclear weapons (²³⁹Pu)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-bolt"></i> Nuclear reactor fuel (MOX fuel)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-satellite"></i> Radioisotope thermoelectric generators (²³⁸Pu for space probes)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-heartbeat"></i> Cardiac pacemaker batteries (²³⁸Pu, historical)
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-flask"></i> Neutron sources (Pu-Be)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-microscope"></i> Research in nuclear physics
+              </div>
+              <div class="use-item">
+                <i class="fas fa-dragon"></i> Component of nuclear waste
+              </div>
+              <div class="use-item">
+                <i class="fas fa-crown"></i> Smoke detectors (very small amounts of ²³⁹Pu, historical)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-crown"></i> Plutonium-238 emits mostly alpha particles and generates significant heat – a 1 kg sphere glows red hot from its own decay.</li>
+            <li><i class="fas fa-bolt"></i> It has six allotropes at ambient pressure; the δ-phase is almost as malleable as aluminum.</li>
+            <li><i class="fas fa-leaf"></i> A sphere of plutonium-239 the size of a softball weighs about 5 kg and has the explosive power of 20 kilotons of TNT.</li>
+            <li><i class="fas fa-atom"></i> Trace amounts of ²³⁹Pu are naturally produced in uranium-rich ores by neutron capture, but it's essentially a synthetic element.</li>
+            <li><i class="fas fa-dragon"></i> Plutonium expands when it melts (like water), which is unusual for a metal.</li>
+            <li><i class="fas fa-globe"></i> The name follows the sequence Uranus → Neptune → Pluto, completing the planet names for actinides.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Plutonium94.png" alt="Plutonium Atom" class="img-fluid" style="max-width: 350px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 94 protons, 150 neutrons (in <sup>244</sup>Pu), 94 electrons</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Plutonium Reactions</h3>
+          <p class="mb-4">Plutonium chemistry is complex, with oxidation states from +3 to +7. The +4 state (Pu⁴⁺) is most stable in aqueous solution, but all states interconvert easily. Plutonium metal is highly reactive and pyrophoric in finely divided form.</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6d4f8f; color: white;">Pu</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #b0b0b0; color: black;">O₂</span>
+                </div>
+                <h5 class="mb-2">Plutonium + Oxygen</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6d4f8f; color: white;">Pu</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #3b9e6d; color: white;">H₂O</span>
+                </div>
+                <h5 class="mb-2">Plutonium + Water</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6d4f8f; color: white;">Pu⁴⁺</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #4682b4; color: white;">F⁻</span>
+                </div>
+                <h5 class="mb-2">PuF₄ precipitation</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6d4f8f; color: white;">Pu³⁺</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #d9b382; color: black;">OH⁻</span>
+                </div>
+                <h5 class="mb-2">Pu(OH)₃ precipitation</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6d4f8f; color: white;">PuO₂²⁺</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #a8431d; color: white;">e⁻</span>
+                </div>
+                <h5 class="mb-2">Pu(VI) → Pu(V) reduction</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #bc8f8f; color: white;">n</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #607d8b; color: white;">²³⁹Pu</span>
+                </div>
+                <h5 class="mb-2">²³⁹Pu(n,f) fission</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert alert-info mt-3" style="background-color: #f8f0ff; border-color: #d9bfff; color: #2d1f3a;">
+            <i class="fas fa-flask" style="color: #6d4f8f;"></i> <strong>Experiment Idea:</strong> In a glovebox, plutonium(III) solutions are blue-violet; Pu(IV) is tan or orange-brown; Pu(V) is light pink (as PuO₂⁺); Pu(VI) is pink-orange (as PuO₂²⁺). The complex aqueous chemistry makes plutonium one of the most fascinating elements to study. Because of its radioactivity and toxicity, all work requires specialized facilities and extreme caution.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yttrium - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #fffcdd;
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      background-color: #d4a017;
+    }
+    .element-header {
+      background-color: #e6b800;
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(212, 160, 23, 0.1);
+      border-top: 4px solid #e6b800;
+      height: 100%; /* Ensures equal height in a row */
+    }
+    .property-box {
+      background: #fff9e6;
+      border-left: 4px solid #d4a017;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 8px;
+      border-radius: 5px;
+      background-color: #fff9e6;
+    }
+    .use-item i {
+      color: #d4a017;
+      margin-right: 10px;
+      font-size: 1.2rem;
+      width: 25px;
+      text-align: center;
+    }
+    footer {
+      background-color: #d4a017;
+      color: white;
+      padding: 20px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #000000;
+      border-bottom: 2px solid #f5e8b3;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+    /* Reaction box styles */
+    .reaction-box {
+      background: #fff9e6;
+      border: 1px solid #e6b800;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(212, 160, 23, 0.2);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+      color: white;
+    }
+    .navbar-brand {
+      color: #333 !important;
+      font-weight: 700;
+    }
+    .nav-link {
+      color: #333 !important;
+    }
+    /* Add some spacing for rows */
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation with logo -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="80" class="me-2">
+  <span class="fw-bold">Elementarium</span>
+</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Yttrium (Y)</h1>
+      <h3>Atomic Number: 39</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> Y
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> 88.90584 u
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Transition Metal (Group 3)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Solid
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              [Kr] 4d¹ 5s² [citation:1][citation:2]
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-gem"></i> Silvery-metallic, lustrous, and crystalline [citation:1]</li>
+            <li><i class="fas fa-temperature-high"></i> Melting point: 1526°C, Boiling point: 3336°C [citation:5]</li>
+            <li><i class="fas fa-shield-alt"></i> Stable in air due to protective oxide layer [citation:3]</li>
+            <li><i class="fas fa-fire"></i> Finely divided yttrium is pyrophoric (ignites in air) [citation:7]</li>
+            <li><i class="fas fa-atom"></i> Often classified with rare earth elements [citation:2]</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> Discovered in 1794 by Johan Gadolin in Finland, in a mineral from the village of Ytterby, Sweden. The element is named after Ytterby, the same Swedish quarry that yielded four elements (yttrium, ytterbium, terbium, erbium) [citation:4][citation:8].</p>
+          <p><i class="fas fa-industry"></i> Friedrich Wöhler is credited with first isolating the impure metal in 1828. Yttrium is often classified as a "rare earth" element because it shares chemical properties with the lanthanides [citation:1].</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>1794:</strong> Gadolin discovers yttrium oxide (yttria) [citation:4]</li>
+              <li><strong>1828:</strong> Wöhler produces impure yttrium metal [citation:1]</li>
+              <li><strong>1843:</strong> Mosander splits yttria into yttrium, terbium, erbium [citation:3]</li>
+              <li><strong>20th c.:</strong> Vital for color TV phosphors, lasers, superconductors [citation:8]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-tv"></i> Red phosphors in color TV & LED screens [citation:3]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-bolt"></i> High-temperature superconductors (YBCO) [citation:2]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-gem"></i> Yttrium-aluminum garnet (YAG) lasers [citation:5]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-microscope"></i> Microwave filters & radar technology [citation:7]
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-utensils"></i> Stabilizer in zirconia ceramics (cubic zirconia) [citation:1]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-atom"></i> Nuclear technology (fuel cladding) [citation:4]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-flask"></i> Electrolyte in solid oxide fuel cells [citation:8]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-crown"></i> Catalyst for ethylene polymerization [citation:6]
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-crown"></i> Yttrium is one of four elements named after the Swedish village of Ytterby (along with ytterbium, terbium, erbium) – the most elements named after a single location. This makes it a favorite among element trivia enthusiasts [citation:4].</li>
+            <li><i class="fas fa-dragon"></i> Yttrium-aluminum garnet (YAG) doped with neodymium (Nd:YAG) is one of the most widely used solid-state laser crystals, found in medical, industrial, and military lasers. It's used for everything from eye surgery to cutting metal [citation:2].</li>
+            <li><i class="fas fa-flask"></i> Yttrium barium copper oxide (YBCO) was the first material to exhibit superconductivity above the boiling point of liquid nitrogen (77 K), revolutionizing practical applications of superconductors. It can levitate magnets in a dramatic demonstration [citation:3].</li>
+            <li><i class="fas fa-atom"></i> Yttrium is used to make cubic zirconia – the synthetic gemstone that looks like diamond. Adding yttrium stabilizes the zirconia crystal structure, creating a hard, brilliant material used in jewelry [citation:5].</li>
+            <li><i class="fas fa-bolt"></i> Yttrium-90, a radioactive isotope, is used in targeted cancer therapy (radioembolization) for liver tumors. It's delivered directly to the tumor site via microspheres [citation:7].</li>
+            <li><i class="fas fa-gem"></i> Yttrium is surprisingly abundant – it's about twice as common in the Earth's crust as lead and more abundant than silver. Despite this, it's difficult to extract and refine [citation:8].</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Yttrium39.png" alt="Yttrium Atom" class="img-fluid" style="max-width: 400px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 39 protons, 50 neutrons (in <sup>89</sup>Y), 39 electrons</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Yttrium Reactions</h3>
+          <p class="mb-4">Yttrium almost exclusively exhibits the +3 oxidation state. It forms a variety of compounds with industrial and scientific importance, particularly in ceramics and lasers [citation:1]. Here are some combinations to explore:</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6a5e8c; color: white;">Y</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">O</span>
+                </div>
+                <h5 class="mb-2">Y + Oxygen (Y₂O₃)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6a5e8c; color: white;">Y</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #66BB6A; color: white;">Cl</span>
+                </div>
+                <h5 class="mb-2">Y + Chlorine (YCl₃)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6a5e8c; color: white;">Y</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #5D4037; color: white;">Ba</span>
+                </div>
+                <h5 class="mb-2">Y + Barium (YBCO superconductor)</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6a5e8c; color: white;">Y</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FFA726; color: white;">Al</span>
+                </div>
+                <h5 class="mb-2">Y + Aluminum (YAG garnet)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6a5e8c; color: white;">Y</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #9C27B0; color: white;">Eu</span>
+                </div>
+                <h5 class="mb-2">Y + Europium (red phosphor)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6a5e8c; color: white;">Y</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">ZrO₂</span>
+                </div>
+                <h5 class="mb-2">Y + Zirconia (YSZ)</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert mt-3" style="background-color: #fff9e6; border-color: #d4a017; color: #333; border: 1px solid #e6b800;">
+            <i class="fas fa-flask" style="color: #d4a017;"></i> <strong>Experiment Idea (Conceptual):</strong> Yttrium oxide (Y₂O₃) is a white powder that can be dissolved in nitric acid to form yttrium nitrate (Y(NO₃)₃). When combined with europium, it creates the famous red phosphor used in old color TV screens. While a full synthesis is complex, the chemistry demonstrates how rare earth elements produce brilliant, pure colors – a property that revolutionized display technology. In the lab, you can observe the fluorescence of europium-doped yttrium oxide under UV light – it glows bright red [citation:1].
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

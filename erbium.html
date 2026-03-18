@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Erbium - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #faf3e8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #dfcfba;
+    }
+    .element-header {
+      background-color: #d2bfa8;
+      color: #3a2e1f;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: #ffffff;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(223, 207, 186, 0.4);
+      border: 1px solid #dfcfba;
+      height: 100%;
+    }
+    .property-box {
+      background: #faf3e8;
+      border-left: 3px solid #dfcfba;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #faf3e8;
+    }
+    .use-item i {
+      color: #8b6e4b;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #dfcfba;
+      color: #3a2e1f;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #3a2e1f;
+      border-bottom: 1px solid #dfcfba;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: white;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #3a2e1f !important;
+    }
+    .navbar-brand {
+      color: #3a2e1f !important;
+      font-weight: 700;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .reaction-box {
+      background: #faf3e8;
+      border: 1px solid #dfcfba;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(223, 207, 186, 0.6);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+    .alert-info {
+      background-color: #faf3e8;
+      border-color: #dfcfba;
+      color: #3a2e1f;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+        <span class="fw-bold">Elementarium</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Erbium (Er)</h1>
+      <h3>Atomic Number: 68</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> Er
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> 167.259 u
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Lanthanide
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Solid
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              [Xe] 4f¹² 6s²
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-bolt"></i> Soft, silvery-metal, relatively stable in air</li>
+            <li><i class="fas fa-palette"></i> Pink salts and oxides</li>
+            <li><i class="fas fa-crown"></i> Named after the village Ytterby, Sweden</li>
+            <li><i class="fas fa-atom"></i> 6 naturally occurring isotopes</li>
+            <li><i class="fas fa-fire"></i> Slowly oxidizes, reacts with water and acids</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> Discovered in 1843 by Swedish chemist Carl Gustaf Mosander. He separated "yttria" into three fractions: yttria, erbia, and terbia. The pink fraction he named erbia.</p>
+          <p><i class="fas fa-industry"></i> Named after Ytterby, the Swedish village where the mineral gadolinite was found – the same source for yttrium, terbium, and ytterbium.</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>1843:</strong> Mosander isolates erbium</li>
+              <li><strong>1878:</strong> Jean Charles Galissard de Marignac identifies it as distinct</li>
+              <li><strong>1905:</strong> Georges Urbain purifies erbium</li>
+              <li><strong>Modern:</strong> Essential for fiber optics and medical lasers</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-wifi"></i> Fiber optic amplifiers (Er-doped fiber)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-laser"></i> Er:YAG lasers (skin resurfacing, dentistry)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-glasses"></i> Pink glass and crystal coloring
+              </div>
+              <div class="use-item">
+                <i class="fas fa-microchip"></i> Infrared-absorbing safety glasses
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-atom"></i> Nuclear reactor control rods
+              </div>
+              <div class="use-item">
+                <i class="fas fa-flask"></i> Metallurgy additive (strengthens alloys)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-microscope"></i> Phosphor in lighting and displays
+              </div>
+              <div class="use-item">
+                <i class="fas fa-bolt"></i> Microwave ferrites
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-crown"></i> Erbium is the workhorse of fiber optic communications – erbium-doped fiber amplifiers (EDFAs) boost light signals directly without converting them to electricity.</li>
+            <li><i class="fas fa-bolt"></i> Er:YAG lasers (2940 nm) are perfectly tuned to water absorption, making them ideal for precise skin resurfacing and dental procedures with minimal heat damage.</li>
+            <li><i class="fas fa-leaf"></i> Erbium is one of four elements named after Ytterby (with yttrium, terbium, ytterbium) – the small Swedish quarry that has more elements named after it than any other place.</li>
+            <li><i class="fas fa-atom"></i> Pink erbium oxide (Er₂O₃) is used to color glass and cubic zirconia, producing delicate pink hues prized in jewelry.</li>
+            <li><i class="fas fa-dragon"></i> It has a high neutron absorption cross-section, making it useful in nuclear reactor control rods.</li>
+            <li><i class="fas fa-globe"></i> Abundance in Earth's crust is about 3.5 ppm, similar to silver.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Erbium68.png" alt="Erbium Atom" class="img-fluid" style="max-width: 350px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 68 protons, 99 neutrons (in <sup>167</sup>Er), 68 electrons</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Erbium Reactions</h3>
+          <p class="mb-4">Erbium is a typical lanthanide, reacting slowly with water and rapidly with acids. It forms pink Er(III) compounds.</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #8b6e4b; color: white;">Er</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #b0b0b0; color: black;">O₂</span>
+                </div>
+                <h5 class="mb-2">Erbium + Oxygen</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #8b6e4b; color: white;">Er</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #3b9e6d; color: white;">H₂O</span>
+                </div>
+                <h5 class="mb-2">Erbium + Water</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #8b6e4b; color: white;">Er</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #a8431d; color: white;">Cl₂</span>
+                </div>
+                <h5 class="mb-2">Erbium + Chlorine</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #8b6e4b; color: white;">Er</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #d9b382; color: black;">H⁺</span>
+                </div>
+                <h5 class="mb-2">Erbium + Acid</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #8b6e4b; color: white;">Er³⁺</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #4682b4; color: white;">SiO₂</span>
+                </div>
+                <h5 class="mb-2">Er-doped fiber (EDFA)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #8b6e4b; color: white;">Er³⁺</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #9c27b0; color: white;">YAG</span>
+                </div>
+                <h5 class="mb-2">Er:YAG laser crystal</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert alert-info mt-3" style="background-color: #faf3e8; border-color: #dfcfba; color: #3a2e1f;">
+            <i class="fas fa-flask" style="color: #8b6e4b;"></i> <strong>Experiment Idea:</strong> Dissolve erbium oxide in hydrochloric acid to form ErCl₃. The solution has a beautiful pink color. Under UV light, erbium compounds can exhibit fluorescence, though less intense than europium or terbium.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

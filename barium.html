@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Barium - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #e8f3ef;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #b8e1d2;
+    }
+    .element-header {
+      background-color: #a6d5c4;
+      color: #1a3b32;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: #FFFFFF;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(184, 225, 210, 0.3);
+      border: 1px solid #c9e6db;
+      height: 100%; /* Ensures equal height in a row */
+    }
+    .property-box {
+      background: #e8f3ef;
+      border-left: 3px solid #b8e1d2;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #e8f3ef;
+    }
+    .use-item i {
+      color: #2c7a6e;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #b8e1d2;
+      color: #1a3b32;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #1a3b32;
+      border-bottom: 1px solid #c9e6db;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: #1a3b32;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #1a3b32 !important;
+    }
+    .navbar-brand {
+      color: #1a3b32 !important;
+      font-weight: 700;
+    }
+    .reaction-box {
+      background: #e8f3ef;
+      border: 1px solid #b8e1d2;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(184, 225, 210, 0.4);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    /* Add some spacing for rows */
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+    .alert-info {
+      background-color: #e8f3ef;
+      border-color: #b8e1d2;
+      color: #1a3b32;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+        <span class="fw-bold">Elementarium</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Barium (Ba)</h1>
+      <h3>Atomic Number: 56</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> Ba
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> 137.327 u
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Alkaline Earth Metal
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Solid
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              [Xe] 6s²
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-fire"></i> Burns with brilliant apple-green flame</li>
+            <li><i class="fas fa-water"></i> Highly reactive with water</li>
+            <li><i class="fas fa-weight"></i> Dense, silvery-white metal</li>
+            <li><i class="fas fa-shield"></i> Absorbs X-rays strongly</li>
+            <li><i class="fas fa-skull"></i> All water-soluble barium compounds are toxic</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> Discovered by Carl Wilhelm Scheele in 1772 as an oxide. First isolated by Humphry Davy in 1808 through electrolysis of barium salts.</p>
+          <p><i class="fas fa-industry"></i> The name comes from Greek "barys" meaning heavy, due to its dense compounds (like barite, BaSO₄).</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>1600s:</strong> "Bologna stones" (barite) glow after exposure to light</li>
+              <li><strong>1772:</strong> Scheele identifies barium oxide</li>
+              <li><strong>1808:</strong> Davy isolates barium metal</li>
+              <li><strong>20th c.:</strong> Used in medical imaging and drilling fluids</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-fire"></i> Green fireworks and flares
+              </div>
+              <div class="use-item">
+                <i class="fas fa-x-ray"></i> Barium meal (medical imaging)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-oil-well"></i> Drilling fluids (barite)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-paint"></i> Pigments (lithopone, blanc fixe)
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-tv"></i> Getter in vacuum tubes
+              </div>
+              <div class="use-item">
+                <i class="fas fa-atom"></i> Nuclear reactors (absorbs neutrons)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-glass"></i> Special glass and ceramics
+              </div>
+              <div class="use-item">
+                <i class="fas fa-flask"></i> Laboratory reagent
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-fire"></i> Barium compounds produce the most brilliant green color in fireworks – unmistakable and vivid</li>
+            <li><i class="fas fa-x-ray"></i> A "barium meal" (barium sulfate) is used to coat the digestive tract for X-rays – it's opaque to X-rays but safe because it's insoluble</li>
+            <li><i class="fas fa-weight"></i> The name comes from Greek "barys" (heavy) – some barium minerals are twice as dense as similar minerals</li>
+            <li><i class="fas fa-bolt"></i> Barium metal is so reactive it must be stored under oil or in an inert atmosphere</li>
+            <li><i class="fas fa-skull"></i> Soluble barium compounds are highly toxic – they interfere with potassium channels in cells</li>
+            <li><i class="fas fa-gem"></i> "Bologna stones" (barite) from Italy were found to glow after exposure to light – an early form of phosphorescence</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Barium56.png" alt="Barium Atom" class="img-fluid" style="max-width: 350px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 56 protons, 81 neutrons, 56 electrons</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Barium Reactions</h3>
+          <p class="mb-4">Barium is highly reactive and produces a distinctive green flame. Here are some reactions to explore (with caution – soluble barium salts are toxic):</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a6e; color: white;">Ba</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FFA726; color: white;">O₂</span>
+                </div>
+                <h5 class="mb-2">Barium + Oxygen</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a6e; color: white;">Ba</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #66BB6A; color: white;">H₂O</span>
+                </div>
+                <h5 class="mb-2">Barium + Water</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a6e; color: white;">Ba</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #66BB6A; color: white;">Cl</span>
+                </div>
+                <h5 class="mb-2">Barium + Chlorine</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a6e; color: white;">Ba</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FF6B6B; color: white;">SO₄</span>
+                </div>
+                <h5 class="mb-2">Barium + Sulfate (test)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a6e; color: white;">Ba</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">N₂</span>
+                </div>
+                <h5 class="mb-2">Barium + Nitrogen</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a6e; color: white;">Ba</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #5D4037; color: white;">S</span>
+                </div>
+                <h5 class="mb-2">Barium + Sulfur</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert alert-info mt-3" style="background-color: #e8f3ef; border-color: #b8e1d2; color: #1a3b32;">
+            <i class="fas fa-flask" style="color: #2c7a6e;"></i> <strong>Experiment Idea (Conceptual):</strong> The classic barium test is adding barium chloride to a sulfate solution – a dense white precipitate of barium sulfate forms immediately. This is used to test for sulfate ions. Barium's green flame is also unmistakable in fireworks.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

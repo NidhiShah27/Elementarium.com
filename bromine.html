@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bromine - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f0f9ff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #b9e5ff;
+    }
+    .element-header {
+      background-color: #9ad0f5;
+      color: #1a3a4a;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: #ffffff;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(185, 229, 255, 0.3);
+      border: 1px solid #d4edff;
+      height: 100%; /* Ensures equal height in a row */
+    }
+    .property-box {
+      background: #f0f9ff;
+      border-left: 3px solid #b9e5ff;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #f0f9ff;
+    }
+    .use-item i {
+      color: #2c7a9e;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #b9e5ff;
+      color: #1a3a4a;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #1a3a4a;
+      border-bottom: 1px solid #d4edff;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: white;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #1a3a4a !important;
+    }
+    .navbar-brand {
+      color: #1a3a4a !important;
+      font-weight: 700;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .reaction-box {
+      background: #f0f9ff;
+      border: 1px solid #b9e5ff;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(185, 229, 255, 0.4);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    /* Add some spacing for rows */
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+    .alert-info {
+      background-color: #f0f9ff;
+      border-color: #b9e5ff;
+      color: #1a3a4a;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+        <span class="fw-bold">Elementarium</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Bromine (Br)</h1>
+      <h3>Atomic Number: 35</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> Br
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> 79.904 u
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Halogen
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Liquid
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              [Ar] 3d¹⁰ 4s² 4p⁵
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-tint"></i> Only nonmetallic element liquid at room temperature</li>
+            <li><i class="fas fa-wind"></i> Reddish-brown, fuming liquid with pungent odor</li>
+            <li><i class="fas fa-skull"></i> Highly toxic and corrosive</li>
+            <li><i class="fas fa-bolt"></i> Less reactive than chlorine but more than iodine</li>
+            <li><i class="fas fa-crown"></i> Named from Greek "bromos" meaning stench</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> Discovered independently by two chemists in 1825-26: Carl Jacob Löwig (Germany) and Antoine Jérôme Balard (France). Balard published first and is credited.</p>
+          <p><i class="fas fa-industry"></i> The name comes from Greek "bromos" meaning stench, because of its strong, irritating smell.</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>1825:</strong> Löwig isolates bromine</li>
+              <li><strong>1826:</strong> Balard publishes discovery</li>
+              <li><strong>1840s:</strong> Used in daguerreotype photography</li>
+              <li><strong>20th c.:</strong> Flame retardants and pharmaceuticals</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-fire"></i> Flame retardants
+              </div>
+              <div class="use-item">
+                <i class="fas fa-pills"></i> Pharmaceuticals (sedatives)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-flask"></i> Photography chemicals
+              </div>
+              <div class="use-item">
+                <i class="fas fa-tint"></i> Water purification
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-car"></i> Brominated gasoline (historical)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-industry"></i> Drilling fluids
+              </div>
+              <div class="use-item">
+                <i class="fas fa-leaf"></i> Pesticides and fumigants
+              </div>
+              <div class="use-item">
+                <i class="fas fa-crown"></i> Dyes and pigments
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-tint"></i> Bromine is one of only two elements that are liquid at room temperature (the other is mercury)</li>
+            <li><i class="fas fa-wind"></i> Its name means "stench" in Greek – and rightly so, as bromine vapor has an overpowering, irritating smell</li>
+            <li><i class="fas fa-crown"></i> Bromine was discovered almost simultaneously by two chemists – Balard's professor recommended he name it "muride", but Balard chose "bromine"</li>
+            <li><i class="fas fa-flask"></i> Silver bromide (AgBr) is light-sensitive and was the basis of photographic film for over 150 years</li>
+            <li><i class="fas fa-fire"></i> Brominated flame retardants are added to electronics and furniture to prevent fires – but some are now banned due to toxicity</li>
+            <li><i class="fas fa-atom"></i> The Dead Sea is the world's largest source of bromine – it contains about 5 grams of bromine per ton of water</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Bromine35.png" alt="Bromine Atom" class="img-fluid" style="max-width: 350px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 35 protons, 45 neutrons, 35 electrons</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Bromine Reactions</h3>
+          <p class="mb-4">Bromine is toxic and corrosive – these reactions should only be performed by professionals with proper safety equipment.</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">Br</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #66BB6A; color: white;">Na</span>
+                </div>
+                <h5 class="mb-2">Sodium + Bromine</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">Br</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">Al</span>
+                </div>
+                <h5 class="mb-2">Aluminium + Bromine</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">Br</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FFA726; color: white;">C₂H₄</span>
+                </div>
+                <h5 class="mb-2">Bromine + Ethene</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">Br</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #AB47BC; color: white;">Cl</span>
+                </div>
+                <h5 class="mb-2">Bromine + Chlorine</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">Br</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FF6B6B; color: white;">AgNO₃</span>
+                </div>
+                <h5 class="mb-2">Bromide + Silver nitrate</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">Br</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #8D6E63; color: white;">F</span>
+                </div>
+                <h5 class="mb-2">Bromine + Fluorine</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert alert-info mt-3" style="background-color: #f0f9ff; border-color: #b9e5ff; color: #1a3a4a;">
+            <i class="fas fa-flask" style="color: #2c7a9e;"></i> <strong>Chemical Note:</strong> Bromine water is used to test for unsaturation in organic compounds. When added to an alkene (like ethene), the reddish-brown color disappears as bromine adds across the double bond.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

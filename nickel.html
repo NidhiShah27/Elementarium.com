@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nickel - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #fffcdd;
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      background-color: #d4a017;
+    }
+    .element-header {
+      background-color: #e6b800;
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(212, 160, 23, 0.1);
+      border-top: 4px solid #e6b800;
+      height: 100%; /* Ensures equal height in a row */
+    }
+    .property-box {
+      background: #fff9e6;
+      border-left: 4px solid #d4a017;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 8px;
+      border-radius: 5px;
+      background-color: #fff9e6;
+    }
+    .use-item i {
+      color: #d4a017;
+      margin-right: 10px;
+      font-size: 1.2rem;
+      width: 25px;
+      text-align: center;
+    }
+    footer {
+      background-color: #d4a017;
+      color: white;
+      padding: 20px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #000000;
+      border-bottom: 2px solid #f5e8b3;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+    /* Reaction box styles */
+    .reaction-box {
+      background: #fff9e6;
+      border: 1px solid #e6b800;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(212, 160, 23, 0.2);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+      color: white;
+    }
+    .navbar-brand {
+      color: #333 !important;
+      font-weight: 700;
+    }
+    .nav-link {
+      color: #333 !important;
+    }
+    /* Add some spacing for rows */
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation with logo -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="80" class="me-2">
+  <span class="fw-bold">Elementarium</span>
+</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Nickel (Ni)</h1>
+      <h3>Atomic Number: 28</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> Ni
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> 58.6934 u
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Transition Metal (Group 10)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Solid
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              [Ar] 3d⁸ 4s² [citation:1][citation:2]
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-gem"></i> Silvery-white, lustrous metal with a golden tinge [citation:1]</li>
+            <li><i class="fas fa-temperature-high"></i> Melting point: 1455°C, Boiling point: 2913°C [citation:5]</li>
+            <li><i class="fas fa-shield-alt"></i> Excellent corrosion resistance (oxidizes slowly) [citation:3]</li>
+            <li><i class="fas fa-magnet"></i> Ferromagnetic (magnetic at room temperature) [citation:7]</li>
+            <li><i class="fas fa-leaf"></i> Tough, malleable, and ductile [citation:2]</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> Isolated and identified by Axel Fredrik Cronstedt in 1751 in Sweden. He extracted it from a mineral called "kupfernickel" (Old Nick's copper) and named it nickel after the mischievous sprite [citation:4][citation:8].</p>
+          <p><i class="fas fa-industry"></i> Miners called the ore "kupfernickel" because it looked like copper ore but yielded no copper – they blamed it on a mischievous sprite. Cronstedt proved it contained a new metal [citation:1].</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>~3500 BCE:</strong> Nickel-containing meteoric iron used for tools [citation:4]</li>
+              <li><strong>1751:</strong> Cronstedt isolates nickel [citation:1]</li>
+              <li><strong>1889:</strong> Nickel strengthens steel (stainless steel developed) [citation:3]</li>
+              <li><strong>20th c.:</strong> Vital for superalloys, batteries, and coinage [citation:8]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-utensils"></i> Stainless steel (kitchenware, sinks) [citation:3]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-battery-full"></i> Rechargeable batteries (NiCd, NiMH) [citation:2]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-coins"></i> Coinage (nickels, euros) [citation:5]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-fan"></i> Superalloys for jet engines [citation:7]
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-microscope"></i> Magnets (Alnico alloys) [citation:1]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-plug"></i> Electrical contacts & thermocouples [citation:4]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-ring"></i> Electroplating (protective coating) [citation:8]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-flask"></i> Catalysts (hydrogenation) [citation:6]
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-crown"></i> Nickel is one of the few elements that can be found in metallic form on Earth, but it's much more common in meteorites. Some iron meteorites contain up to 20% nickel – ancient peoples used this meteoric iron for tools and weapons [citation:2].</li>
+            <li><i class="fas fa-dragon"></i> The US five-cent coin called "nickel" is actually only 25% nickel and 75% copper. The Canadian nickel, however, is mostly nickel (with some copper) [citation:4].</li>
+            <li><i class="fas fa-flask"></i> Nickel plating is used to coat other metals to prevent corrosion – it's the shiny layer on many bathroom fixtures, musical instruments, and automotive trim. Nickel-chrome plating gives a durable, bright finish [citation:3].</li>
+            <li><i class="fas fa-atom"></i> Nickel is essential for the high-temperature performance of superalloys in gas turbines and rocket engines. It maintains strength at temperatures where other metals would soften [citation:5].</li>
+            <li><i class="fas fa-bolt"></i> Some plants (like the Alyssum genus) hyperaccumulate nickel from the soil and are used for phytomining – they can contain up to 20% nickel in their sap, allowing nickel to be "farmed" from poor soils [citation:7].</li>
+            <li><i class="fas fa-gem"></i> Ancient Chinese "white copper" (pak-tong) was actually a nickel-copper alloy, known in the West as "German silver" centuries later. It was prized for its silvery appearance and corrosion resistance [citation:8].</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Nickel28.png" alt="Nickel Atom" class="img-fluid" style="max-width: 400px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 28 protons, 31 neutrons (in <sup>59</sup>Ni), 28 electrons</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Nickel Reactions</h3>
+          <p class="mb-4">Nickel primarily exhibits the +2 oxidation state. It forms a variety of coordination complexes, especially green Ni²⁺ compounds, and is a key component in many alloys [citation:1]. Here are some combinations to explore:</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #7f8c8d; color: white;">Ni</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">O</span>
+                </div>
+                <h5 class="mb-2">Ni + Oxygen (NiO)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #7f8c8d; color: white;">Ni</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #66BB6A; color: white;">Cl</span>
+                </div>
+                <h5 class="mb-2">Ni + Chlorine (NiCl₂)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #7f8c8d; color: white;">Ni</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #5D4037; color: white;">Fe</span>
+                </div>
+                <h5 class="mb-2">Ni + Iron (stainless steel)</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #7f8c8d; color: white;">Ni</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FFA726; color: white;">S</span>
+                </div>
+                <h5 class="mb-2">Ni + Sulfur (NiS)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #7f8c8d; color: white;">Ni</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #9C27B0; color: white;">NH₃</span>
+                </div>
+                <h5 class="mb-2">Ni + Ammonia ([Ni(NH₃)₆]²⁺)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #7f8c8d; color: white;">Ni</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">Cu</span>
+                </div>
+                <h5 class="mb-2">Ni + Copper (Monel alloy)</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert mt-3" style="background-color: #fff9e6; border-color: #d4a017; color: #333; border: 1px solid #e6b800;">
+            <i class="fas fa-flask" style="color: #d4a017;"></i> <strong>Experiment Idea (Conceptual):</strong> Nickel compounds are often green. Nickel(II) chloride (NiCl₂) is a beautiful green crystalline solid. In aqueous solution, it forms the green [Ni(H₂O)₆]²⁺ complex. When you add ammonia, it forms the blue-violet [Ni(NH₃)₆]²⁺ complex – a classic coordination chemistry demonstration showing ligand exchange. The color change is striking and illustrates how the coordination environment affects the d-orbital splitting and thus the color of transition metal complexes [citation:1].
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

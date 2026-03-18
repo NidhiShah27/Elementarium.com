@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Moscovium - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #fff3f3;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #fcd9d9;
+    }
+    .element-header {
+      background-color: #fccaca;
+      color: #4a2e2e;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: #FFFFFF;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(252, 217, 217, 0.4);
+      border: 1px solid #ffe0e0;
+      height: 100%; /* Ensures equal height in a row */
+    }
+    .property-box {
+      background: #fff3f3;
+      border-left: 3px solid #fcd9d9;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #fff3f3;
+    }
+    .use-item i {
+      color: #b45f5f;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #fcd9d9;
+      color: #4a2e2e;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #4a2e2e;
+      border-bottom: 1px solid #ffe0e0;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: #4a2e2e;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #4a2e2e !important;
+    }
+    .navbar-brand {
+      color: #4a2e2e !important;
+      font-weight: 700;
+    }
+    .reaction-box {
+      background: #fff3f3;
+      border: 1px solid #fcd9d9;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(252, 217, 217, 0.5);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    /* Add some spacing for rows */
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+    .alert-info {
+      background-color: #fff3f3;
+      border-color: #fcd9d9;
+      color: #4a2e2e;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+        <span class="fw-bold">Elementarium</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Moscovium (Mc)</h1>
+      <h3>Atomic Number: 115</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> Mc
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> [290] u (most stable isotope)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Post-Transition Metal (predicted)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Solid (predicted)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              [Rn] 5f¹⁴ 6d¹⁰ 7s² 7p³ (predicted)
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-radiation"></i> Synthetic, highly radioactive</li>
+            <li><i class="fas fa-crown"></i> Named after Moscow, Russia</li>
+            <li><i class="fas fa-bolt"></i> Predicted to be a volatile metal</li>
+            <li><i class="fas fa-atom"></i> Very short half-life (milliseconds to seconds)</li>
+            <li><i class="fas fa-flask"></i> Only a few atoms ever created</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> Discovered in 2003 by a joint team at the Joint Institute for Nuclear Research in Dubna, Russia, and Lawrence Livermore National Laboratory, USA. They bombarded americium-243 with calcium-48 ions.</p>
+          <p><i class="fas fa-industry"></i> Named after the Moscow region (Moskovskaya Oblast), where the JINR is located.</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>2003:</strong> First atoms produced at Dubna</li>
+              <li><strong>2015:</strong> Confirmed by IUPAC</li>
+              <li><strong>2016:</strong> Officially named moscovium</li>
+              <li><strong>21st c.:</strong> Only a few dozen atoms ever created</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-flask"></i> Only used in scientific research
+              </div>
+              <div class="use-item">
+                <i class="fas fa-atom"></i> Studying nuclear structure
+              </div>
+              <div class="use-item">
+                <i class="fas fa-microscope"></i> Testing relativistic effects
+              </div>
+              <div class="use-item">
+                <i class="fas fa-dna"></i> No biological applications
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-crown"></i> Confirming "island of stability"
+              </div>
+              <div class="use-item">
+                <i class="fas fa-bolt"></i> Understanding heavy element trends
+              </div>
+              <div class="use-item">
+                <i class="fas fa-shield"></i> No practical uses (too rare, too radioactive)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-chart-line"></i> Target for synthesis of heavier elements
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-crown"></i> Moscovium is part of the "island of stability" – a predicted region of relatively long-lived superheavy elements</li>
+            <li><i class="fas fa-bolt"></i> Moscovium-290 has a half-life of about 0.8 seconds – unusually long for a superheavy element</li>
+            <li><i class="fas fa-atom"></i> Relativistic effects may make moscovium behave differently from its lighter homolog, bismuth</li>
+            <li><i class="fas fa-dragon"></i> Some predictions suggest moscovium could be a volatile metal with a low boiling point</li>
+            <li><i class="fas fa-leaf"></i> The element is named after the Moscow region – home to the famous Dubna laboratory where many superheavy elements were discovered</li>
+            <li><i class="fas fa-flask"></i> Only about 100 atoms of moscovium have ever been made – all have decayed in less than a second</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Moscovium115.png" alt="Moscovium Atom" class="img-fluid" style="max-width: 350px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 115 protons, 175 neutrons (in <sup>290</sup>Mc), 115 electrons</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Moscovium Reactions</h3>
+          <p class="mb-4">Moscovium is extremely radioactive and short-lived – no chemical experiments have ever been performed. Here are some theoretical predictions:</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #b45f5f; color: white;">Mc</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FFA726; color: white;">Cl</span>
+                </div>
+                <h5 class="mb-2">Moscovium + Chlorine</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #b45f5f; color: white;">Mc</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #66BB6A; color: white;">F</span>
+                </div>
+                <h5 class="mb-2">Moscovium + Fluorine</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #b45f5f; color: white;">Mc</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FF6B6B; color: white;">Au</span>
+                </div>
+                <h5 class="mb-2">Mc + Gold (adsorption)</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #b45f5f; color: white;">Mc</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">Am</span>
+                </div>
+                <h5 class="mb-2">Am + Ca → Mc (synthesis)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #b45f5f; color: white;">Mc</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #AB47BC; color: white;">Bi</span>
+                </div>
+                <h5 class="mb-2">Moscovium + Bismuth (homolog)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #b45f5f; color: white;">Mc</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #5D4037; color: white;">α</span>
+                </div>
+                <h5 class="mb-2">Moscovium + Alpha decay</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert alert-info mt-3" style="background-color: #fff3f3; border-color: #fcd9d9; color: #4a2e2e;">
+            <i class="fas fa-flask" style="color: #b45f5f;"></i> <strong>Experiment Idea (Conceptual):</strong> No experiments with moscovium are possible outside specialized nuclear physics labs. Its synthesis requires smashing calcium-48 ions into americium-243 targets – producing just a few atoms that decay in milliseconds.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

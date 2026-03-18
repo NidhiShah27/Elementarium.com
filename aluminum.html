@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aluminium - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #fff3f3;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #fcd9d9;
+    }
+    .element-header {
+      background-color: #fccaca;
+      color: #4a2e2e;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: #FFFFFF;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(252, 217, 217, 0.4);
+      border: 1px solid #ffe0e0;
+      height: 100%; /* Ensures equal height in a row */
+    }
+    .property-box {
+      background: #fff3f3;
+      border-left: 3px solid #fcd9d9;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #fff3f3;
+    }
+    .use-item i {
+      color: #b45f5f;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #fcd9d9;
+      color: #4a2e2e;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #4a2e2e;
+      border-bottom: 1px solid #ffe0e0;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: #4a2e2e;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #4a2e2e !important;
+    }
+    .navbar-brand {
+      color: #4a2e2e !important;
+      font-weight: 700;
+    }
+    .reaction-box {
+      background: #fff3f3;
+      border: 1px solid #fcd9d9;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(252, 217, 217, 0.5);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    /* Add some spacing for rows */
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+    .alert-info {
+      background-color: #fff3f3;
+      border-color: #fcd9d9;
+      color: #4a2e2e;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+        <span class="fw-bold">Elementarium</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Aluminium (Al)</h1>
+      <h3>Atomic Number: 13</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> Al
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> 26.981538 u
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Post-Transition Metal
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Solid
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              [Ne] 3s² 3p¹
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-weight"></i> Lightweight but strong (density 2.7 g/cm³)</li>
+            <li><i class="fas fa-shield"></i> Forms protective oxide layer (corrosion-resistant)</li>
+            <li><i class="fas fa-bolt"></i> Excellent conductor of electricity</li>
+            <li><i class="fas fa-recycle"></i> 100% recyclable without quality loss</li>
+            <li><i class="fas fa-crown"></i> Most abundant metal in Earth's crust</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> First isolated by Hans Christian Ørsted in 1825 in Denmark. Friedrich Wöhler produced the first pure sample in 1827.</p>
+          <p><i class="fas fa-industry"></i> The name comes from Latin "alumen" (alum). Once so rare and expensive that Napoleon III served it on special occasions.</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>1825:</strong> Ørsted produces impure aluminium</li>
+              <li><strong>1854:</strong> First commercial production (very expensive)</li>
+              <li><strong>1886:</strong> Hall-Héroult process makes it affordable</li>
+              <li><strong>20th c.:</strong> Becomes the most widely used non-ferrous metal</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-plane"></i> Aircraft and aerospace
+              </div>
+              <div class="use-item">
+                <i class="fas fa-car"></i> Automotive parts (engines, wheels)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-can"></i> Beverage cans and packaging
+              </div>
+              <div class="use-item">
+                <i class="fas fa-window"></i> Window frames and construction
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-bolt"></i> Power lines (high-tension cables)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-laptop"></i> Electronics and smartphones
+              </div>
+              <div class="use-item">
+                <i class="fas fa-utensils"></i> Kitchen foil and cookware
+              </div>
+              <div class="use-item">
+                <i class="fas fa-bicycle"></i> Bicycle frames
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-crown"></i> Aluminium was once more valuable than gold – the Washington Monument has a 2.8 kg aluminium capstone, the largest piece at the time (1884)</li>
+            <li><i class="fas fa-recycle"></i> Recycling aluminium saves 95% of the energy needed to make it from ore</li>
+            <li><i class="fas fa-shield"></i> The protective oxide layer forms instantly in air – it's only 4 nm thick but incredibly effective</li>
+            <li><i class="fas fa-atom"></i> Aluminium is the third most abundant element in Earth's crust (8% by weight) – only oxygen and silicon are more common</li>
+            <li><i class="fas fa-bolt"></i> Though it conducts electricity well, aluminium wiring was phased out in homes because it expands/contracts more than copper</li>
+            <li><i class="fas fa-weight"></i> An aluminium soda can weighs about 15 grams – the same weight as 20 paperclips</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Aluminium13.png" alt="Aluminium Atom" class="img-fluid" style="max-width: 350px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 13 protons, 14 neutrons, 13 electrons</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Aluminium Reactions</h3>
+          <p class="mb-4">Aluminium is protected by its oxide layer, but it can react vigorously under certain conditions. Here are some reactions to explore:</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #b45f5f; color: white;">Al</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FFA726; color: white;">O₂</span>
+                </div>
+                <h5 class="mb-2">Aluminium + Oxygen</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #b45f5f; color: white;">Al</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #66BB6A; color: white;">HCl</span>
+                </div>
+                <h5 class="mb-2">Aluminium + Acid</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #b45f5f; color: white;">Al</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FF6B6B; color: white;">Fe₂O₃</span>
+                </div>
+                <h5 class="mb-2">Thermite reaction</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #b45f5f; color: white;">Al</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">Cu</span>
+                </div>
+                <h5 class="mb-2">Aluminium + Copper (alloy)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #b45f5f; color: white;">Al</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #AB47BC; color: white;">NaOH</span>
+                </div>
+                <h5 class="mb-2">Aluminium + Base</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #b45f5f; color: white;">Al</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #5D4037; color: white;">Si</span>
+                </div>
+                <h5 class="mb-2">Aluminium + Silicon (alloys)</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert alert-info mt-3" style="background-color: #fff3f3; border-color: #fcd9d9; color: #4a2e2e;">
+            <i class="fas fa-flask" style="color: #b45f5f;"></i> <strong>Experiment Idea:</strong> The thermite reaction (aluminium + iron oxide) produces molten iron and is used for welding railroad tracks. It's spectacular but extremely dangerous – never attempt it at home!
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

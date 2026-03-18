@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Molybdenum - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #fffcdd;
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      background-color: #d4a017;
+    }
+    .element-header {
+      background-color: #e6b800;
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(212, 160, 23, 0.1);
+      border-top: 4px solid #e6b800;
+      height: 100%; /* Ensures equal height in a row */
+    }
+    .property-box {
+      background: #fff9e6;
+      border-left: 4px solid #d4a017;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 8px;
+      border-radius: 5px;
+      background-color: #fff9e6;
+    }
+    .use-item i {
+      color: #d4a017;
+      margin-right: 10px;
+      font-size: 1.2rem;
+      width: 25px;
+      text-align: center;
+    }
+    footer {
+      background-color: #d4a017;
+      color: white;
+      padding: 20px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #000000;
+      border-bottom: 2px solid #f5e8b3;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+    /* Reaction box styles */
+    .reaction-box {
+      background: #fff9e6;
+      border: 1px solid #e6b800;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(212, 160, 23, 0.2);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+      color: white;
+    }
+    .navbar-brand {
+      color: #333 !important;
+      font-weight: 700;
+    }
+    .nav-link {
+      color: #333 !important;
+    }
+    /* Add some spacing for rows */
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation with logo -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="80" class="me-2">
+  <span class="fw-bold">Elementarium</span>
+</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Molybdenum (Mo)</h1>
+      <h3>Atomic Number: 42</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> Mo
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> 95.95 u
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Transition Metal (Group 6)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Solid
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              [Kr] 4d⁵ 5s¹ [citation:1][citation:2]
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-gem"></i> Silvery-white, very hard refractory metal [citation:1]</li>
+            <li><i class="fas fa-temperature-high"></i> Extremely high melting point: 2623°C (6th highest) [citation:5]</li>
+            <li><i class="fas fa-shield-alt"></i> Excellent high-temperature strength [citation:3]</li>
+            <li><i class="fas fa-bolt"></i> Low thermal expansion, high thermal conductivity [citation:7]</li>
+            <li><i class="fas fa-leaf"></i> Essential trace element for most living organisms [citation:2]</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> Discovered in 1778 by Carl Wilhelm Scheele in Sweden. He identified molybdenum as a distinct element in the mineral molybdenite (MoS₂), but only produced the oxide. Pure molybdenum metal was first isolated by Peter Jacob Hjelm in 1781 [citation:4][citation:8].</p>
+          <p><i class="fas fa-industry"></i> The name comes from the Greek word "molybdos" meaning lead, because its ores were often confused with lead ores. For centuries, molybdenite was thought to be a lead ore or graphite [citation:1].</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>Ancient:</strong> Molybdenite used as lubricant (confused with graphite) [citation:4]</li>
+              <li><strong>1778:</strong> Scheele identifies molybdenum as new element [citation:1]</li>
+              <li><strong>1781:</strong> Hjelm isolates impure molybdenum metal [citation:3]</li>
+              <li><strong>1910s:</strong> Molybdenum steel vital for WWI armor [citation:8]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-industry"></i> High-strength steel alloys [citation:3]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-fan"></i> Jet engine turbine blades [citation:2]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-fire"></i> High-temperature furnace components [citation:5]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-oil-can"></i> Lubricant additive (MoS₂) [citation:7]
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-flask"></i> Catalyst in petroleum refining [citation:1]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-microchip"></i> Electrodes in thin-film transistors [citation:4]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-bolt"></i> Heating elements in furnaces [citation:8]
+              </div>
+              <div class="use-item">
+                <i class="fas fa-tint"></i> Corrosion-resistant pipes [citation:6]
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-crown"></i> Molybdenum is the only second-row transition metal essential for life. It's a critical component of nitrogenase, the enzyme that bacteria use to fix nitrogen from the air into ammonia – a process that sustains all life on Earth [citation:2].</li>
+            <li><i class="fas fa-dragon"></i> Molybdenum has one of the highest melting points of all elements (2623°C) – only tantalum, tungsten, rhenium, osmium, and carbon are higher. It retains its strength at white-hot temperatures [citation:3].</li>
+            <li><i class="fas fa-flask"></i> The space shuttle's main engines used molybdenum alloys in their turbines and nozzles because they withstand the extreme temperatures of liquid hydrogen combustion [citation:5].</li>
+            <li><i class="fas fa-atom"></i> Molybdenum disulfide (MoS₂) is an excellent dry lubricant used in space applications where oil would evaporate or freeze. It's also used in automotive engine oils to reduce friction [citation:7].</li>
+            <li><i class="fas fa-bolt"></i> The oceans contain molybdenum – it's the most abundant transition metal dissolved in seawater, though at very low concentrations (10 parts per billion) [citation:1].</li>
+            <li><i class="fas fa-gem"></i> Molybdenum was crucial to the "Haber-Bosch process" that produces ammonia fertilizer – modern iron-molybdenum catalysts enable the reaction that feeds billions of people today [citation:4].</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Molybdenum42.png" alt="Molybdenum Atom" class="img-fluid" style="max-width: 400px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 42 protons, 54 neutrons (in <sup>96</sup>Mo), 42 electrons</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Molybdenum Reactions</h3>
+          <p class="mb-4">Molybdenum exhibits multiple oxidation states (from +2 to +6), with +4 and +6 being most common. It forms colorful compounds and is a key catalyst in industry [citation:1]. Here are some combinations to explore:</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6b8e9b; color: white;">Mo</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">O</span>
+                </div>
+                <h5 class="mb-2">Mo + Oxygen (MoO₃)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6b8e9b; color: white;">Mo</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #66BB6A; color: white;">S</span>
+                </div>
+                <h5 class="mb-2">Mo + Sulfur (MoS₂)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6b8e9b; color: white;">Mo</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #5D4037; color: white;">Fe</span>
+                </div>
+                <h5 class="mb-2">Mo + Iron (ferromolybdenum)</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6b8e9b; color: white;">Mo</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FFA726; color: white;">Cl</span>
+                </div>
+                <h5 class="mb-2">Mo + Chlorine (MoCl₅)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6b8e9b; color: white;">Mo</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #9C27B0; color: white;">N</span>
+                </div>
+                <h5 class="mb-2">Mo + Nitrogen (MoN)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #6b8e9b; color: white;">Mo</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">C</span>
+                </div>
+                <h5 class="mb-2">Mo + Carbon (MoC)</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert mt-3" style="background-color: #fff9e6; border-color: #d4a017; color: #333; border: 1px solid #e6b800;">
+            <i class="fas fa-flask" style="color: #d4a017;"></i> <strong>Experiment Idea (Conceptual):</strong> The "blue water" reaction: When molybdenum(VI) oxide is reduced in solution, it forms "molybdenum blue" – a striking deep blue color that results from mixed-valence molybdenum oxide clusters. This classic demonstration shows the complexity of molybdenum chemistry and its multiple oxidation states. In analytical chemistry, the "molybdenum blue" method is used to detect phosphates in water. You can create it by reducing an acidic molybdate solution with a mild reducing agent like tin(II) chloride or ascorbic acid [citation:1].
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

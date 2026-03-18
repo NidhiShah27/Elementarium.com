@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Astatine - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f0f9ff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #b9e5ff;
+    }
+    .element-header {
+      background-color: #9ad0f5;
+      color: #1a3a4a;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: #ffffff;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(185, 229, 255, 0.3);
+      border: 1px solid #d4edff;
+      height: 100%; /* Ensures equal height in a row */
+    }
+    .property-box {
+      background: #f0f9ff;
+      border-left: 3px solid #b9e5ff;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #f0f9ff;
+    }
+    .use-item i {
+      color: #2c7a9e;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #b9e5ff;
+      color: #1a3a4a;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #1a3a4a;
+      border-bottom: 1px solid #d4edff;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: white;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #1a3a4a !important;
+    }
+    .navbar-brand {
+      color: #1a3a4a !important;
+      font-weight: 700;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .reaction-box {
+      background: #f0f9ff;
+      border: 1px solid #b9e5ff;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(185, 229, 255, 0.4);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    /* Add some spacing for rows */
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+    .alert-info {
+      background-color: #f0f9ff;
+      border-color: #b9e5ff;
+      color: #1a3a4a;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+        <span class="fw-bold">Elementarium</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Astatine (At)</h1>
+      <h3>Atomic Number: 85</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> At
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> [210] u (most stable isotope)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Halogen
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Solid (predicted)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              [Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁵
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-radiation"></i> Extremely radioactive – all isotopes decay rapidly</li>
+            <li><i class="fas fa-crown"></i> Rarest naturally occurring element</li>
+            <li><i class="fas fa-gem"></i> Dark, metallic appearance (predicted)</li>
+            <li><i class="fas fa-bolt"></i> More metallic than other halogens</li>
+            <li><i class="fas fa-flask"></i> Less than an ounce exists on Earth at any time</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> Discovered in 1940 by Dale Corson, Kenneth MacKenzie, and Emilio Segrè at the University of California, Berkeley. They synthesized it by bombarding bismuth-209 with alpha particles.</p>
+          <p><i class="fas fa-industry"></i> The name comes from Greek "astatos" meaning unstable, because all its isotopes are radioactive.</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>1940:</strong> First synthesized at Berkeley</li>
+              <li><strong>1943:</strong> Found to occur naturally in trace amounts</li>
+              <li><strong>1950s:</strong> Chemical properties studied (with difficulty)</li>
+              <li><strong>21st c.:</strong> Potential medical applications (targeted radiotherapy)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-flask"></i> Only used in scientific research
+              </div>
+              <div class="use-item">
+                <i class="fas fa-atom"></i> Studying nuclear structure
+              </div>
+              <div class="use-item">
+                <i class="fas fa-microscope"></i> Testing relativistic effects
+              </div>
+              <div class="use-item">
+                <i class="fas fa-dna"></i> No biological applications (too rare, too radioactive)</li>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-crown"></i> Confirming halogen trends
+              </div>
+              <div class="use-item">
+                <i class="fas fa-bolt"></i> Targeted alpha therapy (experimental cancer treatment)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-shield"></i> No commercial uses
+              </div>
+              <div class="use-item">
+                <i class="fas fa-chart-line"></i> Tracer studies
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-crown"></i> Astatine is the rarest naturally occurring element – the total amount in Earth's crust is less than 1 ounce (about 25 grams) at any time</li>
+            <li><i class="fas fa-bolt"></i> Its most stable isotope, At-210, has a half-life of just 8.1 hours – too short to accumulate</li>
+            <li><i class="fas fa-atom"></i> Astatine is so radioactive that it glows and vaporizes itself due to its own heat (self-heating)</li>
+            <li><i class="fas fa-dragon"></i> It was the last element of the halogen group to be discovered – filling the final gap in the periodic table</li>
+            <li><i class="fas fa-leaf"></i> Astatine is concentrated by the thyroid gland (like iodine) – At-211 is being studied for cancer treatment</li>
+            <li><i class="fas fa-flask"></i> Only about 1 nanogram of astatine has ever been produced at once – all chemical studies used invisible trace amounts</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Astatine85.png" alt="Astatine Atom" class="img-fluid" style="max-width: 350px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 85 protons, 125 neutrons (in <sup>210</sup>At), 85 electrons</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Astatine Reactions</h3>
+          <p class="mb-4">Astatine is extremely radioactive and rare – no chemical experiments are possible outside specialized labs. Here are some theoretical predictions:</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">At</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FFA726; color: white;">H₂</span>
+                </div>
+                <h5 class="mb-2">Astatine + Hydrogen</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">At</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #66BB6A; color: white;">Na</span>
+                </div>
+                <h5 class="mb-2">Sodium + Astatine</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">At</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">I</span>
+                </div>
+                <h5 class="mb-2">Astatine + Iodine (homolog)</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">At</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #AB47BC; color: white;">Cl</span>
+                </div>
+                <h5 class="mb-2">Astatine + Chlorine</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">At</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FF6B6B; color: white;">Bi</span>
+                </div>
+                <h5 class="mb-2">Bi + α → At (synthesis)</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a9e; color: white;">At</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #8D6E63; color: white;">Ag</span>
+                </div>
+                <h5 class="mb-2">Astatine + Silver</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert alert-info mt-3" style="background-color: #f0f9ff; border-color: #b9e5ff; color: #1a3a4a;">
+            <i class="fas fa-flask" style="color: #2c7a9e;"></i> <strong>Experiment Idea (Conceptual):</strong> No experiments with astatine are possible outside specialized nuclear labs. Its extreme rarity and radioactivity mean that even seeing a sample is impossible – it would vaporize itself from its own heat!
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

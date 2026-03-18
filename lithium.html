@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lithium - Interactive Periodic Table</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #fff1e1;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #ffb347;
+    }
+    .element-header {
+      background-color: #ffa500;
+      color: #333;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: #FFFFFF;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(255, 179, 71, 0.1);
+      border: 1px solid #ffe4cc;
+      height: 100%; /* Ensures equal height in a row */
+    }
+    .property-box {
+      background: #fff8f0;
+      border-left: 3px solid #ffb347;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #fff8f0;
+    }
+    .use-item i {
+      color: #ff8c00;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #ffb347;
+      color: #333;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #333;
+      border-bottom: 1px solid #ffd9b3;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #333 !important;
+    }
+    .navbar-brand {
+      color: #333 !important;
+      font-weight: 700;
+    }
+    .reaction-box {
+      background: #fff8f0;
+      border: 1px solid #ffb347;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(255, 179, 71, 0.2);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    /* Add some spacing for rows */
+    .row.mb-4 {
+      margin-bottom: 1.5rem !important;
+    }
+    .alert-info {
+      background-color: #fff8f0;
+      border-color: #ffb347;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="IPTLOGO.jpeg" alt="Website Logo" height="60" width="60" class="me-2">
+        <span class="fw-bold">Interactive Periodic Table</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1>Lithium (Li)</h1>
+      <h3>Atomic Number: 3</h3>
+    </div>
+
+    <!-- First row: Basic Information and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-hashtag"></i> Symbol:</strong> Li
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-weight-hanging"></i> Atomic Mass:</strong> 6.941 u
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tags"></i> Category:</strong> Alkali Metal
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-thermometer-half"></i> State at Room Temperature:</strong> Solid
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron Configuration:</strong> 
+            <div style="font-family: monospace; margin-top: 5px;">
+              1s² 2s¹
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-weight"></i> Lightest metal on the periodic table</li>
+            <li><i class="fas fa-fire"></i> Highly reactive with water and air</li>
+            <li><i class="fas fa-temperature-high"></i> Low density (floats on oil)</li>
+            <li><i class="fas fa-bolt"></i> Excellent electrical conductor</li>
+            <li><i class="fas fa-temperature-low"></i> Lowest melting point of all metals (180.5°C)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: Discovery & History and Common Uses -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-history"></i> Discovery & History</h3>
+          <p><i class="fas fa-user"></i> Discovered by Johan August Arfwedson in 1817 in Sweden.</p>
+          <p><i class="fas fa-industry"></i> Found in minerals like spodumene, lepidolite, and petalite.</p>
+          
+          <div class="mt-3">
+            <h5><i class="fas fa-timeline"></i> Historical Timeline:</h5>
+            <ul>
+              <li><strong>1817:</strong> Discovered in petalite mineral</li>
+              <li><strong>1818:</strong> First isolated by William Thomas Brande</li>
+              <li><strong>1923:</strong> Commercial production begins</li>
+              <li><strong>1970s:</strong> Lithium-ion battery development starts</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-battery-full"></i> Rechargeable batteries
+              </div>
+              <div class="use-item">
+                <i class="fas fa-pills"></i> Psychiatric medication
+              </div>
+              <div class="use-item">
+                <i class="fas fa-industry"></i> Industrial lubricants
+              </div>
+              <div class="use-item">
+                <i class="fas fa-glass"></i> Glass and ceramics
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-car"></i> Electric vehicles
+              </div>
+              <div class="use-item">
+                <i class="fas fa-snowflake"></i> Air conditioning
+              </div>
+              <div class="use-item">
+                <i class="fas fa-rocket"></i> Aerospace alloys
+              </div>
+              <div class="use-item">
+                <i class="fas fa-mobile-alt"></i> Mobile devices
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Interesting Facts and Atomic Structure -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-atom"></i> Only metal that floats on oil (lowest density)</li>
+            <li><i class="fas fa-brain"></i> Used as mood stabilizer for bipolar disorder</li>
+            <li><i class="fas fa-recycle"></i> Powers most modern rechargeable devices</li>
+            <li><i class="fas fa-fire"></i> Reacts violently with water, producing hydrogen gas</li>
+            <li><i class="fas fa-star"></i> Found in stars and formed during Big Bang nucleosynthesis</li>
+            <li><i class="fas fa-leaf"></i> Key to green energy transition through batteries</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card text-center">
+          <h3><i class="fas fa-atom"></i> Atomic Structure</h3>
+          <img src="Lithium3.png" alt="Lithium Atom" class="img-fluid" style="max-width: 350px;">
+          <p class="mt-2"><i class="fas fa-microscope"></i> 3 protons, 4 neutrons, 3 electrons</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions Suggestions Card (full width, spanning both columns) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Try These Lithium Reactions</h3>
+          <p class="mb-4">Lithium is highly reactive and forms various compounds. Here are some common reactions to explore:</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #FFA500; color: white;">Li</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #66BB6A; color: white;">Cl</span>
+                </div>
+                <h5 class="mb-2">Lithium + Chlorine</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #FFA500; color: white;">Li</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FF6B6B; color: white;">H₂O</span>
+                </div>
+                <h5 class="mb-2">Lithium + Water</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #FFA500; color: white;">Li</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #FFA726; color: white;">O₂</span>
+                </div>
+                <h5 class="mb-2">Lithium + Oxygen</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #FFA500; color: white;">Li</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #AB47BC; color: white;">N₂</span>
+                </div>
+                <h5 class="mb-2">Lithium + Nitrogen</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #FFA500; color: white;">Li</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">H₂</span>
+                </div>
+                <h5 class="mb-2">Lithium + Hydrogen</h5>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #FFA500; color: white;">Li</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #5D4037; color: white;">C</span>
+                </div>
+                <h5 class="mb-2">Lithium + Carbon</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert alert-info mt-3" style="background-color: #fff8f0; border-color: #ffb347; color: #333;">
+            <i class="fas fa-flask" style="color: #ff8c00;"></i> <strong>Experiment Idea:</strong> Lithium reacts vigorously with water to produce hydrogen gas and lithium hydroxide. This reaction is less violent than sodium or potassium but still produces bubbles and heat!
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
