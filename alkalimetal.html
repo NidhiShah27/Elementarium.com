@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alkali Metals - Interactive Periodic Table</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #fff1e1;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #ffb347;
+    }
+    .element-header {
+      background-color: #ffa500;
+      color: #333;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: #FFFFFF;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(255, 179, 71, 0.1);
+      border: 1px solid #ffe4cc;
+      height: 100%;
+    }
+    .property-box {
+      background: #fff8f0;
+      border-left: 3px solid #ffb347;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .element-item {
+      background: #fff8f0;
+      border: 1px solid #ffb347;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+    .element-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(255, 179, 71, 0.2);
+    }
+    .element-symbol {
+      background-color: #ffa500;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #fff8f0;
+    }
+    .use-item i {
+      color: #ff8c00;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #ffb347;
+      color: #333;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #333;
+      border-bottom: 1px solid #ffd9b3;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #333 !important;
+    }
+    .navbar-brand {
+      color: #333 !important;
+      font-weight: 700;
+    }
+    .trend-box {
+      background: #fff8f0;
+      border: 1px solid #ffb347;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+    }
+    .reaction-box {
+      background: #fff8f0;
+      border: 1px solid #ffb347;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(255, 179, 71, 0.2);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    .alert-info {
+      background-color: #fff8f0;
+      border-color: #ffb347;
+      color: #333;
+    }
+    .legend-color-box {
+      width: 20px;
+      height: 20px;
+      background-color: #ffa500;
+      display: inline-block;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+        <span class="fw-bold">Elementarium</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1><span class="legend-color-box"></span>Alkali Metals</h1>
+      <h3>Group 1 Elements (Except Hydrogen)</h3>
+    </div>
+
+    <!-- First row: What are Alkali Metals and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> What are Alkali Metals?</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-layer-group"></i> Group:</strong> 1 (IA)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Valence Electrons:</strong> 1 (ns¹ configuration)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tint"></i> Reactivity:</strong> Extremely reactive - never found in pure form in nature
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-bolt"></i> Common Characteristics:</strong>
+            <ul class="mt-2 mb-0">
+              <li>Soft metals (can be cut with a knife)</li>
+              <li>Low density and melting points</li>
+              <li>Shiny when freshly cut (tarnish quickly in air)</li>
+              <li>Excellent conductors of heat and electricity</li>
+              <li>Form strong alkaline hydroxides when reacted with water</li>
+            </ul>
+          </div>
+          
+          <div class="mt-3">
+            <p><i class="fas fa-quote-right"></i> Alkali metals are so named because they form alkaline (basic) solutions when they react with water.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-arrow-down"></i> <strong>Reactivity Trend:</strong> Increases down the group (Li → Na → K → Rb → Cs → Fr)</li>
+            <li><i class="fas fa-thermometer-half"></i> <strong>Melting Points:</strong> Decrease down the group</li>
+            <li><i class="fas fa-weight-hanging"></i> <strong>Density:</strong> Increases down the group (except potassium)</li>
+            <li><i class="fas fa-fire"></i> <strong>Ionization Energy:</strong> Lowest of all elements - easily lose their single valence electron</li>
+            <li><i class="fas fa-water"></i> <strong>Water Reaction:</strong> Produce hydrogen gas and metal hydroxide (alkaline solution)</li>
+          </ul>
+          
+          <div class="alert alert-info mt-3" style="background-color: #fff8f0; border-color: #ffb347; color: #333;">
+            <i class="fas fa-flask"></i> <strong>Flame Test Colors:</strong> Each alkali metal produces a characteristic flame color when heated:
+            <ul class="mt-2">
+              <li><span style="color: #ff4444;">❤️ Lithium - Crimson Red</span></li>
+              <li><span style="color: #ffaa00;">🔥 Sodium - Yellow/Orange</span></li>
+              <li><span style="color: #aa66ff;">💜 Potassium - Lilac</span></li>
+              <li><span style="color: #ff66aa;">🌸 Rubidium - Red-Violet</span></li>
+              <li><span style="color: #4444ff;">💙 Cesium - Blue</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: List of Alkali Metals -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-list"></i> The Six Alkali Metals</h3>
+          <p class="mb-4">There are six elements classified as alkali metals. Here they are in order of increasing atomic number:</p>
+          
+          <div class="row">
+            <div class="col-md-6">
+              <div class="element-item">
+                <div class="element-symbol">Li</div>
+                <div>
+                  <h4 class="mb-1">Lithium (Atomic Number: 3)</h4>
+                  <p class="mb-0"><i class="fas fa-weight"></i> Lightest metal • <i class="fas fa-battery-full"></i> Used in batteries • <i class="fas fa-brain"></i> Mood stabilizer</p>
+                  <a href="lithium.html" class="text-decoration-none" style="color: #ff8c00;">Learn more →</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="element-item">
+                <div class="element-symbol">Na</div>
+                <div>
+                  <h4 class="mb-1">Sodium (Atomic Number: 11)</h4>
+                  <p class="mb-0"><i class="fas fa-utensils"></i> Table salt (NaCl) • <i class="fas fa-lightbulb"></i> Street lamps • <i class="fas fa-water"></i> Violent water reaction</p>
+                  <a href="sodium.html" class="text-decoration-none" style="color: #ff8c00;">Learn more →</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="element-item">
+                <div class="element-symbol">K</div>
+                <div>
+                  <h4 class="mb-1">Potassium (Atomic Number: 19)</h4>
+                  <p class="mb-0"><i class="fas fa-apple-alt"></i> Essential nutrient • <i class="fas fa-fire"></i> Very reactive • <i class="fas fa-leaf"></i> Fertilizers</p>
+                  <a href="potassium.html" class="text-decoration-none" style="color: #ff8c00;">Learn more →</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="element-item">
+                <div class="element-symbol">Rb</div>
+                <div>
+                  <h4 class="mb-1">Rubidium (Atomic Number: 37)</h4>
+                  <p class="mb-0"><i class="fas fa-clock"></i> Atomic clocks • <i class="fas fa-vial"></i> Research • <i class="fas fa-fire"></i> Ignites in air</p>
+                  <a href="rubidium.html" class="text-decoration-none" style="color: #ff8c00;">Learn more →</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="element-item">
+                <div class="element-symbol">Cs</div>
+                <div>
+                  <h4 class="mb-1">Cesium (Atomic Number: 55)</h4>
+                  <p class="mb-0"><i class="fas fa-clock"></i> Most accurate atomic clocks • <i class="fas fa-oil-can"></i> Drilling fluids • <i class="fas fa-fire"></i> Explodes in water</p>
+                  <a href="cesium.html" class="text-decoration-none" style="color: #ff8c00;">Learn more →</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="element-item">
+                <div class="element-symbol">Fr</div>
+                <div>
+                  <h4 class="mb-1">Francium (Atomic Number: 87)</h4>
+                  <p class="mb-0"><i class="fas fa-radiation"></i> Radioactive • <i class="fas fa-clock"></i> Extremely rare • <i class="fas fa-flask"></i> Only 20-30g on Earth at any time</p>
+                  <a href="francium.html" class="text-decoration-none" style="color: #ff8c00;">Learn more →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Common Uses and Interesting Facts -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-battery-full"></i> Lithium-ion batteries
+              </div>
+              <div class="use-item">
+                <i class="fas fa-utensils"></i> Sodium chloride (table salt)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-seedling"></i> Potassium fertilizers
+              </div>
+              <div class="use-item">
+                <i class="fas fa-glass"></i> Specialized glass (Li, Cs)
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-clock"></i> Atomic clocks (Rb, Cs)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-lightbulb"></i> Sodium vapor lamps
+              </div>
+              <div class="use-item">
+                <i class="fas fa-pills"></i> Mood stabilizers (Li)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-industry"></i> Chemical catalysts
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-water"></i> Cesium is so reactive it explodes instantly when dropped in water</li>
+            <li><i class="fas fa-hand"></i> Sodium and potassium are soft enough to cut with a butter knife</li>
+            <li><i class="fas fa-clock"></i> Cesium atomic clocks are accurate to within one second in 100 million years</li>
+            <li><i class="fas fa-dollar-sign"></i> Francium is so rare, scientists have never isolated a visible amount</li>
+            <li><i class="fas fa-heartbeat"></i> Potassium is essential for nerve function and heartbeat regulation</li>
+            <li><i class="fas fa-star"></i> Lithium was one of the three elements created in the Big Bang</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions with Water Card -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Reaction with Water</h3>
+          <p class="mb-4">All alkali metals react vigorously with water, producing hydrogen gas and a metal hydroxide solution. The reactivity increases dramatically down the group:</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #FFA500; color: white;">Li</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">H₂O</span>
+                </div>
+                <h5 class="mb-2">Lithium + Water</h5>
+                <p class="mb-0 small">Fizzes steadily, floats on water</p>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #FFA500; color: white;">Na</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">H₂O</span>
+                </div>
+                <h5 class="mb-2">Sodium + Water</h5>
+                <p class="mb-0 small">Melts into a ball, darts around surface</p>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #FFA500; color: white;">K</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">H₂O</span>
+                </div>
+                <h5 class="mb-2">Potassium + Water</h5>
+                <p class="mb-0 small">Lilac flame, ignites hydrogen gas</p>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #FFA500; color: white;">Rb</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">H₂O</span>
+                </div>
+                <h5 class="mb-2">Rubidium + Water</h5>
+                <p class="mb-0 small">Explosive reaction, ignites immediately</p>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #FFA500; color: white;">Cs</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">H₂O</span>
+                </div>
+                <h5 class="mb-2">Cesium + Water</h5>
+                <p class="mb-0 small">Violent explosion on contact</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert alert-info mt-3" style="background-color: #fff8f0; border-color: #ffb347; color: #333;">
+            <i class="fas fa-exclamation-triangle" style="color: #ff8c00;"></i> <strong>Safety Warning:</strong> Alkali metals should never be handled without proper training and equipment. They react violently with moisture and can cause severe burns or explosions!
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

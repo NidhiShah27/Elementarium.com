@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Noble Gases - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #eef3fa;      /* soft pearl blue background (noble gas scheme) */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #A7C7E7;      /* serene periwinkle blue for navbar */
+    }
+    .element-header {
+      background-color: #A7C7E7;
+      color: #2c4a6e;                /* deep slate blue for text */
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+      border: 1px solid #8aafcf;
+    }
+    .element-card {
+      background: #f8fbfe;            /* off-white with subtle blue tint */
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(167, 199, 231, 0.5);
+      border: 1px solid #A7C7E7;
+      height: 100%;
+    }
+    .property-box {
+      background: #eef3fc;            /* light misty blue */
+      border-left: 3px solid #5f8bb3;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .element-item {
+      background: #eef3fc;
+      border: 1px solid #A7C7E7;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+    .element-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(95, 139, 179, 0.25);
+    }
+    .element-symbol {
+      background-color: #5f8bb3;       /* muted cadet blue */
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #eef3fc;
+    }
+    .use-item i {
+      color: #5f8bb3;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #A7C7E7;
+      color: #2c4a6e;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #2c4a6e;
+      border-bottom: 1px solid #A7C7E7;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: #2c4a6e;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #2c4a6e !important;
+    }
+    .navbar-brand {
+      color: #2c4a6e !important;
+      font-weight: 700;
+    }
+    .trend-box {
+      background: #eef3fc;
+      border: 1px solid #A7C7E7;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+    }
+    .reaction-box {
+      background: #eef3fc;
+      border: 1px solid #A7C7E7;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(95, 139, 179, 0.25);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    .alert-info {
+      background-color: #eef3fc;
+      border-color: #A7C7E7;
+      color: #2c4a6e;
+    }
+    .legend-color-box {
+      width: 20px;
+      height: 20px;
+      background-color: #5f8bb3;
+      display: inline-block;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+    /* custom noble gas badge */
+    .noble-badge {
+      background-color: #5f8bb3;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      display: inline-block;
+    }
+    .glow-text {
+      color: #5f8bb3;
+      font-weight: 500;
+    }
+    .discovery-card {
+      background: linear-gradient(135deg, #eef3fc 0%, #e4edf8 100%);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation (same structure, noble gas periwinkle scheme) -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+        <span class="fw-bold">Elementarium</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Header with noble gas theme -->
+    <div class="element-header">
+      <h1><span class="legend-color-box"></span>Noble Gases</h1>
+      <h3>The inert ones • full shells, glowing signs & cosmic abundance</h3>
+    </div>
+
+    <!-- row 1: definition & key properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> What are Noble Gases?</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-layer-group"></i> Position:</strong> Group 18 (VIIIA) of the periodic table — helium, neon, argon, krypton, xenon, radon (oganesson)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron configuration:</strong> ns² np⁶ (full valence shell) — helium has 1s² (duet rule)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-gem"></i> Defining traits:</strong>
+            <ul class="mt-2 mb-0">
+              <li>Extremely low chemical reactivity — "inert gases"</li>
+              <li>Colorless, odorless, tasteless monatomic gases at standard conditions</li>
+              <li>Very low boiling points — all exist as gases at room temperature</li>
+              <li>Highest ionization energies in their respective periods</li>
+              <li>Do not form chemical bonds under normal conditions</li>
+              <li>Glow with characteristic colors when electrically excited (neon signs)</li>
+            </ul>
+          </div>
+          
+          <div class="mt-3">
+            <p><i class="fas fa-quote-right"></i> Named "noble" because of their aloofness — like noble metals, they resist chemical reactions. The term was coined by Hugo Erdmann in 1898.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-temperature-low"></i> <strong>Boiling points:</strong> He (-269°C), Ne (-246°C), Ar (-186°C), Kr (-152°C), Xe (-108°C), Rn (-62°C)</li>
+            <li><i class="fas fa-microchip"></i> <strong>Ionization energy trend:</strong> decreases down the group — helium has highest IE of all elements</li>
+            <li><i class="fas fa-flask"></i> <strong>Reactivity:</strong> Xenon forms compounds with fluorine (XeF₂, XeF₄, XeF₆) under extreme conditions</li>
+            <li><i class="fas fa-chart-line"></i> <strong>Atomic radius:</strong> increases down the group (He smallest, Rn largest)</li>
+            <li><i class="fas fa-globe"></i> <strong>Abundance:</strong> Argon is most abundant in Earth's atmosphere (0.93%); helium is abundant in the universe (23% by mass)</li>
+            <li><i class="fas fa-crown"></i> <strong>Radon:</strong> Radioactive noble gas — decays to polonium and lead</li>
+          </ul>
+          
+          <div class="alert alert-info mt-3">
+            <i class="fas fa-flask"></i> <strong>Did you know?</strong> Helium was first discovered in the Sun (1868) through spectroscopy before being found on Earth. Its name comes from Greek "helios" (sun).
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 2: list of noble gases (full group 18) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-list"></i> The Noble Gas Elements</h3>
+          <p class="mb-4">Group 18 elements are the most stable on the periodic table. Their filled valence shells make them exceptionally unreactive. From lightweight helium to radioactive radon, each has unique applications.</p>
+          
+          <div class="row">
+            <!-- Helium -->
+            <div class="col-md-4 col-lg-4">
+              <div class="element-item">
+                <div class="element-symbol">He</div>
+                <div>
+                  <h5 class="mb-1">Helium (2)</h5>
+                  <p class="mb-0 small"><i class="fas fa-balloon"></i> Balloons & airships • <i class="fas fa-cryo"></i> Cryogenics (MRI cooling) • <i class="fas fa-wind"></i> Leak detection</p>
+                  <a href="helium.html" class="text-decoration-none" style="color: #5f8bb3;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Neon -->
+            <div class="col-md-4 col-lg-4">
+              <div class="element-item">
+                <div class="element-symbol">Ne</div>
+                <div>
+                  <h5 class="mb-1">Neon (10)</h5>
+                  <p class="mb-0 small"><i class="fas fa-lightbulb"></i> Neon signs (orange-red glow) • <i class="fas fa-tv"></i> Lasers • <i class="fas fa-cryo"></i> Cryogenic refrigerant</p>
+                  <a href="neon.html" class="text-decoration-none" style="color: #5f8bb3;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Argon -->
+            <div class="col-md-4 col-lg-4">
+              <div class="element-item">
+                <div class="element-symbol">Ar</div>
+                <div>
+                  <h5 class="mb-1">Argon (18)</h5>
+                  <p class="mb-0 small"><i class="fas fa-shield-alt"></i> Welding shielding gas • <i class="fas fa-lightbulb"></i> Incandescent bulbs • <i class="fas fa-wine-bottle"></i> Wine preservation</p>
+                  <a href="argon.html" class="text-decoration-none" style="color: #5f8bb3;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Krypton -->
+            <div class="col-md-4 col-lg-4">
+              <div class="element-item">
+                <div class="element-symbol">Kr</div>
+                <div>
+                  <h5 class="mb-1">Krypton (36)</h5>
+                  <p class="mb-0 small"><i class="fas fa-camera"></i> High-performance lighting • <i class="fas fa-microchip"></i> Excimer lasers • <i class="fas fa-ruler"></i> Definition of meter (1960-1983)</p>
+                  <a href="krypton.html" class="text-decoration-none" style="color: #5f8bb3;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Xenon -->
+            <div class="col-md-4 col-lg-4">
+              <div class="element-item">
+                <div class="element-symbol">Xe</div>
+                <div>
+                  <h5 class="mb-1">Xenon (54)</h5>
+                  <p class="mb-0 small"><i class="fas fa-car"></i> Xenon headlamps • <i class="fas fa-bed"></i> Anesthesia • <i class="fas fa-rocket"></i> Ion propulsion</p>
+                  <a href="xenon.html" class="text-decoration-none" style="color: #5f8bb3;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Radon -->
+            <div class="col-md-4 col-lg-4">
+              <div class="element-item">
+                <div class="element-symbol">Rn</div>
+                <div>
+                  <h5 class="mb-1">Radon (86)</h5>
+                  <p class="mb-0 small"><i class="fas fa-radiation"></i> Radioactive • <i class="fas fa-home"></i> Indoor air hazard • <i class="fas fa-flask"></i> Cancer radiotherapy (historically)</p>
+                  <a href="radon.html" class="text-decoration-none" style="color: #5f8bb3;">details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 text-center">
+            <span class="noble-badge"><i class="fas fa-tint"></i> All are monatomic gases</span>
+            <span class="noble-badge ms-2"><i class="fas fa-chart-simple"></i> Boiling points: He (-269°C) → Rn (-62°C)</span>
+            <span class="noble-badge ms-2"><i class="fas fa-crown"></i> Most unreactive elements in periodic table</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 3: everyday uses & interesting facts -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Everyday & industrial uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item"><i class="fas fa-balloon"></i> Helium for balloons & airships</div>
+              <div class="use-item"><i class="fas fa-magnet"></i> MRI cryogenics (liquid helium)</div>
+              <div class="use-item"><i class="fas fa-welding"></i> Argon shielding in welding</div>
+              <div class="use-item"><i class="fas fa-wine-bottle"></i> Wine preservation (argon blanket)</div>
+            </div>
+            <div class="col-6">
+              <div class="use-item"><i class="fas fa-lightbulb"></i> Neon signs & advertising</div>
+              <div class="use-item"><i class="fas fa-car"></i> Xenon HID headlights</div>
+              <div class="use-item"><i class="fas fa-microchip"></i> Semiconductor manufacturing</div>
+              <div class="use-item"><i class="fas fa-bed"></i> Xenon medical anesthesia</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Fascinating facts</h3>
+          <ul>
+            <li><i class="fas fa-sun"></i> <strong>Helium</strong> is the second most abundant element in the universe (23% by mass) — created by nuclear fusion in stars.</li>
+            <li><i class="fas fa-chart-line"></i> <strong>Argon</strong> is the third most abundant gas in Earth's atmosphere (0.93%) — more than CO₂.</li>
+            <li><i class="fas fa-trophy"></i> <strong>Neon</strong> got its name from Greek "neos" meaning "new" — discovered in 1898 by Ramsay and Travers.</li>
+            <li><i class="fas fa-film"></i> <strong>Krypton</strong> defined the meter from 1960 to 1983 (1,650,763.73 wavelengths of krypton-86 light).</li>
+            <li><i class="fas fa-flask"></i> <strong>Xenon</strong> was the first noble gas found to form true chemical compounds (XeF₂, 1962 by Neil Bartlett).</li>
+            <li><i class="fas fa-home"></i> <strong>Radon</strong> is the second leading cause of lung cancer after smoking — accumulates in basements from uranium decay.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 4: noble gas chemistry & the discovery of reactivity -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-chart-line"></i> The "Inert" myth & noble gas compounds</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="reaction-box text-center">
+                <i class="fas fa-flask fa-2x" style="color: #5f8bb3;"></i>
+                <p class="mt-2"><strong>1962: A chemical revolution</strong></p>
+                <p>Neil Bartlett synthesized <strong>XePtF₆</strong> — the first noble gas compound. This shattered the belief that noble gases were completely inert.</p>
+                <p class="small mt-2">Today, known compounds: XeF₂, XeF₄, XeF₆, KrF₂, and even xenon oxides (XeO₃, XeO₄).</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="reaction-box text-center">
+                <i class="fas fa-chart-simple fa-2x" style="color: #5f8bb3;"></i>
+                <p class="mt-2"><strong>Reactivity trend under extreme conditions</strong></p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap mb-2">
+                  <span class="badge bg-secondary p-2">He, Ne, Ar</span>
+                  <i class="fas fa-arrow-right"></i>
+                  <span class="badge bg-info text-dark p-2">Kr (limited)</span>
+                  <i class="fas fa-arrow-right"></i>
+                  <span class="badge bg-primary p-2">Xe (many compounds)</span>
+                  <i class="fas fa-arrow-right"></i>
+                  <span class="badge bg-danger p-2">Rn (theoretical)</span>
+                </div>
+                <p class="small">Only heavier noble gases (Kr, Xe, Rn) form stable compounds — requires strong oxidizing agents like fluorine.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12">
+              <div class="property-box text-center">
+                <i class="fas fa-chalkboard-user"></i> <strong>Endohedral fullerenes & clathrates:</strong> Noble gases can be trapped inside carbon cages (He@C₆₀) or water ice cages (gas hydrates) without forming covalent bonds.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 5: abundance, atmospheric extraction & economic data -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-chart-pie"></i> Abundance & production</h3>
+          <div class="row">
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Argon</strong> 0.93% air</div>
+              <small class="text-muted">~700,000 tons/year</small>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Helium</strong> 5.2 ppm air</div>
+              <small class="text-muted">~170 million m³/year (US, Qatar)</small>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Neon</strong> 18 ppm air</div>
+              <small class="text-muted">Extracted from air separation</small>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Krypton</strong> 1.1 ppm air</div>
+              <small class="text-muted">~40 tons/year globally</small>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-md-6">
+              <div class="trend-box"><strong>Xenon</strong> 0.087 ppm air — ~20 tons/year (extremely rare)</div>
+            </div>
+            <div class="col-md-6">
+              <div class="trend-box"><strong>Radon</strong> Trace amounts — decays from uranium/thorium in rocks</div>
+            </div>
+          </div>
+          <p class="mt-3"><i class="fas fa-industry"></i> <strong>Production method:</strong> Fractional distillation of liquid air. Helium is also extracted from natural gas fields (up to 7% He in some US wells). Global helium supply is critical for MRI machines and semiconductor manufacturing.</p>
+          <div class="alert alert-info mt-2">
+            <i class="fas fa-globe"></i> <strong>Environmental & economic note:</strong> Helium is a non-renewable resource — escaping into space once released. Recycling and conservation are increasingly important for medical and scientific applications.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 6: spectral signatures & noble gas glow colors -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-palette"></i> Signature glow colors (electrical discharge)</h3>
+          <div class="row text-center">
+            <div class="col-sm-2 col-6 mb-3">
+              <div class="trend-box" style="background-color: #fff0e0;">
+                <i class="fas fa-circle" style="color: #ffb347; font-size: 2rem;"></i>
+                <p class="mt-2 mb-0"><strong>Helium</strong><br><span class="small">pink/yellow</span></p>
+              </div>
+            </div>
+            <div class="col-sm-2 col-6 mb-3">
+              <div class="trend-box" style="background-color: #ffe0e0;">
+                <i class="fas fa-circle" style="color: #ff6b6b; font-size: 2rem;"></i>
+                <p class="mt-2 mb-0"><strong>Neon</strong><br><span class="small">orange-red</span></p>
+              </div>
+            </div>
+            <div class="col-sm-2 col-6 mb-3">
+              <div class="trend-box" style="background-color: #e0e8ff;">
+                <i class="fas fa-circle" style="color: #9b59b6; font-size: 2rem;"></i>
+                <p class="mt-2 mb-0"><strong>Argon</strong><br><span class="small">lavender/violet</span></p>
+              </div>
+            </div>
+            <div class="col-sm-2 col-6 mb-3">
+              <div class="trend-box" style="background-color: #e0ffe0;">
+                <i class="fas fa-circle" style="color: #6b8e23; font-size: 2rem;"></i>
+                <p class="mt-2 mb-0"><strong>Krypton</strong><br><span class="small">greenish-white</span></p>
+              </div>
+            </div>
+            <div class="col-sm-2 col-6 mb-3">
+              <div class="trend-box" style="background-color: #e0f0ff;">
+                <i class="fas fa-circle" style="color: #3498db; font-size: 2rem;"></i>
+                <p class="mt-2 mb-0"><strong>Xenon</strong><br><span class="small">blue-white</span></p>
+              </div>
+            </div>
+            <div class="col-sm-2 col-6 mb-3">
+              <div class="trend-box" style="background-color: #ffe0f0;">
+                <i class="fas fa-circle" style="color: #e84393; font-size: 2rem;"></i>
+                <p class="mt-2 mb-0"><strong>Radon</strong><br><span class="small">yellow-green (radio)</span></p>
+              </div>
+            </div>
+          </div>
+          <p class="text-center mt-3 small"><i class="fas fa-lightbulb"></i> These distinctive colors make noble gases essential for neon signs, lasers, and specialized lighting applications.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Metalloids - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #9be3e3;      /* soft aqua/teal background (metalloid scheme) */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #7ac5c5;      /* deeper teal for contrast */
+    }
+    .element-header {
+      background-color: #7ac5c5;
+      color: #003333;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+      border: 1px solid #5fa3a3;
+    }
+    .element-card {
+      background: #ebfafa;            /* very light cyan inside cards */
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(122, 197, 197, 0.4);
+      border: 1px solid #7ac5c5;
+      height: 100%;
+    }
+    .property-box {
+      background: #d4f0f0;            /* lighter cyan */
+      border-left: 3px solid #408080;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .element-item {
+      background: #d4f0f0;
+      border: 1px solid #7ac5c5;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+    .element-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(64, 128, 128, 0.3);
+    }
+    .element-symbol {
+      background-color: #3f8a8a;       /* medium teal */
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #d4f0f0;
+    }
+    .use-item i {
+      color: #3f8a8a;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #7ac5c5;
+      color: #003333;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #003333;
+      border-bottom: 1px solid #7ac5c5;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: #003333;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #003333 !important;
+    }
+    .navbar-brand {
+      color: #003333 !important;
+      font-weight: 700;
+    }
+    .trend-box {
+      background: #d4f0f0;
+      border: 1px solid #7ac5c5;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+    }
+    .reaction-box {
+      background: #d4f0f0;
+      border: 1px solid #7ac5c5;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(64, 128, 128, 0.3);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    .alert-info {
+      background-color: #d4f0f0;
+      border-color: #7ac5c5;
+      color: #003333;
+    }
+    .legend-color-box {
+      width: 20px;
+      height: 20px;
+      background-color: #3f8a8a;
+      display: inline-block;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation (identical structure, metalloid colors) -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+        <span class="fw-bold">Elementarium</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Header -->
+    <div class="element-header">
+      <h1><span class="legend-color-box"></span>Metalloids</h1>
+      <h3>The semimetals • stepping stones between metals and nonmetals</h3>
+    </div>
+
+    <!-- row 1: definition & key properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> What are Metalloids?</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-layer-group"></i> Position:</strong> along the zig‑zag line from boron to astatine (groups 13–17, periods 2–6)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron configuration:</strong> intermediate – typically have 3 to 6 valence electrons (p‑block)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-gem"></i> Typical traits:</strong>
+            <ul class="mt-2 mb-0">
+              <li>Exhibit properties of both metals and nonmetals</li>
+              <li>Semiconductors (moderate electrical conductivity)</li>
+              <li>Brittle, often metallic lustre</li>
+              <li>Form amphoteric or weakly acidic oxides</li>
+              <li>Can act as dopants in semiconductor industry</li>
+              <li>Alloys often improve strength or corrosion resistance</li>
+            </ul>
+          </div>
+          
+          <div class="mt-3">
+            <p><i class="fas fa-quote-right"></i> The term “metalloid” comes from the Greek <em>metallon</em> (metal) and <em>eidos</em> (resembling) – they look like metals but behave chemically like nonmetals in many ways.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-microchip"></i> <strong>Semiconductivity:</strong> silicon and germanium are the foundations of modern electronics</li>
+            <li><i class="fas fa-thermometer-half"></i> <strong>Melting points:</strong> high (boron >2000 °C) to moderate (antimony 630 °C)</li>
+            <li><i class="fas fa-flask"></i> <strong>Amphoteric oxides:</strong> e.g. SiO₂ reacts with HF, but also with strong bases to form silicates</li>
+            <li><i class="fas fa-bolt"></i> <strong>Electrical conductivity:</strong> increases with temperature (opposite of metals)</li>
+            <li><i class="fas fa-cubes"></i> <strong>Common oxidation states:</strong> B (+3), Si (+4), Ge (+4), As (±3,+5), Sb (+3,+5), Te (±2,+4,+6)</li>
+            <li><i class="fas fa-leaf"></i> <strong>Alloying behaviour:</strong> antimony hardens lead; arsenic improves battery grids</li>
+          </ul>
+          
+          <div class="alert alert-info mt-3">
+            <i class="fas fa-flask"></i> <strong>Did you know?</strong> Silicon is the second most abundant element in Earth's crust (about 28%) – it’s the main ingredient in sand, quartz, and computer chips.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 2: list of metalloids (the six classic + sometimes polonium/astatine) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-list"></i> The Metalloid Elements</h3>
+          <p class="mb-4">Six elements are universally recognised as metalloids. Boron, silicon, germanium, arsenic, antimony, tellurium – and sometimes polonium and astatine are included.</p>
+          
+          <div class="row">
+            <!-- boron -->
+            <div class="col-md-4">
+              <div class="element-item">
+                <div class="element-symbol">B</div>
+                <div>
+                  <h5 class="mb-1">Boron (5)</h5>
+                  <p class="mb-0 small"><i class="fas fa-flask"></i> Borosilicate glass • <i class="fas fa-soap"></i> Detergents • <i class="fas fa-rocket"></i> Rocket fuel</p>
+                  <a href="boron.html" class="text-decoration-none" style="color: #3f8a8a;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- silicon -->
+            <div class="col-md-4">
+              <div class="element-item">
+                <div class="element-symbol">Si</div>
+                <div>
+                  <h5 class="mb-1">Silicon (14)</h5>
+                  <p class="mb-0 small"><i class="fas fa-microchip"></i> Semiconductors • <i class="fas fa-solar-panel"></i> Solar cells • <i class="fas fa-glass-cheers"></i> Glass</p>
+                  <a href="silicon.html" class="text-decoration-none" style="color: #3f8a8a;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- germanium -->
+            <div class="col-md-4">
+              <div class="element-item">
+                <div class="element-symbol">Ge</div>
+                <div>
+                  <h5 class="mb-1">Germanium (32)</h5>
+                  <p class="mb-0 small"><i class="fas fa-eye"></i> Infrared optics • <i class="fas fa-fiber"></i> Fibre optics • <i class="fas fa-microchip"></i> Transistors (early)</p>
+                  <a href="germanium.html" class="text-decoration-none" style="color: #3f8a8a;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- arsenic -->
+            <div class="col-md-4">
+              <div class="element-item">
+                <div class="element-symbol">As</div>
+                <div>
+                  <h5 class="mb-1">Arsenic (33)</h5>
+                  <p class="mb-0 small"><i class="fas fa-leaf"></i> Wood preservatives • <i class="fas fa-microchip"></i> Gallium arsenide (LEDs) • <i class="fas fa-skull"></i> Toxic</p>
+                  <a href="arsenic.html" class="text-decoration-none" style="color: #3f8a8a;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- antimony -->
+            <div class="col-md-4">
+              <div class="element-item">
+                <div class="element-symbol">Sb</div>
+                <div>
+                  <h5 class="mb-1">Antimony (51)</h5>
+                  <p class="mb-0 small"><i class="fas fa-fire-extinguisher"></i> Flame retardants • <i class="fas fa-battery-full"></i> Lead‑acid batteries • <i class="fas fa-paint"></i> Pigments</p>
+                  <a href="antimony.html" class="text-decoration-none" style="color: #3f8a8a;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- tellurium -->
+            <div class="col-md-4">
+              <div class="element-item">
+                <div class="element-symbol">Te</div>
+                <div>
+                  <h5 class="mb-1">Tellurium (52)</h5>
+                  <p class="mb-0 small"><i class="fas fa-solar-panel"></i> Cadmium telluride solar cells • <i class="fas fa-industry"></i> Alloys • <i class="fas fa-rubber"></i> Rubber vulcanisation</p>
+                  <a href="tellurium.html" class="text-decoration-none" style="color: #3f8a8a;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- optional: polonium (sometimes metalloid) -->
+            <div class="col-md-4">
+              <div class="element-item">
+                <div class="element-symbol">Po</div>
+                <div>
+                  <h5 class="mb-1">Polonium (84)</h5>
+                  <p class="mb-0 small"><i class="fas fa-radiation"></i> Radioactive • <i class="fas fa-flask"></i> Neutron sources • extremely rare</p>
+                  <a href="polonium.html" class="text-decoration-none" style="color: #3f8a8a;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- astatine (often classed as halogen, but sometimes metalloid) -->
+            <div class="col-md-4">
+              <div class="element-item">
+                <div class="element-symbol">At</div>
+                <div>
+                  <h5 class="mb-1">Astatine (85)</h5>
+                  <p class="mb-0 small"><i class="fas fa-radiation"></i> Radioactive • <i class="fas fa-flask"></i> Halogen with some metallic character</p>
+                  <a href="astatine.html" class="text-decoration-none" style="color: #3f8a8a;">details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 3: everyday uses & interesting facts -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Everyday uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item"><i class="fas fa-microchip"></i> Silicon chips & solar cells</div>
+              <div class="use-item"><i class="fas fa-glass-cheers"></i> Borosilicate glass (Pyrex)</div>
+              <div class="use-item"><i class="fas fa-eye"></i> Germanium infrared lenses</div>
+              <div class="use-item"><i class="fas fa-fire-extinguisher"></i> Antimony flame retardants</div>
+            </div>
+            <div class="col-6">
+              <div class="use-item"><i class="fas fa-leaf"></i> Gallium arsenide (LEDs, solar)</div>
+              <div class="use-item"><i class="fas fa-bolt"></i> Silicones & sealants</div>
+              <div class="use-item"><i class="fas fa-paint"></i> Arsenic pigments (historic)</div>
+              <div class="use-item"><i class="fas fa-industry"></i> Tellurium in alloys & solar</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting facts</h3>
+          <ul>
+            <li><i class="fas fa-gem"></i> <strong>Boron</strong> is essential for plant growth – boron deficiency causes brittle stems.</li>
+            <li><i class="fas fa-sun"></i> <strong>Silicon</strong> makes up about 60% of the mass of the Moon’s crust.</li>
+            <li><i class="fas fa-skull"></i> <strong>Arsenic</strong> was called the “inheritance powder” in the Middle Ages because of its discreet use in poisonings.</li>
+            <li><i class="fas fa-thermometer"></i> <strong>Germanium</strong> was used in the first transistors – its name honours Germany.</li>
+            <li><i class="fas fa-bolt"></i> <strong>Antimony</strong> trioxide is one of the most widely used flame retardants in plastics.</li>
+            <li><i class="fas fa-robot"></i> <strong>Tellurium</strong> is named after the Latin <em>tellus</em> (earth) – it’s extremely rare, yet used in next‑gen solar cells.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 4: semiconductor behaviour & the zig‑zag line -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-chart-line"></i> Semiconductor behaviour & the zig‑zag</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="reaction-box text-center">
+                <i class="fas fa-microchip fa-2x" style="color: #3f8a8a;"></i>
+                <p class="mt-2"><strong>Silicon & germanium</strong> are the classic semiconductors. Their conductivity can be tuned by doping with tiny amounts of arsenic or boron.</p>
+                <p class="small">n‑type (arsenic) adds extra electrons • p‑type (boron) creates “holes”.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="reaction-box text-center">
+                <i class="fas fa-grip-lines fa-2x" style="color: #3f8a8a;"></i>
+                <p class="mt-2"><strong>The metalloid staircase</strong> separates metals (left) from nonmetals (right). Elements along this line (B, Si, Ge, As, Sb, Te) show mixed properties.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 5: abundance & economic data -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-chart-pie"></i> Abundance & production</h3>
+          <div class="row">
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Silicon</strong> ≈ 28% crust</div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Boron</strong> ≈ 0.001%</div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Arsenic</strong> ≈ 0.0002%</div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Germanium</strong> ≈ 0.00015%</div>
+            </div>
+          </div>
+          <p class="mt-3"><i class="fas fa-database"></i> Annual production: silicon >8 million tonnes (mostly ferrosilicon for metallurgy), boron ~4 Mt (as borates), antimony ~150,000 t, germanium ~130 t. Metalloids are vital for high‑tech industries despite modest tonnages.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

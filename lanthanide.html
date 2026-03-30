@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lanthanides - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f7f2e9;      /* warm cream background (lanthanide scheme) */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #dfcfba;      /* warm beige/taupe for navbar */
+    }
+    .element-header {
+      background-color: #dfcfba;
+      color: #5a4a3a;                /* deep brown for text */
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+      border: 1px solid #c8b69c;
+    }
+    .element-card {
+      background: #fffbf5;            /* off-white with warm tint */
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(223, 207, 186, 0.5);
+      border: 1px solid #dfcfba;
+      height: 100%;
+    }
+    .property-box {
+      background: #f6ede2;            /* light beige */
+      border-left: 3px solid #b29a7a;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .element-item {
+      background: #f6ede2;
+      border: 1px solid #dfcfba;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+    .element-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(178, 154, 122, 0.25);
+    }
+    .element-symbol {
+      background-color: #b29a7a;       /* warm terracotta brown */
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #f6ede2;
+    }
+    .use-item i {
+      color: #b29a7a;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #dfcfba;
+      color: #5a4a3a;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #5a4a3a;
+      border-bottom: 1px solid #dfcfba;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: #5a4a3a;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #5a4a3a !important;
+    }
+    .navbar-brand {
+      color: #5a4a3a !important;
+      font-weight: 700;
+    }
+    .trend-box {
+      background: #f6ede2;
+      border: 1px solid #dfcfba;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+    }
+    .reaction-box {
+      background: #f6ede2;
+      border: 1px solid #dfcfba;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(178, 154, 122, 0.25);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    .alert-info {
+      background-color: #f6ede2;
+      border-color: #dfcfba;
+      color: #5a4a3a;
+    }
+    .legend-color-box {
+      width: 20px;
+      height: 20px;
+      background-color: #b29a7a;
+      display: inline-block;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+    /* custom lanthanide badge */
+    .lanthanide-badge {
+      background-color: #b29a7a;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      display: inline-block;
+    }
+    .magnetic-badge {
+      background-color: #c9b28b;
+      color: #5a4a3a;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      display: inline-block;
+    }
+    .row-equal-height {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation (same structure, lanthanide warm beige scheme) -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+        <span class="fw-bold">Elementarium</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Header with lanthanide theme -->
+    <div class="element-header">
+      <h1><span class="legend-color-box"></span>Lanthanides</h1>
+      <h3>The rare earth metals • f-block elements of modern technology</h3>
+    </div>
+
+    <!-- row 1: definition & key properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> What are Lanthanides?</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-layer-group"></i> Position:</strong> f-block elements, atomic numbers 57 (lanthanum) through 71 (lutetium) — often called "rare earth elements"
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron configuration:</strong> [Xe] 4f<sup>1-14</sup> 5d<sup>0-1</sup> 6s<sup>2</sup> — filling the 4f subshell
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-gem"></i> Defining traits:</strong>
+            <ul class="mt-2 mb-0">
+              <li>Silvery-white metals that tarnish quickly in air</li>
+              <li>Remarkably similar chemical properties — difficult to separate</li>
+              <li>Strong paramagnetism (except lutetium and ytterbium)</li>
+              <li>High melting points (800-1600°C) and densities</li>
+              <li>Excellent optical properties — used in lasers, phosphors, and displays</li>
+              <li>Essential components in modern electronics, magnets, and green energy</li>
+            </ul>
+          </div>
+          
+          <div class="mt-3">
+            <p><i class="fas fa-quote-right"></i> Despite the name "rare earth," many lanthanides are more abundant than silver or gold. They're called "earth" because they form stable oxides.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-magnet"></i> <strong>Magnetic properties:</strong> Exceptional paramagnetism and ferromagnetism — neodymium magnets are the strongest permanent magnets known</li>
+            <li><i class="fas fa-tachometer-alt"></i> <strong>Lanthanide contraction:</strong> Atomic radii decrease across the series — causes similar chemical behavior</li>
+            <li><i class="fas fa-sun"></i> <strong>Optical properties:</strong> Sharp, intense luminescence — used in phosphors for LEDs, TVs, and lasers</li>
+            <li><i class="fas fa-flask"></i> <strong>Reactivity:</strong> React with water to release hydrogen; form stable oxides (R₂O₃) and halides</li>
+            <li><i class="fas fa-microchip"></i> <strong>Oxidation state:</strong> Predominantly +3 (except Ce⁴⁺, Eu²⁺, Yb²⁺)</li>
+            <li><i class="fas fa-battery-full"></i> <strong>Applications:</strong> Permanent magnets, rechargeable batteries (NiMH), catalysts, polishing agents</li>
+          </ul>
+          
+          <div class="alert alert-info mt-3">
+            <i class="fas fa-flask"></i> <strong>Did you know?</strong> The lanthanide contraction makes yttrium (atomic number 39) chemically similar to the heavy lanthanides — it's often found alongside them in rare earth deposits.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 2: list of lanthanides (full series 57-71) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-list"></i> The Lanthanide Series</h3>
+          <p class="mb-4">Fifteen metallic elements from lanthanum to lutetium, plus often yttrium and scandium, make up the rare earth elements. Their unique electronic configurations give them extraordinary optical and magnetic properties.</p>
+          
+          <div class="row">
+            <!-- Lanthanum -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">La</div>
+                <div>
+                  <h5 class="mb-1">Lanthanum (57)</h5>
+                  <p class="mb-0 small"><i class="fas fa-camera"></i> Optical lenses • <i class="fas fa-battery-full"></i> NiMH batteries • <i class="fas fa-industry"></i> Catalysts</p>
+                  <a href="lanthanum.html" class="text-decoration-none" style="color: #b29a7a;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Cerium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Ce</div>
+                <div>
+                  <h5 class="mb-1">Cerium (58)</h5>
+                  <p class="mb-0 small"><i class="fas fa-car"></i> Catalytic converters • <i class="fas fa-vial"></i> Polishing compound • <i class="fas fa-sun"></i> Self-cleaning ovens</p>
+                  <a href="cerium.html" class="text-decoration-none" style="color: #b29a7a;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Praseodymium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Pr</div>
+                <div>
+                  <h5 class="mb-1">Praseodymium (59)</h5>
+                  <p class="mb-0 small"><i class="fas fa-magnet"></i> High-strength magnets • <i class="fas fa-gem"></i> Glass coloring (yellow-green)</p>
+                  <a href="praseodymium.html" class="text-decoration-none" style="color: #b29a7a;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Neodymium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Nd</div>
+                <div>
+                  <h5 class="mb-1">Neodymium (60)</h5>
+                  <p class="mb-0 small"><i class="fas fa-magnet"></i> Strongest permanent magnets • <i class="fas fa-laser"></i> Nd:YAG lasers • <i class="fas fa-microphone"></i> Microphones</p>
+                  <a href="neodymium.html" class="text-decoration-none" style="color: #b29a7a;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Promethium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Pm</div>
+                <div>
+                  <h5 class="mb-1">Promethium (61)</h5>
+                  <p class="mb-0 small"><i class="fas fa-radiation"></i> Radioactive • <i class="fas fa-battery"></i> Nuclear batteries • <i class="fas fa-tv"></i> Luminous paint</p>
+                  <a href="promethium.html" class="text-decoration-none" style="color: #b29a7a;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Samarium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Sm</div>
+                <div>
+                  <h5 class="mb-1">Samarium (62)</h5>
+                  <p class="mb-0 small"><i class="fas fa-magnet"></i> SmCo magnets (heat-resistant) • <i class="fas fa-flask"></i> Cancer radiotherapy</p>
+                  <a href="samarium.html" class="text-decoration-none" style="color: #b29a7a;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Europium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Eu</div>
+                <div>
+                  <h5 class="mb-1">Europium (63)</h5>
+                  <p class="mb-0 small"><i class="fas fa-tv"></i> Red phosphors (CRT/LED) • <i class="fas fa-money-bill"></i> Anti-counterfeiting (euro banknotes)</p>
+                  <a href="europium.html" class="text-decoration-none" style="color: #b29a7a;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Gadolinium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Gd</div>
+                <div>
+                  <h5 class="mb-1">Gadolinium (64)</h5>
+                  <p class="mb-0 small"><i class="fas fa-mri"></i> MRI contrast agents • <i class="fas fa-cryo"></i> Magnetic refrigeration • <i class="fas fa-microchip"></i> Neutron capture</p>
+                  <a href="gadolinium.html" class="text-decoration-none" style="color: #b29a7a;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Terbium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Tb</div>
+                <div>
+                  <h5 class="mb-1">Terbium (65)</h5>
+                  <p class="mb-0 small"><i class="fas fa-lightbulb"></i> Green phosphors (LEDs) • <i class="fas fa-magnet"></i> Magnetostrictive alloys (Terfenol-D)</p>
+                  <a href="terbium.html" class="text-decoration-none" style="color: #b29a7a;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Dysprosium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Dy</div>
+                <div>
+                  <h5 class="mb-1">Dysprosium (66)</h5>
+                  <p class="mb-0 small"><i class="fas fa-magnet"></i> NdFeB magnet additive (heat resistance) • <i class="fas fa-laser"></i> Data storage</p>
+                  <a href="dysprosium.html" class="text-decoration-none" style="color: #b29a7a;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Holmium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Ho</div>
+                <div>
+                  <h5 class="mb-1">Holmium (67)</h5>
+                  <p class="mb-0 small"><i class="fas fa-laser"></i> Medical lasers • <i class="fas fa-magnet"></i> Highest magnetic moment • <i class="fas fa-microchip"></i> Nuclear control rods</p>
+                  <a href="holmium.html" class="text-decoration-none" style="color: #b29a7a;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Erbium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Er</div>
+                <div>
+                  <h5 class="mb-1">Erbium (68)</h5>
+                  <p class="mb-0 small"><i class="fas fa-fiber"></i> Fiber optic amplifiers • <i class="fas fa-gem"></i> Pink glass coloring • <i class="fas fa-laser"></i> Medical lasers</p>
+                  <a href="erbium.html" class="text-decoration-none" style="color: #b29a7a;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Thulium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Tm</div>
+                <div>
+                  <h5 class="mb-1">Thulium (69)</h5>
+                  <p class="mb-0 small"><i class="fas fa-radiation"></i> Portable X-ray sources • <i class="fas fa-laser"></i> Surgical lasers • <i class="fas fa-microchip"></i> Ceramics</p>
+                  <a href="thulium.html" class="text-decoration-none" style="color: #b29a7a;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Ytterbium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Yb</div>
+                <div>
+                  <h5 class="mb-1">Ytterbium (70)</h5>
+                  <p class="mb-0 small"><i class="fas fa-clock"></i> Atomic clocks • <i class="fas fa-laser"></i> Laser materials • <i class="fas fa-flask"></i> Strain gauges</p>
+                  <a href="ytterbium.html" class="text-decoration-none" style="color: #b29a7a;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Lutetium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Lu</div>
+                <div>
+                  <h5 class="mb-1">Lutetium (71)</h5>
+                  <p class="mb-0 small"><i class="fas fa-microchip"></i> PET scanners (Lu-177) • <i class="fas fa-catalyst"></i> Petroleum cracking • <i class="fas fa-gem"></i> LED phosphors</p>
+                  <a href="lutetium.html" class="text-decoration-none" style="color: #b29a7a;">details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 text-center">
+            <span class="lanthanide-badge"><i class="fas fa-magnet"></i> Magnetic: Nd, Sm, Dy, Gd, Ho</span>
+            <span class="lanthanide-badge ms-2"><i class="fas fa-lightbulb"></i> Optical: Eu, Tb, Er, Ce</span>
+            <span class="lanthanide-badge ms-2"><i class="fas fa-industry"></i> Critical for green energy & EVs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 3: everyday uses & interesting facts -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Critical modern applications</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item"><i class="fas fa-car"></i> EV motors (Nd, Dy magnets)</div>
+              <div class="use-item"><i class="fas fa-wind-turbine"></i> Wind turbine generators</div>
+              <div class="use-item"><i class="fas fa-mobile-alt"></i> Smartphone speakers & vibration motors</div>
+              <div class="use-item"><i class="fas fa-tv"></i> LED & OLED displays (Eu, Tb, Ce)</div>
+            </div>
+            <div class="col-6">
+              <div class="use-item"><i class="fas fa-laptop"></i> Hard disk drives (Nd magnets)</div>
+              <div class="use-item"><i class="fas fa-fiber"></i> Fiber optic communications (Er)</div>
+              <div class="use-item"><i class="fas fa-hospital"></i> MRI contrast agents (Gd)</div>
+              <div class="use-item"><i class="fas fa-battery-full"></i> NiMH hybrid car batteries (La, Ce)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Fascinating facts</h3>
+          <ul>
+            <li><i class="fas fa-magnet"></i> <strong>Neodymium magnets</strong> are up to 10 times stronger than standard ferrite magnets — essential for miniaturized electronics.</li>
+            <li><i class="fas fa-money-bill"></i> <strong>Europium</strong> was used in euro banknotes to prevent counterfeiting — glows red under UV light.</li>
+            <li><i class="fas fa-radiation"></i> <strong>Promethium</strong> is the only lanthanide with no stable isotopes — discovered in nuclear reactor waste (1945).</li>
+            <li><i class="fas fa-cryo"></i> <strong>Gadolinium</strong> exhibits the magnetocaloric effect — can be used for magnetic refrigeration near room temperature.</li>
+            <li><i class="fas fa-map"></i> <strong>Ytterbium, yttrium, terbium, erbium</strong> are all named after the same Swedish village — Ytterby.</li>
+            <li><i class="fas fa-chart-line"></i> <strong>China</strong> produces over 60% of the world's rare earth elements — critical for global supply chains.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 4: lanthanide contraction & unique properties -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-chart-line"></i> The Lanthanide Contraction & why they're so similar</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="reaction-box text-center">
+                <i class="fas fa-chart-simple fa-2x" style="color: #b29a7a;"></i>
+                <p class="mt-2"><strong>Atomic radius decreases across the series</strong></p>
+                <p>La (187 pm) → Lu (173 pm) — a 14 pm decrease despite adding 14 protons. The 4f electrons shield poorly, causing stronger nuclear pull.</p>
+                <p class="small mt-2">This contraction makes post-lanthanide elements (Hf, Ta, W) nearly the same size as their 5d period counterparts — explaining their chemical similarity.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="reaction-box text-center">
+                <i class="fas fa-charging-station fa-2x" style="color: #b29a7a;"></i>
+                <p class="mt-2"><strong>4f electron shielding & optical properties</strong></p>
+                <p>4f electrons are shielded by outer 5s and 5p electrons — producing sharp, line-like absorption/emission spectra ideal for lasers and phosphors.</p>
+                <p class="small mt-2">Each lanthanide has a unique fingerprint — used in anti-counterfeiting and forensic analysis.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12">
+              <div class="property-box text-center">
+                <i class="fas fa-chalkboard-user"></i> <strong>Unpaired 4f electrons</strong> give rise to strong magnetic moments. Gadolinium has 7 unpaired electrons — highest paramagnetic moment of any element.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 5: abundance, mining & economic significance -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-chart-pie"></i> Abundance & global production</h3>
+          <div class="row">
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Cerium</strong> 66 ppm crust</div>
+              <small class="text-muted">Most abundant lanthanide</small>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Neodymium</strong> 41 ppm crust</div>
+              <small class="text-muted">~30,000 tons/year</small>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Lanthanum</strong> 39 ppm crust</div>
+              <small class="text-muted">~25,000 tons/year</small>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Europium</strong> 2 ppm crust</div>
+              <small class="text-muted">Rarest stable lanthanide</small>
+            </div>
+          </div>
+          <p class="mt-3"><i class="fas fa-database"></i> <strong>Major deposits:</strong> Bayan Obo (China — 60% global supply), Mountain Pass (USA), Mount Weld (Australia). Rare earths are found in minerals like bastnäsite, monazite, and xenotime.</p>
+          <div class="alert alert-info mt-2">
+            <i class="fas fa-globe"></i> <strong>Geopolitical significance:</strong> Lanthanides are designated "critical minerals" by the US, EU, and other nations due to their importance in defense, renewable energy, and electronics manufacturing.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 6: optical & magnetic applications showcase -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-cubes"></i> Signature technologies enabled by lanthanides</h3>
+          <div class="row">
+            <div class="col-sm-4 mb-3">
+              <div class="trend-box h-100">
+                <i class="fas fa-magnet fa-2x mb-2" style="color: #b29a7a;"></i>
+                <h6>NdFeB Magnets</h6>
+                <p class="small mb-0">Neodymium-iron-boron — strongest permanent magnets. Used in EV motors, wind turbines, headphones, and hard drives.</p>
+              </div>
+            </div>
+            <div class="col-sm-4 mb-3">
+              <div class="trend-box h-100">
+                <i class="fas fa-tv fa-2x mb-2" style="color: #b29a7a;"></i>
+                <h6>Phosphors & Displays</h6>
+                <p class="small mb-0">Europium (red), terbium (green), cerium (blue) — essential for LED, OLED, and fluorescent lighting.</p>
+              </div>
+            </div>
+            <div class="col-sm-4 mb-3">
+              <div class="trend-box h-100">
+                <i class="fas fa-laser fa-2x mb-2" style="color: #b29a7a;"></i>
+                <h6>Solid-State Lasers</h6>
+                <p class="small mb-0">Nd:YAG (surgery, cutting), Er:YAG (dental), Ho:YAG (urology) — precision medical and industrial lasers.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-sm-6">
+              <div class="use-item"><i class="fas fa-fiber"></i> <strong>Erbium-doped fiber amplifiers (EDFAs)</strong> — backbone of the internet, amplifying optical signals without electronic conversion.</div>
+            </div>
+            <div class="col-sm-6">
+              <div class="use-item"><i class="fas fa-mri"></i> <strong>Gadolinium-based contrast agents</strong> — enhance MRI scans, used in ~30% of MRI procedures worldwide.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

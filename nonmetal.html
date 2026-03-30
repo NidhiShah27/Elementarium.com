@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nonmetals - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #ffe5ea;      /* soft pink/rose background (nonmetal scheme) */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #F7A8B8;      /* main pink for navbar */
+    }
+    .element-header {
+      background-color: #F7A8B8;
+      color: #5e2a36;                /* deep rose for text */
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+      border: 1px solid #e08e9e;
+    }
+    .element-card {
+      background: #fff5f7;            /* off-white with pinkish tint */
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(247, 168, 184, 0.4);
+      border: 1px solid #F7A8B8;
+      height: 100%;
+    }
+    .property-box {
+      background: #ffeef1;            /* very light pink */
+      border-left: 3px solid #d46f84;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .element-item {
+      background: #ffeef1;
+      border: 1px solid #F7A8B8;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+    .element-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(212, 111, 132, 0.3);
+    }
+    .element-symbol {
+      background-color: #d46f84;       /* warm rose */
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #ffeef1;
+    }
+    .use-item i {
+      color: #d46f84;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #F7A8B8;
+      color: #5e2a36;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #5e2a36;
+      border-bottom: 1px solid #F7A8B8;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: #5e2a36;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #5e2a36 !important;
+    }
+    .navbar-brand {
+      color: #5e2a36 !important;
+      font-weight: 700;
+    }
+    .trend-box {
+      background: #ffeef1;
+      border: 1px solid #F7A8B8;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+    }
+    .reaction-box {
+      background: #ffeef1;
+      border: 1px solid #F7A8B8;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(212, 111, 132, 0.3);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    .alert-info {
+      background-color: #ffeef1;
+      border-color: #F7A8B8;
+      color: #5e2a36;
+    }
+    .legend-color-box {
+      width: 20px;
+      height: 20px;
+      background-color: #d46f84;
+      display: inline-block;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+    /* custom nonmetal badge colors */
+    .nonmetal-badge {
+      background-color: #d46f84;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation (same structure, nonmetal pink scheme) -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+        <span class="fw-bold">Elementarium</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Header with nonmetal theme -->
+    <div class="element-header">
+      <h1><span class="legend-color-box"></span>Nonmetals</h1>
+      <h3>The essentials of life • gases, liquids & reactive solids</h3>
+    </div>
+
+    <!-- row 1: definition & key properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> What are Nonmetals?</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-layer-group"></i> Position:</strong> upper right corner of periodic table (except hydrogen) — groups 14–18, periods 1–6
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron configuration:</strong> high electronegativity, usually 4–8 valence electrons (p-block except H & He)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-gem"></i> Typical traits:</strong>
+            <ul class="mt-2 mb-0">
+              <li>Poor conductors of heat and electricity (except carbon as graphite)</li>
+              <li>Brittle when solid, often gases or liquids at room temperature</li>
+              <li>High ionization energies & electronegativities</li>
+              <li>Form acidic oxides (except neutral H₂O, CO)</li>
+              <li>Usually gain electrons to form anions in chemical reactions</li>
+              <li>Essential for biology: C, H, O, N, S, P are building blocks of life</li>
+            </ul>
+          </div>
+          
+          <div class="mt-3">
+            <p><i class="fas fa-quote-right"></i> From the Greek <em>non</em> + <em>metallon</em> — they lack metallic luster, malleability, and conductivity. Yet they are the most abundant elements in living organisms.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-wind"></i> <strong>Diverse states:</strong> 11 gases (H₂, N₂, O₂, F₂, Cl₂, noble gases), 1 liquid (Br₂), and many solids (C, P, S, Se, I)</li>
+            <li><i class="fas fa-flask"></i> <strong>Reactivity:</strong> halogens (F, Cl, Br, I) are extremely reactive; noble gases are inert.</li>
+            <li><i class="fas fa-charging-station"></i> <strong>Electronegativity:</strong> fluorine is the most electronegative element (4.0), followed by oxygen.</li>
+            <li><i class="fas fa-cloud-sun"></i> <strong>Oxides:</strong> typically acidic (SO₂, CO₂, N₂O₅) or neutral (H₂O, NO).</li>
+            <li><i class="fas fa-dna"></i> <strong>Biological role:</strong> carbon, hydrogen, oxygen, nitrogen, phosphorus, sulfur make up 98% of living matter.</li>
+            <li><i class="fas fa-bolt"></i> <strong>Allotropes:</strong> carbon (diamond, graphite, graphene), oxygen (O₂, O₃), phosphorus (white, red).</li>
+          </ul>
+          
+          <div class="alert alert-info mt-3">
+            <i class="fas fa-flask"></i> <strong>Did you know?</strong> Despite being a nonmetal, graphite conducts electricity due to delocalized electrons — it’s used in electrodes and batteries.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 2: list of nonmetals (17 classic nonmetals including H, C, N, O, etc.) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-list"></i> The Nonmetal Elements</h3>
+          <p class="mb-4">There are 17 nonmetals, located at the upper right corner of the periodic table. They include reactive halogens, inert noble gases, and essential life elements.</p>
+          
+          <div class="row">
+            <!-- Hydrogen -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">H</div>
+                <div>
+                  <h5 class="mb-1">Hydrogen (1)</h5>
+                  <p class="mb-0 small"><i class="fas fa-fire"></i> Rocket fuel • <i class="fas fa-industry"></i> Ammonia • <i class="fas fa-water"></i> Water</p>
+                  <a href="hydrogen.html" class="text-decoration-none" style="color: #d46f84;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Carbon -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">C</div>
+                <div>
+                  <h5 class="mb-1">Carbon (6)</h5>
+                  <p class="mb-0 small"><i class="fas fa-gem"></i> Diamonds • <i class="fas fa-chart-line"></i> Graphite • <i class="fas fa-dna"></i> Organic chemistry</p>
+                  <a href="carbon.html" class="text-decoration-none" style="color: #d46f84;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Nitrogen -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">N</div>
+                <div>
+                  <h5 class="mb-1">Nitrogen (7)</h5>
+                  <p class="mb-0 small"><i class="fas fa-seedling"></i> Fertilizers • <i class="fas fa-cryo"></i> Cryogenics • <i class="fas fa-beer"></i> Beer dispensing</p>
+                  <a href="nitrogen.html" class="text-decoration-none" style="color: #d46f84;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Oxygen -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">O</div>
+                <div>
+                  <h5 class="mb-1">Oxygen (8)</h5>
+                  <p class="mb-0 small"><i class="fas fa-lungs"></i> Respiration • <i class="fas fa-hospital"></i> Medical use • <i class="fas fa-burn"></i> Steelmaking</p>
+                  <a href="oxygen.html" class="text-decoration-none" style="color: #d46f84;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Fluorine -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">F</div>
+                <div>
+                  <h5 class="mb-1">Fluorine (9)</h5>
+                  <p class="mb-0 small"><i class="fas fa-tooth"></i> Toothpaste • <i class="fas fa-snowplow"></i> Teflon • <i class="fas fa-industry"></i> Uranium enrichment</p>
+                  <a href="fluorine.html" class="text-decoration-none" style="color: #d46f84;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Phosphorus -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">P</div>
+                <div>
+                  <h5 class="mb-1">Phosphorus (15)</h5>
+                  <p class="mb-0 small"><i class="fas fa-fire"></i> Matches • <i class="fas fa-dna"></i> DNA backbone • <i class="fas fa-seedling"></i> Fertilizers</p>
+                  <a href="phosphorus.html" class="text-decoration-none" style="color: #d46f84;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Sulfur -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">S</div>
+                <div>
+                  <h5 class="mb-1">Sulfur (16)</h5>
+                  <p class="mb-0 small"><i class="fas fa-industry"></i> Sulfuric acid • <i class="fas fa-allergies"></i> Vulcanization • <i class="fas fa-seedling"></i> Fungicides</p>
+                  <a href="sulfur.html" class="text-decoration-none" style="color: #d46f84;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Chlorine -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Cl</div>
+                <div>
+                  <h5 class="mb-1">Chlorine (17)</h5>
+                  <p class="mb-0 small"><i class="fas fa-water"></i> Water disinfection • <i class="fas fa-soap"></i> PVC • <i class="fas fa-vial"></i> Bleach</p>
+                  <a href="chlorine.html" class="text-decoration-none" style="color: #d46f84;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Selenium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Se</div>
+                <div>
+                  <h5 class="mb-1">Selenium (34)</h5>
+                  <p class="mb-0 small"><i class="fas fa-solar-panel"></i> Solar cells • <i class="fas fa-camera"></i> Photocopiers • <i class="fas fa-heartbeat"></i> Antioxidant</p>
+                  <a href="selenium.html" class="text-decoration-none" style="color: #d46f84;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Bromine -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Br</div>
+                <div>
+                  <h5 class="mb-1">Bromine (35)</h5>
+                  <p class="mb-0 small"><i class="fas fa-fire-extinguisher"></i> Flame retardants • <i class="fas fa-camera"></i> Photography • <i class="fas fa-vial"></i> Pharmaceuticals</p>
+                  <a href="bromine.html" class="text-decoration-none" style="color: #d46f84;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Iodine -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">I</div>
+                <div>
+                  <h5 class="mb-1">Iodine (53)</h5>
+                  <p class="mb-0 small"><i class="fas fa-bandaid"></i> Antiseptic • <i class="fas fa-thyroid"></i> Thyroid health • <i class="fas fa-chalkboard"></i> Disinfectant</p>
+                  <a href="iodine.html" class="text-decoration-none" style="color: #d46f84;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Noble gases group sample: Helium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">He</div>
+                <div>
+                  <h5 class="mb-1">Helium (2)</h5>
+                  <p class="mb-0 small"><i class="fas fa-balloon"></i> Balloons • <i class="fas fa-cryo"></i> Cryogenics • <i class="fas fa-magnet"></i> MRI cooling</p>
+                  <a href="helium.html" class="text-decoration-none" style="color: #d46f84;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Neon -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Ne</div>
+                <div>
+                  <h5 class="mb-1">Neon (10)</h5>
+                  <p class="mb-0 small"><i class="fas fa-lightbulb"></i> Neon signs • <i class="fas fa-tv"></i> Lasers • <i class="fas fa-cryo"></i> Cryogenics</p>
+                  <a href="neon.html" class="text-decoration-none" style="color: #d46f84;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Argon -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Ar</div>
+                <div>
+                  <h5 class="mb-1">Argon (18)</h5>
+                  <p class="mb-0 small"><i class="fas fa-shield-alt"></i> Welding shield • <i class="fas fa-lightbulb"></i> Light bulbs • <i class="fas fa-wine-bottle"></i> Wine preservation</p>
+                  <a href="argon.html" class="text-decoration-none" style="color: #d46f84;">details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 text-center">
+            <span class="nonmetal-badge"><i class="fas fa-tint"></i> Also: Krypton, Xenon, Radon</span> <span class="nonmetal-badge ms-2"><i class="fas fa-chart-simple"></i> Nonmetals cover ~98% of living mass</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 3: everyday uses & interesting facts -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Everyday uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item"><i class="fas fa-lungs"></i> Oxygen therapy & steel industry</div>
+              <div class="use-item"><i class="fas fa-baby-carriage"></i> Nitrogen in food packaging</div>
+              <div class="use-item"><i class="fas fa-gem"></i> Diamond cutting tools (carbon)</div>
+              <div class="use-item"><i class="fas fa-vial"></i> Chlorine water disinfection</div>
+            </div>
+            <div class="col-6">
+              <div class="use-item"><i class="fas fa-tooth"></i> Fluoride in dental care</div>
+              <div class="use-item"><i class="fas fa-battery-full"></i> Sulfur in car batteries (H₂SO₄)</div>
+              <div class="use-item"><i class="fas fa-lightbulb"></i> Noble gases in lighting</div>
+              <div class="use-item"><i class="fas fa-apple-alt"></i> Phosphorus in fertilizers</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting facts</h3>
+          <ul>
+            <li><i class="fas fa-fire"></i> <strong>Hydrogen</strong> is the lightest and most abundant element in the universe — powers stars.</li>
+            <li><i class="fas fa-gem"></i> <strong>Carbon</strong> can form over 10 million compounds, more than all other elements combined.</li>
+            <li><i class="fas fa-wind"></i> <strong>Oxygen</strong> makes up about 21% of Earth's atmosphere and 50% of Earth's crust (by mass).</li>
+            <li><i class="fas fa-skull-crossbones"></i> <strong>Fluorine</strong> is the most reactive element — reacts with almost any substance, even glass.</li>
+            <li><i class="fas fa-hourglass-half"></i> <strong>Phosphorus</strong> was discovered from urine in 1669 by Hennig Brand while searching for the philosopher's stone.</li>
+            <li><i class="fas fa-balloon"></i> <strong>Helium</strong> is the only element that cannot be frozen at atmospheric pressure — remains liquid down to absolute zero.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 4: nonmetal chemistry & the octet rule -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-chart-line"></i> Chemical personality: the octet rule & reactivity</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="reaction-box text-center">
+                <i class="fas fa-shield-haltered fa-2x" style="color: #d46f84;"></i>
+                <p class="mt-2"><strong>Halogens</strong> (Group 17) are highly electronegative and readily gain one electron to form stable anions (F⁻, Cl⁻). They are diatomic molecules (F₂, Cl₂, Br₂, I₂).</p>
+                <p class="small">Reactivity decreases down the group: fluorine is the strongest oxidizing agent.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="reaction-box text-center">
+                <i class="fas fa-crown fa-2x" style="color: #d46f84;"></i>
+                <p class="mt-2"><strong>Noble gases</strong> (Group 18) have full valence shells — extremely low chemical reactivity. Under extreme conditions, xenon and krypton form compounds (XeF₂, etc.).</p>
+                <p class="small">Helium, neon, and argon are truly inert in most practical conditions.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-12">
+              <div class="property-box text-center">
+                <i class="fas fa-chalkboard-user"></i> <strong>Chalcogens (O, S, Se)</strong> typically gain two electrons to form anions (O²⁻, S²⁻) and form acidic oxides like SO₂ and CO₂, contributing to acid rain.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 5: abundance & biological importance -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-chart-pie"></i> Abundance & vital statistics</h3>
+          <div class="row">
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Oxygen</strong> ≈ 46% crust</div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Carbon</strong> ≈ 0.02% crust</div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Hydrogen</strong> ≈ 0.14% crust</div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Nitrogen</strong> ≈ 78% atmosphere</div>
+            </div>
+          </div>
+          <p class="mt-3"><i class="fas fa-database"></i> Global production: Nitrogen (millions of tons via Haber process), Oxygen (500 Mt/year), Sulfur (80 Mt/year), Chlorine (70 Mt/year). Nonmetals dominate industrial chemistry — fertilizers, plastics, pharmaceuticals, and energy storage.</p>
+          <div class="alert alert-info mt-2">
+            <i class="fas fa-heartbeat"></i> <strong>Life's backbone:</strong> The human body is ~65% oxygen, 18% carbon, 10% hydrogen, and 3% nitrogen. Nonmetals literally make up who we are.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- extra row: allotropes showcase -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-cubes"></i> Remarkable allotropes of nonmetals</h3>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="use-item"><i class="fas fa-gem"></i> <strong>Carbon:</strong> diamond (hardest mineral), graphite (lubricant), graphene (superconductor)</div>
+            </div>
+            <div class="col-sm-4">
+              <div class="use-item"><i class="fas fa-wind"></i> <strong>Oxygen:</strong> O₂ (essential for respiration) & O₃ (ozone layer protects from UV)</div>
+            </div>
+            <div class="col-sm-4">
+              <div class="use-item"><i class="fas fa-skull"></i> <strong>Phosphorus:</strong> white (toxic, pyrophoric) vs red (safe, matches)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Elementarium.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fefcdf;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        footer {
+            background-color: #fefcdf !important;
+            color: #3a2a4a;
+            margin-top: auto;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+        }
+        
+        footer .container small {
+            color: #3a2a4a;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .quiz-container {
+            background-color: rgba(252, 254, 225, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .quiz-header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #090909;
+            border-bottom: 2px solid #94d2fb;
+            padding-bottom: 15px;
+        }
+        
+        .question-container {
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #f4469d;
+        }
+        
+        .options-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .option {
+            padding: 12px 15px;
+            background-color: #e9ecef;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .option:hover {
+            background-color: #d1ecf1;
+            border-color: #17a2b8;
+            transform: translateY(-2px);
+        }
+        
+        .option.selected {
+            background-color: #6dc0f8;
+            color: white;
+            border-color: #0b517f;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        .progress-container {
+            margin-top: 20px;
+        }
+        
+        .score-container {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #f4b37b;
+        }
+        
+        .review-container {
+            margin-top: 30px;
+        }
+        
+        .review-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
+        
+        .review-item.correct {
+            border-left: 5px solid #28a745;
+        }
+        
+        .review-item.incorrect {
+            border-left: 5px solid #dc3545;
+        }
+        
+        .user-answer {
+            font-weight: bold;
+        }
+        
+        .correct-answer {
+            font-weight: bold;
+            color: #28a745;
+        }
+        
+        .explanation {
+            margin-top: 10px;
+            font-style: italic;
+            color: #6c757d;
+        }
+        
+        .level-badge {
+            font-size: 0.8rem;
+            padding: 5px 10px;
+            border-radius: 20px;
+            margin-left: 10px;
+        }
+        
+        .level-badge.easy {
+            background-color: #28a745;
+            color: white;
+        }
+        
+        .level-badge.medium {
+            background-color: #ffc107;
+            color: black;
+        }
+        
+        .level-badge.hard {
+            background-color: #dc3545;
+            color: white;
+        }
+        
+        .level-progression {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .level-indicator {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        
+        .level-indicator.active {
+            background-color: #fcac5b;
+            color: white;
+        }
+        
+        .level-indicator.completed {
+            background-color: #28a745;
+            color: white;
+        }
+        
+        .level-indicator.inactive {
+            background-color: #e9ecef;
+            color: #6c757d;
+        }
+        
+        .start-screen {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .start-screen h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .start-screen p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        
+        .start-btn {
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            background: linear-gradient(135deg, #6dc0f8, #f4469d);
+            border: none;
+            color: white;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .start-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .options-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .navbar {
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-color: #fefcdf;
+        }
+        
+        
+        /* Ensure footer stays at bottom */
+        html, body {
+            height: 100%;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        main {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="Index.html">
+  <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="80" class="me-2">
+  <span class="fw-bold">Elementarium</span>
+</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link fs-5" href="Index.html">Home</a>
+          <a class="nav-link active fs-5" href="quiz.html">Quiz</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+    
+    <main>
+        <div class="container">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h1>Periodic Table Quiz</h1>
+                    <p class="lead">Test your knowledge of chemical elements</p>
+                </div>
+                
+                <!-- Start Screen -->
+                <div id="start-screen" class="start-screen">
+                    <h2>Ready to Test Your Knowledge?</h2>
+                    <p>Challenge yourself with 10 random questions about the periodic table elements. Each quiz will feature different questions from our pool of 20 questions!</p>
+                    <button id="start-quiz-btn" class="start-btn">Start Quiz</button>
+                </div>
+                
+                <!-- Quiz Content (Hidden Initially) -->
+                <div id="quiz-content" class="d-none">
+                    <div class="level-progression">
+                        <span class="level-indicator inactive" id="level-1">1</span>
+                        <span class="level-indicator inactive" id="level-2">2</span>
+                        <span class="level-indicator inactive" id="level-3">3</span>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-1">
+                            <span>Question <span id="current-question">1</span> of <span id="total-questions">10</span></span>
+                            <span>Score: <span id="score">0</span></span>
+                        </div>
+                    </div>
+                    
+                    <div id="question-display" class="mt-4">
+                        <!-- Questions will be dynamically generated here -->
+                    </div>
+                    
+                    <div class="navigation-buttons">
+                        <button id="prev-btn" class="btn btn-secondary">Previous</button>
+                        <button id="next-btn" class="btn btn-primary">Next</button>
+                        <button id="submit-btn" class="btn btn-success">Submit Quiz</button>
+                    </div>
+                </div>
+                
+                <div id="results-container" class="d-none">
+                    <!-- Results will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-dark text-center py-3 mt-5">
+        <div class="container">
+            <small>&copy; 2025 Interactive Periodic Table. All rights reserved.</small><br>
+            <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+        </div>
+    </footer>
+
+    <script>
+        // Quiz data for different difficulty levels (20 questions each)
+        const quizData = {
+            easy: [
+                {
+                    question: "What is the atomic number of Hydrogen?",
+                    options: ["1", "2", "3", "4"],
+                    correctAnswer: 0,
+                    explanation: "Hydrogen is the first element in the periodic table with atomic number 1."
+                },
+                {
+                    question: "Which element has the chemical symbol 'O'?",
+                    options: ["Osmium", "Oxygen", "Oganesson", "Oxygenium"],
+                    correctAnswer: 1,
+                    explanation: "Oxygen has the chemical symbol 'O'. Osmium is 'Os', Oganesson is 'Og', and Oxygenium is not an element."
+                },
+                {
+                    question: "What is the atomic mass of Carbon?",
+                    options: ["10.811", "12.011", "14.007", "15.999"],
+                    correctAnswer: 1,
+                    explanation: "Carbon has an atomic mass of approximately 12.011 u."
+                },
+                {
+                    question: "Which element is a noble gas?",
+                    options: ["Chlorine", "Neon", "Fluorine", "Sodium"],
+                    correctAnswer: 1,
+                    explanation: "Neon is a noble gas. Chlorine and Fluorine are halogens, and Sodium is an alkali metal."
+                },
+                {
+                    question: "What is the symbol for Gold?",
+                    options: ["Go", "Gd", "Au", "Ag"],
+                    correctAnswer: 2,
+                    explanation: "Gold has the symbol 'Au' from its Latin name 'Aurum'. 'Ag' is for Silver (Argentum)."
+                },
+                {
+                    question: "Which element has the highest atomic number?",
+                    options: ["Uranium", "Plutonium", "Oganesson", "Einsteinium"],
+                    correctAnswer: 2,
+                    explanation: "Oganesson (Og) has the highest atomic number of 118."
+                },
+                {
+                    question: "What is the lightest element?",
+                    options: ["Helium", "Lithium", "Hydrogen", "Beryllium"],
+                    correctAnswer: 2,
+                    explanation: "Hydrogen is the lightest element with an atomic mass of approximately 1.008 u."
+                },
+                {
+                    question: "Which element is liquid at room temperature?",
+                    options: ["Bromine", "Gallium", "Mercury", "All of the above"],
+                    correctAnswer: 3,
+                    explanation: "Bromine and Mercury are liquids at room temperature. Gallium melts just above room temperature (29.76°C)."
+                },
+                {
+                    question: "What is the most abundant element in the Earth's crust?",
+                    options: ["Iron", "Oxygen", "Silicon", "Aluminum"],
+                    correctAnswer: 1,
+                    explanation: "Oxygen is the most abundant element in the Earth's crust, making up about 46% of it by mass."
+                },
+                {
+                    question: "Which element is essential for human life and found in hemoglobin?",
+                    options: ["Copper", "Iron", "Zinc", "Calcium"],
+                    correctAnswer: 1,
+                    explanation: "Iron is a crucial component of hemoglobin, which carries oxygen in our blood."
+                },
+                {
+                    question: "What is the chemical symbol for Iron?",
+                    options: ["Ir", "Fe", "In", "Io"],
+                    correctAnswer: 1,
+                    explanation: "The chemical symbol for Iron is Fe, which comes from its Latin name 'Ferrum'."
+                },
+                {
+                    question: "Which element is known as the 'king of chemicals'?",
+                    options: ["Sulfur", "Oxygen", "Carbon", "Nitrogen"],
+                    correctAnswer: 0,
+                    explanation: "Sulfur is often called the 'king of chemicals' because it forms a vast number of compounds and has been known since ancient times."
+                },
+                {
+                    question: "What is the atomic number of Carbon?",
+                    options: ["4", "6", "8", "12"],
+                    correctAnswer: 1,
+                    explanation: "Carbon has atomic number 6, meaning it has 6 protons in its nucleus."
+                },
+                {
+                    question: "Which element is used in light bulbs to prevent filament evaporation?",
+                    options: ["Neon", "Argon", "Krypton", "Xenon"],
+                    correctAnswer: 1,
+                    explanation: "Argon is commonly used in incandescent light bulbs to prevent the tungsten filament from evaporating too quickly."
+                },
+                {
+                    question: "What is the lightest noble gas?",
+                    options: ["Helium", "Neon", "Argon", "Krypton"],
+                    correctAnswer: 0,
+                    explanation: "Helium is the lightest noble gas with atomic number 2, and it's even lighter than air."
+                },
+                {      
+                    question: "Which element is essential for making table salt?",
+                    options: ["Potassium", "Sodium", "Chlorine", "Calcium"],
+                    correctAnswer: 2,
+                    explanation: "Chlorine combines with sodium to form sodium chloride (NaCl), which is common table salt."
+                },
+                {
+                    question: "What is the chemical symbol for Silver?",
+                    options: ["Si", "Sv", "Ag", "Au"],
+                    correctAnswer: 2,
+                    explanation: "The chemical symbol for Silver is Ag, which comes from its Latin name 'Argentum'."
+                },
+                {
+                    question: "Which element is the main component of diamonds?",
+                    options: ["Silicon", "Carbon", "Calcium", "Titanium"],
+                    correctAnswer: 1,
+                    explanation: "Diamonds are made of pure carbon atoms arranged in a crystal lattice structure."
+                },
+                {
+                    question: "What is the most abundant metal in the Earth's crust?",
+                    options: ["Iron", "Aluminum", "Calcium", "Sodium"],
+                    correctAnswer: 1,
+                    explanation: "Aluminum is the most abundant metal in the Earth's crust, making up about 8% of it by mass."
+                },
+                {
+                    question: "Which element is used in pencils?",
+                    options: ["Lead", "Graphite", "Carbon", "Charcoal"],
+                    correctAnswer: 1,
+                    explanation: "Pencil 'lead' is actually made of graphite, which is a form of carbon. The name 'lead' is a historical misnomer."
+                }
+            ],
+            medium: [
+                {
+                    question: "Which element has the electron configuration [Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶?",
+                    options: ["Radon", "Xenon", "Oganesson", "Radium"],
+                    correctAnswer: 0,
+                    explanation: "Radon has the electron configuration [Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁶ and is a noble gas."
+                },
+                {
+                    question: "Which of these elements is a lanthanide?",
+                    options: ["Actinium", "Lutetium", "Hafnium", "Tantalum"],
+                    correctAnswer: 1,
+                    explanation: "Lutetium is the last element in the lanthanide series."
+                },
+                {
+                    question: "What is the most electronegative element?",
+                    options: ["Oxygen", "Nitrogen", "Fluorine", "Chlorine"],
+                    correctAnswer: 2,
+                    explanation: "Fluorine is the most electronegative element with a value of 3.98 on the Pauling scale."
+                },
+                {
+                    question: "Which element has the highest melting point?",
+                    options: ["Tungsten", "Carbon", "Osmium", "Rhenium"],
+                    correctAnswer: 0,
+                    explanation: "Tungsten has the highest melting point of all elements at 3422°C."
+                },
+                {
+                    question: "What is the only metal that is liquid at room temperature?",
+                    options: ["Gallium", "Mercury", "Bromine", "Cesium"],
+                    correctAnswer: 1,
+                    explanation: "Mercury is the only metal that is liquid at room temperature."
+                },
+                {
+                    question: "Which element has the highest ionization energy?",
+                    options: ["Helium", "Neon", "Hydrogen", "Fluorine"],
+                    correctAnswer: 0,
+                    explanation: "Helium has the highest ionization energy of all elements."
+                },
+                {
+                    question: "What is the most abundant element in the universe?",
+                    options: ["Oxygen", "Carbon", "Hydrogen", "Helium"],
+                    correctAnswer: 2,
+                    explanation: "Hydrogen is the most abundant element in the universe, making up about 75% of its elemental mass."
+                },
+                {
+                    question: "Which of these elements is a transuranium element?",
+                    options: ["Uranium", "Plutonium", "Thorium", "Radium"],
+                    correctAnswer: 1,
+                    explanation: "Plutonium is a transuranium element with atomic number greater than 92 (Uranium)."
+                },
+                {
+                    question: "What is the atomic number of the element named after Dmitri Mendeleev?",
+                    options: ["99", "100", "101", "102"],
+                    correctAnswer: 2,
+                    explanation: "Mendelevium has atomic number 101 and is named after Dmitri Mendeleev, the creator of the periodic table."
+                },
+                {
+                    question: "Which element has the highest natural occurrence of isotopes?",
+                    options: ["Tin", "Xenon", "Cadmium", "Tellurium"],
+                    correctAnswer: 0,
+                    explanation: "Tin has the highest number of stable isotopes with 10 naturally occurring isotopes."
+                },
+                {
+                    question: "Which element has the highest atomic number that is naturally occurring?",
+                    options: ["Uranium", "Plutonium", "Neptunium", "Thorium"],
+                    correctAnswer: 0,
+                    explanation: "Uranium (atomic number 92) is the element with the highest atomic number that is found in significant quantities in nature."
+                },
+                {
+                    question: "What is the only letter that does not appear in the periodic table?",
+                    options: ["J", "Q", "W", "All appear"],
+                    correctAnswer: 0,
+                    explanation: "The letter J is the only letter that does not appear in any element symbol in the periodic table."
+                },
+                {   question: "Which element has the highest electrical conductivity?",
+                    options: ["Copper", "Gold", "Silver", "Aluminum"],
+                    correctAnswer: 2,
+                    explanation: "Silver has the highest electrical conductivity of all elements, followed by copper and then gold."
+                },
+                {
+                    question: "What is the most abundant element in the human body by mass?",
+                    options: ["Carbon", "Hydrogen", "Oxygen", "Nitrogen"],
+                    correctAnswer: 2,
+                    explanation: "Oxygen is the most abundant element in the human body, making up about 65% of body mass, primarily in water and organic compounds."
+                },
+                {
+                    question: "Which element forms the most allotropes?",
+                    options: ["Carbon", "Phosphorus", "Sulfur", "Oxygen"],
+                    correctAnswer: 0,
+                    explanation: "Carbon forms the most allotropes, including diamond, graphite, graphene, fullerenes, carbon nanotubes, and amorphous carbon."
+                },
+                {
+                    question: "What is the only element that was named after a living person?",
+                    options: ["Einsteinium", "Fermium", "Seaborgium", "Oganesson"],
+                    correctAnswer: 3,
+                    explanation: "Oganesson was named after Yuri Oganessian while he was still alive, making it the only element named after a living person."
+                },
+                {
+                    question: "Which element has the largest atomic radius?",
+                    options: ["Cesium", "Francium", "Rubidium", "Potassium"],
+                    correctAnswer: 0,
+                    explanation: "Cesium has the largest atomic radius of all naturally occurring elements. While francium is larger theoretically, it's too radioactive to measure accurately."
+                },
+                {
+                    question: "What is the most reactive non-metal?",
+                    options: ["Chlorine", "Fluorine", "Oxygen", "Bromine"],
+                    correctAnswer: 1,
+                    explanation: "Fluorine is the most reactive non-metal and the most electronegative element, reacting with almost all other elements."
+                },
+                {
+                    question: "Which element was discovered first in the Sun before it was found on Earth?",
+                    options: ["Helium", "Neon", "Argon", "Krypton"],
+                    correctAnswer: 0,
+                    explanation: "Helium was first detected in the Sun's spectrum in 1868 and was named after Helios, the Greek sun god, before being discovered on Earth in 1895."
+                },
+                {
+                    question: "What is the only element that is a non-metal at room temperature but a liquid?",
+                    options: ["Mercury", "Bromine", "Gallium", "Caesium"],
+                    correctAnswer: 1,
+                    explanation: "Bromine is the only non-metal element that is liquid at room temperature. Mercury is a metal, and gallium and caesium are metals that melt near room temperature."
+                }
+            ],
+            hard: [
+                {
+                    question: "Which element has the highest known oxidation state?",
+                    options: ["Osmium (+8)", "Rhenium (+7)", "Xenon (+8)", "Ruthenium (+8)"],
+                    correctAnswer: 0,
+                    explanation: "Osmium and Ruthenium can both achieve +8 oxidation state, but Osmium compounds with +8 state are more stable."
+                },
+                {
+                    question: "What is the only letter that does not appear in any element symbol?",
+                    options: ["J", "Q", "W", "Z"],
+                    correctAnswer: 0,
+                    explanation: "The letter 'J' does not appear in any element symbol in the periodic table."
+                },
+                {
+                    question: "Which element has the highest density at standard conditions?",
+                    options: ["Osmium", "Iridium", "Platinum", "Rhenium"],
+                    correctAnswer: 0,
+                    explanation: "Osmium has the highest density of all elements at 22.59 g/cm³."
+                },
+                {
+                    question: "What is the rarest naturally occurring element in Earth's crust?",
+                    options: ["Astatine", "Francium", "Promethium", "Technetium"],
+                    correctAnswer: 0,
+                    explanation: "Astatine is the rarest naturally occurring element in the Earth's crust with an estimated total mass of less than 30 grams at any given time."
+                },
+                {
+                    question: "Which element has the highest thermal conductivity?",
+                    options: ["Silver", "Copper", "Gold", "Diamond (carbon)"],
+                    correctAnswer: 3,
+                    explanation: "Diamond (an allotrope of carbon) has the highest thermal conductivity of any known material."
+                },
+                {
+                    question: "What is the only element that was named after a living person at the time of naming?",
+                    options: ["Seaborgium", "Oganesson", "Einsteinium", "Curium"],
+                    correctAnswer: 0,
+                    explanation: "Seaborgium was named after Glenn T. Seaborg while he was still alive."
+                },
+                {
+                    question: "Which element has the highest boiling point?",
+                    options: ["Tungsten", "Rhenium", "Tantalum", "Osmium"],
+                    correctAnswer: 1,
+                    explanation: "Rhenium has the highest boiling point of all elements at 5596°C."
+                },
+                {
+                    question: "What is the most recently discovered naturally occurring element?",
+                    options: ["Promethium", "Technetium", "Francium", "Astatine"],
+                    correctAnswer: 2,
+                    explanation: "Francium was the last naturally occurring element to be discovered in 1939."
+                },
+                {
+                    question: "Which element has the highest specific heat capacity?",
+                    options: ["Hydrogen", "Lithium", "Helium", "Water (H₂O)"],
+                    correctAnswer: 1,
+                    explanation: "Lithium has the highest specific heat capacity of all solid elements at 3.58 J/g·K."
+                },
+                {
+                    question: "What is the only element that is named after a university?",
+                    options: ["Berkelium", "Californium", "Dubnium", "Darmstadtium"],
+                    correctAnswer: 0,
+                    explanation: "Berkelium is named after the University of California, Berkeley."
+                },
+                {
+                    question: "Which element is predicted to have the highest melting point of all?",
+                    options: ["Tungsten", "Carbon", "Tantalum Hafnium Carbide", "Rhenium"],
+                    correctAnswer: 2,
+                    explanation: "While Tungsten has the highest confirmed melting point for a pure element, the compound Tantalum Hafnium Carbide (Ta4HfC5) is predicted by theoretical studies to have the highest melting point of any known substance at around 4215°C."
+                },
+                {
+                    question: "Which of these elements has no stable isotopes and is also a primordial element?",
+                    options: ["Technetium", "Promethium", "Bismuth", "Uranium"],
+                    correctAnswer: 2,
+                    explanation: "Bismuth-209 was long thought to be stable, but it was discovered in 2003 to undergo alpha decay with an extremely long half-life. This makes Bismuth a primordial element (present since Earth's formation) with no truly stable isotopes."
+                },
+                {
+                    question: "What is the only element in the periodic table named after a non-European mythological figure?",
+                    options: ["Thorium", "Tantalum", "Niobium", "Promethium"],
+                    correctAnswer: 1,
+                    explanation: "Tantalum is named after Tantalus, a figure from Greek mythology. While other elements like Thorium (Norse) are from European myths, Tantalum is the only one from a non-European tradition listed, though note that other elements like Vanadium (Scandinavian goddess) also exist. A stricter answer might be Niobium (Niobe, daughter of Tantalus), but the key is the Greek mythological origin, which is European. For a truly non-European example, consider: 'Which element is named after a Japanese god?' - the answer would be 'Nihonium' (Nihon -> Japan)."
+                },
+                {
+                    question: "Which element has the highest known electron affinity?",
+                    options: ["Chlorine", "Fluorine", "Oxygen", "Caesium"],
+                    correctAnswer: 0,
+                    explanation: "Although Fluorine has the highest electronegativity, Chlorine actually has a higher electron affinity. This is because Fluorine's small atomic size leads to significant electron-electron repulsion in the compact 2p orbital, slightly reducing its energy release upon gaining an electron compared to Chlorine."
+                },
+                {
+                    question: "Which two elements are liquid at standard room temperature (25°C / 77°F)?",
+                    options: ["Mercury and Gallium", "Mercury and Bromine", "Bromine and Francium", "Caesium and Gallium"],
+                    correctAnswer: 1,
+                    explanation: "The only two elements that are liquids at standard room temperature are Mercury (a metal) and Bromine (a halogen). Gallium melts just above room temperature at 29.76°C."
+                },
+                {
+                    question: "What is the only synthetic element that has been observed to form a stable diatomic molecule (X₂) in the gas phase?",
+                    options: ["Technetium", "Einsteinium", "Nobelium", "Mendelevium"],
+                    correctAnswer: 1,
+                    explanation: "Einsteinium (Es) has been shown to form Es₂ molecules in gas-phase experiments, making it the only synthetic element for which a stable diatomic molecule has been characterized."
+                },
+                {
+                    question: "Which element has the largest number of stable isotopes?",
+                    options: ["Tin", "Xenon", "Cerium", "Cadmium"],
+                    correctAnswer: 0,
+                    explanation: "Tin has ten stable isotopes, the most of any element on the periodic table."
+                },
+                {
+                    question: "Which element, when pure, has the lowest electrical resistivity at 20°C?",
+                    options: ["Copper", "Gold", "Silver", "Aluminum"],
+                    correctAnswer: 2,
+                    explanation: "Silver has the lowest electrical resistivity (i.e., the highest conductivity) of all elements at standard room temperature."
+                },
+                {
+                    question: "Which element was the first to be produced artificially?",
+                    options: ["Promethium", "Technetium", "Astatine", "Neptunium"],
+                    correctAnswer: 1,
+                    explanation: "Technetium (element 43) was the first element to be synthesized artificially. It was produced by Carlo Perrier and Emilio Segrè in 1937 by bombarding molybdenum with deuterons."
+                },
+                {
+                    question: "Which of these elements has the highest magnetic susceptibility?",
+                    options: ["Iron", "Gadolinium", "Dysprosium", "Palladium"],
+                    correctAnswer: 1,
+                    explanation: "Gadolinium is a ferromagnetic element like Iron, but it has the highest magnetic moment and susceptibility of any element due to its seven unpaired electrons in its 4f electron shell."
+                }
+            ]
+        };
+
+        // Shuffle function to randomize array
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Function to get random 10 questions from a pool of 20
+        function getRandomQuestions(questions, count = 10) {
+            const shuffled = shuffleArray([...questions]);
+            return shuffled.slice(0, count);
+        }
+
+        // Initialize quiz variables
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let userAnswers = [];
+        let currentLevel = 'easy';
+        let currentQuizQuestions = [];
+
+        // DOM elements
+        const startScreen = document.getElementById('start-screen');
+        const quizContent = document.getElementById('quiz-content');
+        const questionDisplay = document.getElementById('question-display');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const submitBtn = document.getElementById('submit-btn');
+        const startQuizBtn = document.getElementById('start-quiz-btn');
+        const currentQuestionSpan = document.getElementById('current-question');
+        const totalQuestionsSpan = document.getElementById('total-questions');
+        const scoreSpan = document.getElementById('score');
+        const progressBar = document.querySelector('.progress-bar');
+        const resultsContainer = document.getElementById('results-container');
+        const level1Indicator = document.getElementById('level-1');
+        const level2Indicator = document.getElementById('level-2');
+        const level3Indicator = document.getElementById('level-3');
+
+        // Initialize the quiz
+        function initQuiz(level = 'easy') {
+            currentLevel = level;
+            currentQuestionIndex = 0;
+            score = 0;
+            
+            // Get 10 random questions from the pool of 20
+            currentQuizQuestions = getRandomQuestions(quizData[level], 10);
+            
+            userAnswers = new Array(currentQuizQuestions.length).fill(null);
+            
+            // Update level indicators
+            updateLevelIndicators(level);
+            
+            // Update total questions
+            totalQuestionsSpan.textContent = currentQuizQuestions.length;
+            
+            // Display the first question
+            displayQuestion();
+            
+            // Update progress bar
+            updateProgressBar();
+            
+            // Reset score display
+            scoreSpan.textContent = score;
+            
+            // Show quiz content and hide start screen
+            startScreen.classList.add('d-none');
+            quizContent.classList.remove('d-none');
+            resultsContainer.classList.add('d-none');
+            
+            // Always show all navigation buttons initially
+            updateNavigationButtons();
+        }
+
+        // Update level indicators
+        function updateLevelIndicators(currentLevel) {
+            // Reset all indicators
+            level1Indicator.className = 'level-indicator inactive';
+            level2Indicator.className = 'level-indicator inactive';
+            level3Indicator.className = 'level-indicator inactive';
+            
+            // Set current level indicator
+            if (currentLevel === 'easy') {
+                level1Indicator.className = 'level-indicator active';
+            } else if (currentLevel === 'medium') {
+                level1Indicator.className = 'level-indicator completed';
+                level2Indicator.className = 'level-indicator active';
+            } else if (currentLevel === 'hard') {
+                level1Indicator.className = 'level-indicator completed';
+                level2Indicator.className = 'level-indicator completed';
+                level3Indicator.className = 'level-indicator active';
+            }
+        }
+
+        // Display current question
+        function displayQuestion() {
+            const currentQuestion = currentQuizQuestions[currentQuestionIndex];
+            
+            // Create question HTML
+            let questionHTML = `
+                <div class="question-container">
+                    <h3>${currentQuestion.question}</h3>
+                    <div class="options-container">
+            `;
+            
+            // Add options
+            currentQuestion.options.forEach((option, index) => {
+                let optionClass = "option";
+                
+                // Check if this option was previously selected
+                if (userAnswers[currentQuestionIndex] === index) {
+                    optionClass += " selected";
+                }
+                
+                questionHTML += `
+                    <div class="${optionClass}" data-index="${index}">
+                        ${option}
+                    </div>
+                `;
+            });
+            
+            questionHTML += `</div></div>`;
+            
+            // Update quiz content
+            questionDisplay.innerHTML = questionHTML;
+            
+            // Add event listeners to options
+            document.querySelectorAll('.option').forEach(option => {
+                option.addEventListener('click', selectOption);
+            });
+            
+            // Update navigation buttons
+            updateNavigationButtons();
+            
+            // Update current question indicator
+            currentQuestionSpan.textContent = currentQuestionIndex + 1;
+        }
+
+        // Select an option
+        function selectOption(e) {
+            const selectedOptionIndex = parseInt(e.target.getAttribute('data-index'));
+            const currentQuestion = currentQuizQuestions[currentQuestionIndex];
+            
+            // Store user's answer
+            userAnswers[currentQuestionIndex] = selectedOptionIndex;
+            
+            // Update UI to show selected option
+            document.querySelectorAll('.option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            e.target.classList.add('selected');
+            
+            // Check if answer is correct and update score
+            if (selectedOptionIndex === currentQuestion.correctAnswer) {
+                // Only add to score if this question wasn't already answered correctly
+                if (userAnswers[currentQuestionIndex] !== currentQuestion.correctAnswer) {
+                    score++;
+                    scoreSpan.textContent = score;
+                }
+            } else {
+                // If changing from correct to incorrect answer, decrease score
+                if (userAnswers[currentQuestionIndex] === currentQuestion.correctAnswer) {
+                    score--;
+                    scoreSpan.textContent = score;
+                }
+            }
+        }
+
+        // Update navigation buttons
+        function updateNavigationButtons() {
+            // Previous button - disable on first question
+            prevBtn.disabled = currentQuestionIndex === 0;
+            
+            // Next button - show except on last question
+            if (currentQuestionIndex < currentQuizQuestions.length - 1) {
+                nextBtn.style.display = 'block';
+                submitBtn.style.display = 'none';
+            } else {
+                nextBtn.style.display = 'none';
+                submitBtn.style.display = 'block';
+            }
+        }
+
+        // Update progress bar
+        function updateProgressBar() {
+            const progress = ((currentQuestionIndex + 1) / currentQuizQuestions.length) * 100;
+            progressBar.style.width = `${progress}%`;
+        }
+
+        // Event listeners for navigation buttons
+        prevBtn.addEventListener('click', () => {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                displayQuestion();
+                updateProgressBar();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentQuestionIndex < currentQuizQuestions.length - 1) {
+                currentQuestionIndex++;
+                displayQuestion();
+                updateProgressBar();
+            }
+        });
+
+        submitBtn.addEventListener('click', showResults);
+
+        // Show quiz results
+        function showResults() {
+            // Hide quiz content and navigation buttons
+            quizContent.classList.add('d-none');
+            document.querySelector('.navigation-buttons').classList.add('d-none');
+            
+            // Show results container
+            resultsContainer.classList.remove('d-none');
+            
+            // Calculate score
+            let correctCount = 0;
+            currentQuizQuestions.forEach((question, index) => {
+                if (userAnswers[index] === question.correctAnswer) {
+                    correctCount++;
+                }
+            });
+            
+            const percentage = Math.round((correctCount / currentQuizQuestions.length) * 100);
+            
+            // Determine next action based on score
+            let nextActionHTML = '';
+            if (percentage >= 70) {
+                if (currentLevel === 'easy') {
+                    nextActionHTML = `
+                        <p class="mt-3">Great job! You've passed Level 1. Ready for a bigger challenge?</p>
+                        <button id="next-level-btn" class="btn btn-primary mt-2">Proceed to Level 2</button>
+                    `;
+                } else if (currentLevel === 'medium') {
+                    nextActionHTML = `
+                        <p class="mt-3">Excellent! You've passed Level 2. Ready for the final challenge?</p>
+                        <button id="next-level-btn" class="btn btn-primary mt-2">Proceed to Level 3</button>
+                    `;
+                } else {
+                    nextActionHTML = `
+                        <p class="mt-3">Congratulations! You've mastered all three levels of the Periodic Table Quiz!</p>
+                        <button id="restart-btn" class="btn btn-primary mt-2">Start Over</button>
+                    `;
+                }
+            } else {
+                nextActionHTML = `
+                    <p class="mt-3">You need at least 70% to proceed to the next level. Keep studying and try again!</p>
+                    <button id="retry-btn" class="btn btn-warning mt-2">Retry This Level</button>
+                `;
+            }
+            
+            // Display score
+            let resultsHTML = `
+                <div class="text-center mb-4">
+                    <h2>Level ${currentLevel === 'easy' ? '1' : currentLevel === 'medium' ? '2' : '3'} Completed!</h2>
+                    <div class="score-container">
+                        Your Score: ${correctCount} / ${currentQuizQuestions.length} (${percentage}%)
+                    </div>
+                    ${nextActionHTML}
+                </div>
+                <div class="review-container">
+                    <h3>Review Your Answers:</h3>
+            `;
+            
+            // Add review for each question
+            currentQuizQuestions.forEach((question, index) => {
+                const userAnswerIndex = userAnswers[index];
+                const isCorrect = userAnswerIndex === question.correctAnswer;
+                const userAnswerText = userAnswerIndex !== null ? question.options[userAnswerIndex] : "Not answered";
+                const correctAnswerText = question.options[question.correctAnswer];
+                
+                resultsHTML += `
+                    <div class="review-item ${isCorrect ? 'correct' : 'incorrect'}">
+                        <h5>Question ${index + 1}: ${question.question}</h5>
+                        <p>Your answer: <span class="user-answer ${isCorrect ? 'correct-answer' : ''}">${userAnswerText}</span></p>
+                        ${!isCorrect ? `<p>Correct answer: <span class="correct-answer">${correctAnswerText}</span></p>` : ''}
+                        <p class="explanation">${question.explanation}</p>
+                    </div>
+                `;
+            });
+            
+            resultsContainer.innerHTML = resultsHTML;
+            
+            // Add event listeners for action buttons
+            if (document.getElementById('next-level-btn')) {
+                document.getElementById('next-level-btn').addEventListener('click', () => {
+                    if (currentLevel === 'easy') {
+                        initQuiz('medium');
+                    } else if (currentLevel === 'medium') {
+                        initQuiz('hard');
+                    }
+                });
+            }
+            
+            if (document.getElementById('retry-btn')) {
+                document.getElementById('retry-btn').addEventListener('click', () => {
+                    initQuiz(currentLevel);
+                });
+            }
+            
+            if (document.getElementById('restart-btn')) {
+                document.getElementById('restart-btn').addEventListener('click', () => {
+                    // Show start screen again
+                    startScreen.classList.remove('d-none');
+                    quizContent.classList.add('d-none');
+                    resultsContainer.classList.add('d-none');
+                    // Reset level indicators
+                    updateLevelIndicators('easy');
+                });
+            }
+        }
+
+        // Event listener for start quiz button
+        startQuizBtn.addEventListener('click', () => {
+            initQuiz('easy');
+        });
+
+        // Initialize the page with start screen
+        document.addEventListener('DOMContentLoaded', () => {
+            // Show start screen by default
+            startScreen.classList.remove('d-none');
+            quizContent.classList.add('d-none');
+            resultsContainer.classList.add('d-none');
+        });
+    </script>
+</body>
+</html>

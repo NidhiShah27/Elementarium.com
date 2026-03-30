@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Halogens - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #e3f4ff;      /* soft ice-blue background (halogen scheme) */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #b9e5ff;      /* fresh sky blue for navbar */
+    }
+    .element-header {
+      background-color: #b9e5ff;
+      color: #1a4d6b;                /* deep navy-blue for text */
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+      border: 1px solid #9bd0f0;
+    }
+    .element-card {
+      background: #f0f9ff;            /* very light blue-white */
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(185, 229, 255, 0.5);
+      border: 1px solid #b9e5ff;
+      height: 100%;
+    }
+    .property-box {
+      background: #e5f4ff;            /* light azure */
+      border-left: 3px solid #3f8db3;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .element-item {
+      background: #e5f4ff;
+      border: 1px solid #b9e5ff;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+    .element-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(63, 141, 179, 0.3);
+    }
+    .element-symbol {
+      background-color: #3f8db3;       /* cool ocean blue */
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #e5f4ff;
+    }
+    .use-item i {
+      color: #3f8db3;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #b9e5ff;
+      color: #1a4d6b;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #1a4d6b;
+      border-bottom: 1px solid #b9e5ff;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: #1a4d6b;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #1a4d6b !important;
+    }
+    .navbar-brand {
+      color: #1a4d6b !important;
+      font-weight: 700;
+    }
+    .trend-box {
+      background: #e5f4ff;
+      border: 1px solid #b9e5ff;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+    }
+    .reaction-box {
+      background: #e5f4ff;
+      border: 1px solid #b9e5ff;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(63, 141, 179, 0.3);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    .alert-info {
+      background-color: #e5f4ff;
+      border-color: #b9e5ff;
+      color: #1a4d6b;
+    }
+    .legend-color-box {
+      width: 20px;
+      height: 20px;
+      background-color: #3f8db3;
+      display: inline-block;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+    /* custom halogen badge colors */
+    .halogen-badge {
+      background-color: #3f8db3;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      display: inline-block;
+    }
+    .trend-down {
+      color: #2c6e8f;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation (same structure, halogen blue scheme) -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+        <span class="fw-bold">Elementarium</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Header with halogen theme -->
+    <div class="element-header">
+      <h1><span class="legend-color-box"></span>Halogens</h1>
+      <h3>The salt-formers • most reactive nonmetals on Earth</h3>
+    </div>
+
+    <!-- row 1: definition & key properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> What are Halogens?</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-layer-group"></i> Position:</strong> Group 17 (VIIA) of the periodic table — fluorine, chlorine, bromine, iodine, astatine
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron configuration:</strong> ns² np⁵ — seven valence electrons, one electron short of a full octet
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-gem"></i> Typical traits:</strong>
+            <ul class="mt-2 mb-0">
+              <li>Extremely reactive — never found free in nature (except as diatomic molecules)</li>
+              <li>High electronegativity — fluorine is the most electronegative element (4.0)</li>
+              <li>Diatomic molecules: F₂, Cl₂, Br₂, I₂ (At₂ is theoretical)</li>
+              <li>Form salts when combined with metals (e.g., NaCl, KI)</li>
+              <li>Colored vapors: F₂ (pale yellow), Cl₂ (greenish-yellow), Br₂ (red-brown), I₂ (violet)</li>
+              <li>Oxidizing agents — readily gain one electron to form halide ions (X⁻)</li>
+            </ul>
+          </div>
+          
+          <div class="mt-3">
+            <p><i class="fas fa-quote-right"></i> The name "halogen" comes from Greek <em>hals</em> (salt) and <em>gennan</em> (to form) — literally "salt-producers".</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-temperature-high"></i> <strong>Physical states:</strong> F₂ & Cl₂ (gases), Br₂ (liquid), I₂ (solid) at room temperature</li>
+            <li><i class="fas fa-charging-station"></i> <strong>Electronegativity trend:</strong> decreases down the group: F (4.0) > Cl (3.2) > Br (3.0) > I (2.7) > At (2.2)</li>
+            <li><i class="fas fa-bolt"></i> <strong>Reactivity trend:</strong> decreases down the group — fluorine is the most reactive nonmetal</li>
+            <li><i class="fas fa-chart-line"></i> <strong>Melting/Boiling points:</strong> increase with atomic number (F₂ low, I₂ high)</li>
+            <li><i class="fas fa-flask"></i> <strong>Oxidizing strength:</strong> F₂ > Cl₂ > Br₂ > I₂ (fluorine can oxidize water to oxygen)</li>
+            <li><i class="fas fa-industry"></i> <strong>Industrial importance:</strong> disinfectants, pharmaceuticals, plastics (PTFE, PVC), flame retardants</li>
+          </ul>
+          
+          <div class="alert alert-info mt-3">
+            <i class="fas fa-flask"></i> <strong>Did you know?</strong> Fluorine is so reactive that it reacts with noble gases (xenon, krypton) and even with asbestos and glass under certain conditions.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 2: list of halogens (full group 17) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-list"></i> The Halogen Elements</h3>
+          <p class="mb-4">Group 17 elements form the halogen family — from the pale yellow fluorine gas to the radioactive astatine. All are highly reactive and form compounds with nearly every other element.</p>
+          
+          <div class="row">
+            <!-- Fluorine -->
+            <div class="col-md-4 col-lg-4">
+              <div class="element-item">
+                <div class="element-symbol">F</div>
+                <div>
+                  <h5 class="mb-1">Fluorine (9)</h5>
+                  <p class="mb-0 small"><i class="fas fa-tooth"></i> Fluoride in toothpaste • <i class="fas fa-snowplow"></i> Teflon® (PTFE) • <i class="fas fa-industry"></i> Uranium enrichment (UF₆)</p>
+                  <a href="fluorine.html" class="text-decoration-none" style="color: #3f8db3;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Chlorine -->
+            <div class="col-md-4 col-lg-4">
+              <div class="element-item">
+                <div class="element-symbol">Cl</div>
+                <div>
+                  <h5 class="mb-1">Chlorine (17)</h5>
+                  <p class="mb-0 small"><i class="fas fa-water"></i> Water disinfection • <i class="fas fa-soap"></i> PVC plastics • <i class="fas fa-vial"></i> Bleach (NaClO)</p>
+                  <a href="chlorine.html" class="text-decoration-none" style="color: #3f8db3;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Bromine -->
+            <div class="col-md-4 col-lg-4">
+              <div class="element-item">
+                <div class="element-symbol">Br</div>
+                <div>
+                  <h5 class="mb-1">Bromine (35)</h5>
+                  <p class="mb-0 small"><i class="fas fa-fire-extinguisher"></i> Flame retardants • <i class="fas fa-camera"></i> Silver bromide (photography) • <i class="fas fa-vial"></i> Pharmaceuticals</p>
+                  <a href="bromine.html" class="text-decoration-none" style="color: #3f8db3;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Iodine -->
+            <div class="col-md-4 col-lg-4">
+              <div class="element-item">
+                <div class="element-symbol">I</div>
+                <div>
+                  <h5 class="mb-1">Iodine (53)</h5>
+                  <p class="mb-0 small"><i class="fas fa-bandaid"></i> Antiseptic (tincture) • <i class="fas fa-thyroid"></i> Thyroid hormone • <i class="fas fa-chalkboard"></i> Disinfectant</p>
+                  <a href="iodine.html" class="text-decoration-none" style="color: #3f8db3;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Astatine -->
+            <div class="col-md-4 col-lg-4">
+              <div class="element-item">
+                <div class="element-symbol">At</div>
+                <div>
+                  <h5 class="mb-1">Astatine (85)</h5>
+                  <p class="mb-0 small"><i class="fas fa-radiation"></i> Radioactive • <i class="fas fa-flask"></i> Cancer radiotherapy research • extremely rare</p>
+                  <a href="astatine.html" class="text-decoration-none" style="color: #3f8db3;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Tennessine (sometimes included as halogen-like) -->
+            <div class="col-md-4 col-lg-4">
+              <div class="element-item">
+                <div class="element-symbol">Ts</div>
+                <div>
+                  <h5 class="mb-1">Tennessine (117)</h5>
+                  <p class="mb-0 small"><i class="fas fa-atom"></i> Synthetic superheavy • <i class="fas fa-flask"></i> Predicted halogen properties • short half-life</p>
+                  <a href="tennessine.html" class="text-decoration-none" style="color: #3f8db3;">details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 text-center">
+            <span class="halogen-badge"><i class="fas fa-tint"></i> Diatomic: F₂, Cl₂, Br₂, I₂</span>
+            <span class="halogen-badge ms-2"><i class="fas fa-chart-simple"></i> Reactivity: F > Cl > Br > I > At</span>
+            <span class="halogen-badge ms-2"><i class="fas fa-industry"></i> World production: Cl ~70 Mt/yr, Br ~0.8 Mt/yr, I ~30 kt/yr</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 3: everyday uses & interesting facts -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Everyday & industrial uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item"><i class="fas fa-tooth"></i> Fluoride for dental health</div>
+              <div class="use-item"><i class="fas fa-water"></i> Chlorine for drinking water</div>
+              <div class="use-item"><i class="fas fa-swimming-pool"></i> Pool disinfection (chlorine/bromine)</div>
+              <div class="use-item"><i class="fas fa-industry"></i> PVC pipes & vinyl siding</div>
+            </div>
+            <div class="col-6">
+              <div class="use-item"><i class="fas fa-tachometer-alt"></i> Teflon non-stick coatings</div>
+              <div class="use-item"><i class="fas fa-camera"></i> Silver halides in photography</div>
+              <div class="use-item"><i class="fas fa-tablets"></i> Iodine supplements & antiseptics</div>
+              <div class="use-item"><i class="fas fa-fire-extinguisher"></i> Brominated flame retardants</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Fascinating facts</h3>
+          <ul>
+            <li><i class="fas fa-skull-crossbones"></i> <strong>Fluorine</strong> was isolated in 1886 after decades of failed attempts — many chemists were poisoned or injured.</li>
+            <li><i class="fas fa-tint"></i> <strong>Chlorine</strong> was the first chemical weapon used in WWI (1915) — now it's essential for safe drinking water worldwide.</li>
+            <li><i class="fas fa-water"></i> <strong>Bromine</strong> is the only nonmetal that is liquid at room temperature (mercury is the only metal liquid).</li>
+            <li><i class="fas fa-thyroid"></i> <strong>Iodine</strong> deficiency is the leading preventable cause of intellectual disability globally — iodized salt saves millions.</li>
+            <li><i class="fas fa-radiation"></i> <strong>Astatine</strong> is the rarest naturally occurring element — less than one gram exists in Earth's crust at any time.</li>
+            <li><i class="fas fa-chart-line"></i> <strong>Reactivity trend:</strong> Fluorine can even react with xenon and krypton, forming XeF₂, XeF₄, and KrF₂.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 4: halogen chemistry & displacement reactions -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-chart-line"></i> Displacement reactions & reactivity series</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="reaction-box text-center">
+                <i class="fas fa-exchange-alt fa-2x" style="color: #3f8db3;"></i>
+                <p class="mt-2"><strong>Halogen displacement rule:</strong> A more reactive halogen will displace a less reactive halogen from its halide solution.</p>
+                <p class="small">Cl₂ + 2NaBr → 2NaCl + Br₂ (chlorine displaces bromine)</p>
+                <p class="small">Br₂ + 2KI → 2KBr + I₂ (bromine displaces iodine)</p>
+                <p class="small mt-2 text-muted">Fluorine is too reactive for aqueous displacement — reacts violently with water.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="reaction-box text-center">
+                <i class="fas fa-chart-simple fa-2x" style="color: #3f8db3;"></i>
+                <p class="mt-2"><strong>Oxidizing strength decreases down the group:</strong></p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                  <span class="badge bg-info text-dark p-2">F₂ (strongest)</span>
+                  <i class="fas fa-arrow-right"></i>
+                  <span class="badge bg-info text-dark p-2">Cl₂</span>
+                  <i class="fas fa-arrow-right"></i>
+                  <span class="badge bg-info text-dark p-2">Br₂</span>
+                  <i class="fas fa-arrow-right"></i>
+                  <span class="badge bg-info text-dark p-2">I₂ (weakest)</span>
+                </div>
+                <p class="small mt-2">Fluorine can even oxidize oxygen in some compounds — unparalleled reactivity.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12">
+              <div class="property-box text-center">
+                <i class="fas fa-chalkboard-user"></i> <strong>Halogen acids:</strong> HF (weak acid, dangerous), HCl (strong acid, stomach acid), HBr, HI (strong acids). Hydrogen fluoride is unique — etches glass.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 5: abundance & production data -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-chart-pie"></i> Abundance & global production</h3>
+          <div class="row">
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Chlorine</strong> ≈ 0.045% crust</div>
+              <small class="text-muted">~70 million tons/year</small>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Fluorine</strong> ≈ 0.058% crust</div>
+              <small class="text-muted">Fluorspar (CaF₂) ~7 Mt/year</small>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Bromine</strong> ≈ 0.0003% crust</div>
+              <small class="text-muted">~800,000 tons/year (from seawater)</small>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Iodine</strong> ≈ 0.00005% crust</div>
+              <small class="text-muted">~30,000 tons/year (Chile, Japan)</small>
+            </div>
+          </div>
+          <p class="mt-3"><i class="fas fa-database"></i> <strong>Production methods:</strong> Chlorine via electrolysis of brine (Chlor-alkali process). Bromine extracted from seawater or brine wells. Iodine from caliche ore or underground brines. Fluorine obtained by electrolysis of KF·HF mixture.</p>
+          <div class="alert alert-info mt-2">
+            <i class="fas fa-globe"></i> <strong>Environmental note:</strong> Chlorofluorocarbons (CFCs) — once used as refrigerants — were phased out due to ozone layer depletion. Modern halogens are managed with strict regulations.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 6: halogen compounds & applications showcase -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-cube"></i> Important halogen compounds</h3>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="use-item"><i class="fas fa-snowplow"></i> <strong>PTFE (Teflon®):</strong> (C₂F₄)ₙ — non-stick, chemical resistant</div>
+            </div>
+            <div class="col-sm-4">
+              <div class="use-item"><i class="fas fa-industry"></i> <strong>PVC:</strong> (C₂H₃Cl)ₙ — pipes, cables, flooring</div>
+            </div>
+            <div class="col-sm-4">
+              <div class="use-item"><i class="fas fa-tablets"></i> <strong>Levothyroxine:</strong> iodine-containing thyroid medication</div>
+            </div>
+            <div class="col-sm-4">
+              <div class="use-item"><i class="fas fa-vial"></i> <strong>Bleach:</strong> NaClO (sodium hypochlorite) — disinfectant</div>
+            </div>
+            <div class="col-sm-4">
+              <div class="use-item"><i class="fas fa-fire-extinguisher"></i> <strong>Halons:</strong> brominated fire suppressants (phased out)</div>
+            </div>
+            <div class="col-sm-4">
+              <div class="use-item"><i class="fas fa-tooth"></i> <strong>NaF, SnF₂:</strong> fluoride in toothpaste for enamel protection</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

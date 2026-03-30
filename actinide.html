@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Actinides - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f5edff;      /* soft lavender background (actinide scheme) */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #e1c5ff;      /* light purple for navbar */
+    }
+    .element-header {
+      background-color: #e1c5ff;
+      color: #3a2a4a;                /* deep purple for text */
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+      border: 1px solid #c9abe8;
+    }
+    .element-card {
+      background: #fcf9ff;            /* off-white with purple tint */
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(225, 197, 255, 0.5);
+      border: 1px solid #e1c5ff;
+      height: 100%;
+    }
+    .property-box {
+      background: #f2eaff;            /* light lavender */
+      border-left: 3px solid #9b7bc2;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .element-item {
+      background: #f2eaff;
+      border: 1px solid #e1c5ff;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+    .element-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(155, 123, 194, 0.25);
+    }
+    .element-symbol {
+      background-color: #9b7bc2;       /* royal purple */
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #f2eaff;
+    }
+    .use-item i {
+      color: #9b7bc2;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #e1c5ff;
+      color: #3a2a4a;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #3a2a4a;
+      border-bottom: 1px solid #e1c5ff;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: #3a2a4a;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #3a2a4a !important;
+    }
+    .navbar-brand {
+      color: #3a2a4a !important;
+      font-weight: 700;
+    }
+    .trend-box {
+      background: #f2eaff;
+      border: 1px solid #e1c5ff;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+    }
+    .reaction-box {
+      background: #f2eaff;
+      border: 1px solid #e1c5ff;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(155, 123, 194, 0.25);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    .alert-info {
+      background-color: #f2eaff;
+      border-color: #e1c5ff;
+      color: #3a2a4a;
+    }
+    .legend-color-box {
+      width: 20px;
+      height: 20px;
+      background-color: #9b7bc2;
+      display: inline-block;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+    /* custom actinide badge */
+    .actinide-badge {
+      background-color: #9b7bc2;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      display: inline-block;
+    }
+    .radioactive-badge {
+      background-color: #c9a8ff;
+      color: #3a2a4a;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 0.7rem;
+      display: inline-block;
+    }
+    .half-life-note {
+      font-family: monospace;
+      font-size: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation (same structure, actinide purple scheme) -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+        <span class="fw-bold">Elementarium</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Header with actinide theme -->
+    <div class="element-header">
+      <h1><span class="legend-color-box"></span>Actinides</h1>
+      <h3>The radioactive frontier • nuclear energy, discovery & transuranium elements</h3>
+    </div>
+
+    <!-- row 1: definition & key properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> What are Actinides?</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-layer-group"></i> Position:</strong> f-block elements, atomic numbers 89 (actinium) through 103 (lawrencium) — second row of the f-block
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron configuration:</strong> [Rn] 5f<sup>0-14</sup> 6d<sup>0-1</sup> 7s<sup>2</sup> — filling the 5f subshell
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-gem"></i> Defining traits:</strong>
+            <ul class="mt-2 mb-0">
+              <li>All are radioactive — many have extremely long half-lives (uranium-238: 4.5 billion years)</li>
+              <li>Silver-colored metals that tarnish in air due to oxidation</li>
+              <li>Naturally occurring: thorium, uranium, and trace amounts of plutonium</li>
+              <li>Transuranium elements (beyond uranium) are man-made in nuclear reactors or accelerators</li>
+              <li>Critical for nuclear energy, weapons, medical isotopes, and space exploration</li>
+              <li>Exhibit multiple oxidation states (from +3 to +7) — complex chemistry</li>
+            </ul>
+          </div>
+          
+          <div class="mt-3">
+            <p><i class="fas fa-quote-right"></i> The actinide series revolutionized the 20th century — enabling nuclear power, atomic medicine, and reshaping global geopolitics.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-radiation"></i> <strong>Radioactivity:</strong> All isotopes are unstable — undergo alpha, beta, or spontaneous fission decay</li>
+            <li><i class="fas fa-burn"></i> <strong>Nuclear fission:</strong> Uranium-235 and plutonium-239 undergo chain reactions — basis of nuclear reactors and weapons</li>
+            <li><i class="fas fa-chart-line"></i> <strong>Actinide contraction:</strong> Similar to lanthanides — ionic radii decrease across series, affecting chemical behavior</li>
+            <li><i class="fas fa-flask"></i> <strong>Complex chemistry:</strong> Exhibit oxidation states from +3 to +7; form stable complexes with ligands</li>
+            <li><i class="fas fa-microchip"></i> <strong>Pyrophoric nature:</strong> Finely divided actinides can ignite spontaneously in air</li>
+            <li><i class="fas fa-database"></i> <strong>Applications:</strong> Nuclear fuel (U-235, Pu-239), radiothermal generators (Pu-238), medical isotopes (Ac-225, Th-227)</li>
+          </ul>
+          
+          <div class="alert alert-info mt-3">
+            <i class="fas fa-flask"></i> <strong>Did you know?</strong> Plutonium-238 generates heat through radioactive decay — it powers NASA's Perseverance rover and Voyager spacecraft, operating for decades beyond the solar system.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 2: list of actinides (full series 89-103) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-list"></i> The Actinide Series</h3>
+          <p class="mb-4">Fifteen radioactive elements from actinium to lawrencium. The first four (Th, Pa, U) occur naturally; the rest are synthetic, created in nuclear reactors or particle accelerators since 1940.</p>
+          
+          <div class="row">
+            <!-- Actinium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Ac</div>
+                <div>
+                  <h5 class="mb-1">Actinium (89)</h5>
+                  <p class="mb-0 small"><i class="fas fa-radiation"></i> Medical isotopes (Ac-225) • <i class="fas fa-flask"></i> Neutron source • <span class="radioactive-badge">α emitter</span></p>
+                  <a href="actinium.html" class="text-decoration-none" style="color: #9b7bc2;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Thorium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Th</div>
+                <div>
+                  <h5 class="mb-1">Thorium (90)</h5>
+                  <p class="mb-0 small"><i class="fas fa-industry"></i> Nuclear fuel (MSR) • <i class="fas fa-camera"></i> Camera lenses • <span class="radioactive-badge">half-life: 14 Gyr</span></p>
+                  <a href="thorium.html" class="text-decoration-none" style="color: #9b7bc2;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Protactinium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Pa</div>
+                <div>
+                  <h5 class="mb-1">Protactinium (91)</h5>
+                  <p class="mb-0 small"><i class="fas fa-flask"></i> Research • <i class="fas fa-chart-line"></i> Geochronology • <span class="radioactive-badge">rare</span></p>
+                  <a href="protactinium.html" class="text-decoration-none" style="color: #9b7bc2;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Uranium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">U</div>
+                <div>
+                  <h5 class="mb-1">Uranium (92)</h5>
+                  <p class="mb-0 small"><i class="fas fa-atom"></i> Nuclear power • <i class="fas fa-bomb"></i> Weapons • <span class="radioactive-badge">U-235: 704 Myr</span></p>
+                  <a href="uranium.html" class="text-decoration-none" style="color: #9b7bc2;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Neptunium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Np</div>
+                <div>
+                  <h5 class="mb-1">Neptunium (93)</h5>
+                  <p class="mb-0 small"><i class="fas fa-flask"></i> Nuclear waste • <i class="fas fa-microchip"></i> Research • <span class="radioactive-badge">synthetic</span></p>
+                  <a href="neptunium.html" class="text-decoration-none" style="color: #9b7bc2;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Plutonium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Pu</div>
+                <div>
+                  <h5 class="mb-1">Plutonium (94)</h5>
+                  <p class="mb-0 small"><i class="fas fa-space-shuttle"></i> Spacecraft power (RTG) • <i class="fas fa-bomb"></i> Nuclear weapons • <span class="radioactive-badge">Pu-239: 24 kyr</span></p>
+                  <a href="plutonium.html" class="text-decoration-none" style="color: #9b7bc2;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Americium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Am</div>
+                <div>
+                  <h5 class="mb-1">Americium (95)</h5>
+                  <p class="mb-0 small"><i class="fas fa-smoke"></i> Smoke detectors (Am-241) • <i class="fas fa-flask"></i> Industrial gauges</p>
+                  <a href="americium.html" class="text-decoration-none" style="color: #9b7bc2;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Curium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Cm</div>
+                <div>
+                  <h5 class="mb-1">Curium (96)</h5>
+                  <p class="mb-0 small"><i class="fas fa-space-shuttle"></i> Space exploration (RTG) • <i class="fas fa-flask"></i> Research</p>
+                  <a href="curium.html" class="text-decoration-none" style="color: #9b7bc2;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Berkelium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Bk</div>
+                <div>
+                  <h5 class="mb-1">Berkelium (97)</h5>
+                  <p class="mb-0 small"><i class="fas fa-flask"></i> Synthetic research • <span class="radioactive-badge">micrograms produced</span></p>
+                  <a href="berkelium.html" class="text-decoration-none" style="color: #9b7bc2;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Californium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Cf</div>
+                <div>
+                  <h5 class="mb-1">Californium (98)</h5>
+                  <p class="mb-0 small"><i class="fas fa-microscope"></i> Neutron sources • <i class="fas fa-hospital"></i> Cancer therapy (Cf-252)</p>
+                  <a href="californium.html" class="text-decoration-none" style="color: #9b7bc2;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Einsteinium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Es</div>
+                <div>
+                  <h5 class="mb-1">Einsteinium (99)</h5>
+                  <p class="mb-0 small"><i class="fas fa-flask"></i> Research • <i class="fas fa-bomb"></i> Discovered in hydrogen bomb debris (1952)</p>
+                  <a href="einsteinium.html" class="text-decoration-none" style="color: #9b7bc2;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Fermium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Fm</div>
+                <div>
+                  <h5 class="mb-1">Fermium (100)</h5>
+                  <p class="mb-0 small"><i class="fas fa-flask"></i> Synthetic • <span class="radioactive-badge">half-life: 100 days (Fm-257)</span></p>
+                  <a href="fermium.html" class="text-decoration-none" style="color: #9b7bc2;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Mendelevium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Md</div>
+                <div>
+                  <h5 class="mb-1">Mendelevium (101)</h5>
+                  <p class="mb-0 small"><i class="fas fa-flask"></i> Named after Mendeleev • <span class="radioactive-badge">atom-at-a-time chemistry</span></p>
+                  <a href="mendelevium.html" class="text-decoration-none" style="color: #9b7bc2;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Nobelium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">No</div>
+                <div>
+                  <h5 class="mb-1">Nobelium (102)</h5>
+                  <p class="mb-0 small"><i class="fas fa-flask"></i> Synthetic • <span class="radioactive-badge">discovery disputed (1950s)</span></p>
+                  <a href="nobelium.html" class="text-decoration-none" style="color: #9b7bc2;">details</a>
+                </div>
+              </div>
+            </div>
+            <!-- Lawrencium -->
+            <div class="col-md-4 col-lg-3">
+              <div class="element-item">
+                <div class="element-symbol">Lr</div>
+                <div>
+                  <h5 class="mb-1">Lawrencium (103)</h5>
+                  <p class="mb-0 small"><i class="fas fa-flask"></i> Final actinide • <span class="radioactive-badge">named after Ernest Lawrence</span></p>
+                  <a href="lawrencium.html" class="text-decoration-none" style="color: #9b7bc2;">details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 text-center">
+            <span class="actinide-badge"><i class="fas fa-burn"></i> Fissile: U-235, Pu-239</span>
+            <span class="actinide-badge ms-2"><i class="fas fa-space-shuttle"></i> RTG fuels: Pu-238, Cm-244</span>
+            <span class="actinide-badge ms-2"><i class="fas fa-hospital"></i> Medical: Ac-225, Th-227, Cf-252</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 3: everyday uses & interesting facts -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Critical applications</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item"><i class="fas fa-bolt"></i> Nuclear power (U-235, Pu-239)</div>
+              <div class="use-item"><i class="fas fa-space-shuttle"></i> Deep space probes (Pu-238 RTG)</div>
+              <div class="use-item"><i class="fas fa-smoke"></i> Smoke detectors (Am-241)</div>
+              <div class="use-item"><i class="fas fa-microscope"></i> Neutron radiography (Cf-252)</div>
+            </div>
+            <div class="col-6">
+              <div class="use-item"><i class="fas fa-hospital"></i> Cancer radiotherapy (Ac-225, Ra-223)</div>
+              <div class="use-item"><i class="fas fa-industry"></i> Industrial gauging & thickness measurement</div>
+              <div class="use-item"><i class="fas fa-flask"></i> Research & isotope production</div>
+              <div class="use-item"><i class="fas fa-ship"></i> Naval nuclear propulsion</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Fascinating facts</h3>
+          <ul>
+            <li><i class="fas fa-bomb"></i> <strong>Plutonium</strong> is named after the dwarf planet Pluto — following uranium (Uranus) and neptunium (Neptune).</li>
+            <li><i class="fas fa-chart-line"></i> <strong>Uranium-238</strong> has a half-life of 4.5 billion years — older than Earth itself.</li>
+            <li><i class="fas fa-meteor"></i> <strong>Neptunium and plutonium</strong> were first synthesized in 1940-41 at UC Berkeley by Glenn Seaborg's team.</li>
+            <li><i class="fas fa-microscope"></i> <strong>Californium-252</strong> is a powerful neutron emitter — 1 microgram emits 2.3 million neutrons per second.</li>
+            <li><i class="fas fa-radiation"></i> <strong>Einsteinium and fermium</strong> were discovered in the fallout of the Ivy Mike hydrogen bomb test (1952).</li>
+            <li><i class="fas fa-industry"></i> <strong>Thorium</strong> is being explored as an alternative nuclear fuel — more abundant than uranium and produces less long-lived waste.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 4: nuclear fission & the actinide series -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-atom"></i> Nuclear fission & the actinide revolution</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="reaction-box text-center">
+                <i class="fas fa-burn fa-2x" style="color: #9b7bc2;"></i>
+                <p class="mt-2"><strong>Fissionable isotopes</strong></p>
+                <p>Uranium-235 and plutonium-239 undergo sustained nuclear chain reactions. Neutron capture causes nucleus to split — releasing immense energy.</p>
+                <p class="small mt-2">U-235 + n → fission products + 2-3 neutrons + ~200 MeV energy</p>
+                <p class="small">This process powers nuclear reactors and, historically, atomic weapons.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="reaction-box text-center">
+                <i class="fas fa-chart-simple fa-2x" style="color: #9b7bc2;"></i>
+                <p class="mt-2"><strong>Actinide contraction & chemical separation</strong></p>
+                <p>Similar to lanthanides, actinide ionic radii decrease across series — enabling chemical separation (PUREX process) to extract plutonium from spent nuclear fuel.</p>
+                <p class="small mt-2">Oxidation states range from +3 to +7 — uranium (UO₂²⁺) forms uranyl ion; plutonium exhibits all states from +3 to +7.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12">
+              <div class="property-box text-center">
+                <i class="fas fa-chalkboard-user"></i> <strong>Transmutation:</strong> In nuclear reactors, U-238 captures neutrons to form Pu-239 — "breeding" more fissile material. This is the basis of breeder reactors.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 5: abundance, mining & nuclear fuel cycle -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-chart-pie"></i> Abundance & global significance</h3>
+          <div class="row">
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Uranium</strong> 2.7 ppm crust</div>
+              <small class="text-muted">~60,000 tons/year mined</small>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Thorium</strong> 9.6 ppm crust</div>
+              <small class="text-muted">3x more abundant than U</small>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Plutonium</strong> trace natural</div>
+              <small class="text-muted">~70 tons produced annually in reactors</small>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Californium</strong> extremely rare</div>
+              <small class="text-muted">~0.5 grams/year globally</small>
+            </div>
+          </div>
+          <p class="mt-3"><i class="fas fa-database"></i> <strong>Major uranium producers:</strong> Kazakhstan (world leader), Canada, Australia, Namibia. Thorium resources: India, Brazil, Australia, US.</p>
+          <div class="alert alert-info mt-2">
+            <i class="fas fa-globe"></i> <strong>Nuclear energy today:</strong> ~440 nuclear reactors provide ~10% of global electricity. Advanced reactors (SMRs, MSRs) and thorium cycles represent next-generation actinide technologies.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 6: medical isotopes & space exploration -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-cubes"></i> Actinides saving lives & exploring space</h3>
+          <div class="row">
+            <div class="col-sm-6 mb-3">
+              <div class="trend-box h-100">
+                <i class="fas fa-hospital fa-2x mb-2" style="color: #9b7bc2;"></i>
+                <h6>Targeted Alpha Therapy (TAT)</h6>
+                <p class="small mb-0">Actinium-225 and thorium-227 deliver precise radiation to cancer cells — emerging as powerful treatments for prostate, leukemia, and other cancers. Ac-225 has a 10-day half-life, ideal for medical use.</p>
+              </div>
+            </div>
+            <div class="col-sm-6 mb-3">
+              <div class="trend-box h-100">
+                <i class="fas fa-space-shuttle fa-2x mb-2" style="color: #9b7bc2;"></i>
+                <h6>Radioisotope Thermoelectric Generators (RTGs)</h6>
+                <p class="small mb-0">Plutonium-238 (half-life 88 years) powers Voyager, Curiosity, Perseverance, and New Horizons — enabling missions beyond the asteroid belt where solar power is ineffective.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-sm-6">
+              <div class="use-item"><i class="fas fa-smoke"></i> <strong>Americium-241 in smoke detectors</strong> — over 40 million detectors worldwide, saving countless lives.</div>
+            </div>
+            <div class="col-sm-6">
+              <div class="use-item"><i class="fas fa-microscope"></i> <strong>Californium-252 neutron sources</strong> — used in neutron activation analysis, well-logging, and cancer brachytherapy.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- row 7: safety & handling note -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card" style="background: #f2eaff;">
+          <h3><i class="fas fa-shield-alt"></i> Safety & stewardship</h3>
+          <div class="row">
+            <div class="col-md-8">
+              <p><i class="fas fa-radiation"></i> All actinides are radioactive and require specialized handling, shielding, and containment. Nuclear waste management, non-proliferation, and environmental remediation remain critical global challenges.</p>
+              <p class="mb-0"><i class="fas fa-recycle"></i> Spent nuclear fuel contains valuable actinides — advanced recycling technologies aim to reduce waste volume and recover fissile material for sustainable energy.</p>
+            </div>
+            <div class="col-md-4 text-center">
+              <i class="fas fa-triangle-exclamation fa-3x" style="color: #9b7bc2;"></i>
+              <p class="small mt-2">Always handled in shielded facilities with strict protocols</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

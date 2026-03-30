@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alkaline Earth Metals - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #e8f3ef;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #b8e1d2;
+    }
+    .element-header {
+      background-color: #a6d5c4;
+      color: #1a3b32;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .element-card {
+      background: #FFFFFF;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(184, 225, 210, 0.3);
+      border: 1px solid #c9e6db;
+      height: 100%;
+    }
+    .property-box {
+      background: #e8f3ef;
+      border-left: 3px solid #b8e1d2;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .element-item {
+      background: #e8f3ef;
+      border: 1px solid #b8e1d2;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+    .element-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(184, 225, 210, 0.4);
+    }
+    .element-symbol {
+      background-color: #2c7a6e;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #e8f3ef;
+    }
+    .use-item i {
+      color: #2c7a6e;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #b8e1d2;
+      color: #1a3b32;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #1a3b32;
+      border-bottom: 1px solid #c9e6db;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: #1a3b32;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #1a3b32 !important;
+    }
+    .navbar-brand {
+      color: #1a3b32 !important;
+      font-weight: 700;
+    }
+    .trend-box {
+      background: #e8f3ef;
+      border: 1px solid #b8e1d2;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+    }
+    .reaction-box {
+      background: #e8f3ef;
+      border: 1px solid #b8e1d2;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(184, 225, 210, 0.4);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    .alert-info {
+      background-color: #e8f3ef;
+      border-color: #b8e1d2;
+      color: #1a3b32;
+    }
+    .legend-color-box {
+      width: 20px;
+      height: 20px;
+      background-color: #2c7a6e;
+      display: inline-block;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+        <span class="fw-bold">Elementarium</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Element Header -->
+    <div class="element-header">
+      <h1><span class="legend-color-box"></span>Alkaline Earth Metals</h1>
+      <h3>Group 2 Elements</h3>
+    </div>
+
+    <!-- First row: What are Alkaline Earth Metals and Key Properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> What are Alkaline Earth Metals?</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-layer-group"></i> Group:</strong> 2 (IIA)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Valence Electrons:</strong> 2 (ns² configuration)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-tint"></i> Reactivity:</strong> Reactive - but less than alkali metals
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-bolt"></i> Common Characteristics:</strong>
+            <ul class="mt-2 mb-0">
+              <li>Silvery-white, lustrous metals</li>
+              <li>Harder and denser than alkali metals</li>
+              <li>Higher melting points than Group 1</li>
+              <li>Form +2 cations (lose both valence electrons)</li>
+              <li>Form alkaline hydroxides (hence the name)</li>
+              <li>Found abundantly in Earth's crust</li>
+            </ul>
+          </div>
+          
+          <div class="mt-3">
+            <p><i class="fas fa-quote-right"></i> The name "alkaline earth" comes from the Arabic "al-qali" (the ashes) and refers to their basic (alkaline) oxides that were once called "earths."</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-arrow-down"></i> <strong>Reactivity Trend:</strong> Increases down the group (Be → Mg → Ca → Sr → Ba → Ra)</li>
+            <li><i class="fas fa-thermometer-half"></i> <strong>Melting Points:</strong> Higher than Group 1, decrease down group</li>
+            <li><i class="fas fa-weight-hanging"></i> <strong>Density:</strong> Increases down the group</li>
+            <li><i class="fas fa-fire"></i> <strong>Ionization Energy:</strong> Second lowest of all elements - easily lose two electrons</li>
+            <li><i class="fas fa-water"></i> <strong>Water Reaction:</strong> Produce hydrogen gas and metal hydroxide (alkaline solution)</li>
+            <li><i class="fas fa-gem"></i> <strong>Flame Tests:</strong> Produce characteristic colors (except Be and Mg)</li>
+          </ul>
+          
+          <div class="alert alert-info mt-3">
+            <i class="fas fa-flask"></i> <strong>Flame Test Colors:</strong> Each alkaline earth metal (except Be and Mg) produces a characteristic flame color:
+            <ul class="mt-2">
+              <li><span style="color: #ff4444;">❤️ Calcium - Brick Red</span></li>
+              <li><span style="color: #ff0000;">🔥 Strontium - Bright Red</span></li>
+              <li><span style="color: #00aa00;">💚 Barium - Apple Green</span></li>
+              <li><span style="color: #ff00ff;">🌸 Radium - Crimson Red</span></li>
+              <li>Beryllium and Magnesium - No characteristic color</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: List of Alkaline Earth Metals -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-list"></i> The Six Alkaline Earth Metals</h3>
+          <p class="mb-4">There are six elements classified as alkaline earth metals. Here they are in order of increasing atomic number:</p>
+          
+          <div class="row">
+            <div class="col-md-6">
+              <div class="element-item">
+                <div class="element-symbol">Be</div>
+                <div>
+                  <h4 class="mb-1">Beryllium (Atomic Number: 4)</h4>
+                  <p class="mb-0"><i class="fas fa-plane"></i> Aerospace • <i class="fas fa-x-ray"></i> X-ray windows • <i class="fas fa-skull"></i> Toxic if inhaled</p>
+                  <a href="beryllium.html" class="text-decoration-none" style="color: #2c7a6e;">Learn more →</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="element-item">
+                <div class="element-symbol">Mg</div>
+                <div>
+                  <h4 class="mb-1">Magnesium (Atomic Number: 12)</h4>
+                  <p class="mb-0"><i class="fas fa-car"></i> Lightweight alloys • <i class="fas fa-leaf"></i> Chlorophyll • <i class="fas fa-fire"></i> Flares</p>
+                  <a href="magnesium.html" class="text-decoration-none" style="color: #2c7a6e;">Learn more →</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="element-item">
+                <div class="element-symbol">Ca</div>
+                <div>
+                  <h4 class="mb-1">Calcium (Atomic Number: 20)</h4>
+                  <p class="mb-0"><i class="fas fa-bone"></i> Bones & teeth • <i class="fas fa-building"></i> Cement • <i class="fas fa-moon"></i> Moon rocks</p>
+                  <a href="calcium.html" class="text-decoration-none" style="color: #2c7a6e;">Learn more →</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="element-item">
+                <div class="element-symbol">Sr</div>
+                <div>
+                  <h4 class="mb-1">Strontium (Atomic Number: 38)</h4>
+                  <p class="mb-0"><i class="fas fa-fire"></i> Red fireworks • <i class="fas fa-tooth"></i> Toothpaste • <i class="fas fa-tv"></i> CRT TVs</p>
+                  <a href="strontium.html" class="text-decoration-none" style="color: #2c7a6e;">Learn more →</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="element-item">
+                <div class="element-symbol">Ba</div>
+                <div>
+                  <h4 class="mb-1">Barium (Atomic Number: 56)</h4>
+                  <p class="mb-0"><i class="fas fa-stethoscope"></i> Medical imaging • <i class="fas fa-fire"></i> Green fireworks • <i class="fas fa-drill"></i> Drilling fluids</p>
+                  <a href="barium.html" class="text-decoration-none" style="color: #2c7a6e;">Learn more →</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="element-item">
+                <div class="element-symbol">Ra</div>
+                <div>
+                  <h4 class="mb-1">Radium (Atomic Number: 88)</h4>
+                  <p class="mb-0"><i class="fas fa-radiation"></i> Radioactive • <i class="fas fa-clock"></i> Glow-in-dark paint • <i class="fas fa-flask"></i> Extremely rare</p>
+                  <a href="radium.html" class="text-decoration-none" style="color: #2c7a6e;">Learn more →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: Common Uses and Interesting Facts -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Common Uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-bone"></i> Calcium in bones & teeth
+              </div>
+              <div class="use-item">
+                <i class="fas fa-building"></i> Construction materials
+              </div>
+              <div class="use-item">
+                <i class="fas fa-car"></i> Magnesium alloys
+              </div>
+              <div class="use-item">
+                <i class="fas fa-leaf"></i> Chlorophyll (central Mg)
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="use-item">
+                <i class="fas fa-fire"></i> Fireworks (Sr-red, Ba-green)
+              </div>
+              <div class="use-item">
+                <i class="fas fa-stethoscope"></i> Barium medical imaging
+              </div>
+              <div class="use-item">
+                <i class="fas fa-x-ray"></i> Beryllium X-ray windows
+              </div>
+              <div class="use-item">
+                <i class="fas fa-radiation"></i> Radium (historic use)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting Facts</h3>
+          <ul>
+            <li><i class="fas fa-leaf"></i> Magnesium is the central atom in chlorophyll - without it, plants couldn't photosynthesize</li>
+            <li><i class="fas fa-bone"></i> The average human contains about 1kg of calcium - mostly in bones and teeth</li>
+            <li><i class="fas fa-fire"></i> Strontium and barium salts create red and green fireworks</li>
+            <li><i class="fas fa-clock"></i> Radium was used in glow-in-the-dark watch faces until its dangers were known</li>
+            <li><i class="fas fa-gem"></i> Beryllium is found in emeralds and aquamarines (as beryl)</li>
+            <li><i class="fas fa-moon"></i> Moon rocks contain significant amounts of calcium and magnesium</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reactions with Water Card -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-vial"></i> Reaction with Water</h3>
+          <p class="mb-4">Alkaline earth metals react with water, but less vigorously than alkali metals. Reactivity increases down the group:</p>
+          
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a6e; color: white;">Be</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">H₂O</span>
+                </div>
+                <h5 class="mb-2">Beryllium + Water</h5>
+                <p class="mb-0 small">No reaction at room temperature (oxide layer protects it)</p>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a6e; color: white;">Mg</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">H₂O</span>
+                </div>
+                <h5 class="mb-2">Magnesium + Water</h5>
+                <p class="mb-0 small">Very slow with cold water, reacts with steam</p>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a6e; color: white;">Ca</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">H₂O</span>
+                </div>
+                <h5 class="mb-2">Calcium + Water</h5>
+                <p class="mb-0 small">Moderate reaction, bubbles of hydrogen form</p>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a6e; color: white;">Sr</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">H₂O</span>
+                </div>
+                <h5 class="mb-2">Strontium + Water</h5>
+                <p class="mb-0 small">Vigorous reaction, strontium hydroxide forms</p>
+              </div>
+            </div>
+            
+            <div class="col-md-4 mb-3">
+              <div class="reaction-box text-center">
+                <div class="mb-3">
+                  <span class="element-badge" style="background-color: #2c7a6e; color: white;">Ba</span>
+                  <i class="fas fa-plus fa-lg mx-3 text-muted"></i>
+                  <span class="element-badge" style="background-color: #42A5F5; color: white;">H₂O</span>
+                </div>
+                <h5 class="mb-2">Barium + Water</h5>
+                <p class="mb-0 small">Very vigorous reaction, similar to sodium</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert alert-info mt-3">
+            <i class="fas fa-exclamation-triangle" style="color: #2c7a6e;"></i> <strong>Safety Note:</strong> While calcium and magnesium are essential nutrients, beryllium compounds are highly toxic, and radium is radioactive. Always handle with proper safety protocols.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Abundance in Earth's Crust -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-mountain"></i> Abundance in Earth's Crust</h3>
+          <p class="mb-4">Alkaline earth metals are abundant in the Earth's crust, often found in mineral deposits:</p>
+          
+          <div class="row">
+            <div class="col-md-3">
+              <div class="trend-box mb-3">
+                <h4>Calcium</h4>
+                <h2>4.15%</h2>
+                <p class="mb-0">5th most abundant</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="trend-box mb-3">
+                <h4>Magnesium</h4>
+                <h2>2.33%</h2>
+                <p class="mb-0">7th most abundant</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="trend-box mb-3">
+                <h4>Barium</h4>
+                <h2>0.05%</h2>
+                <p class="mb-0">14th most abundant</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="trend-box mb-3">
+                <h4>Strontium</h4>
+                <h2>0.04%</h2>
+                <p class="mb-0">15th most abundant</p>
+              </div>
+            </div>
+          </div>
+          
+          <p class="mt-3"><i class="fas fa-gem"></i> <strong>Common minerals:</strong> Limestone (CaCO₃), dolomite (CaMg(CO₃)₂), magnesite (MgCO₃), barite (BaSO₄), and beryl (Be₃Al₂Si₆O₁₈).</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

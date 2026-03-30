@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transition Metals - Elementarium.com</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #fef5a3;      /* soft yellow background */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: #e6dc8e;      /* deeper golden for contrast */
+    }
+    .element-header {
+      background-color: #e6dc8e;      /* matching navbar */
+      color: #3e3a1f;
+      padding: 25px;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+      border: 1px solid #c9b870;
+    }
+    .element-card {
+      background: #FFFFF0;            /* ivory inside cards – clean */
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(230, 220, 142, 0.4);
+      border: 1px solid #e6dc8e;
+      height: 100%;
+    }
+    .property-box {
+      background: #fef9cf;            /* very light yellow */
+      border-left: 3px solid #d4b96a;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 4px;
+    }
+    .element-item {
+      background: #fef9cf;
+      border: 1px solid #e6dc8e;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+    .element-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(212, 185, 106, 0.3);
+    }
+    .element-symbol {
+      background-color: #b49450;       /* warm bronze */
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+    }
+    .use-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #fef9cf;
+    }
+    .use-item i {
+      color: #b49450;
+      margin-right: 8px;
+      font-size: 1.1rem;
+      width: 24px;
+      text-align: center;
+    }
+    footer {
+      background-color: #e6dc8e;
+      color: #3e3a1f;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    h3 {
+      color: #3e3a1f;
+      border-bottom: 1px solid #e6dc8e;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    h1 {
+      color: #3e3a1f;
+      margin-bottom: 10px;
+    }
+    .nav-link {
+      color: #3e3a1f !important;
+    }
+    .navbar-brand {
+      color: #3e3a1f !important;
+      font-weight: 700;
+    }
+    .trend-box {
+      background: #fef9cf;
+      border: 1px solid #e6dc8e;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+    }
+    .reaction-box {
+      background: #fef9cf;
+      border: 1px solid #e6dc8e;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+    .reaction-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(212, 185, 106, 0.3);
+    }
+    .element-badge {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 20px;
+      margin: 0 5px;
+    }
+    .alert-info {
+      background-color: #fef9cf;
+      border-color: #e6dc8e;
+      color: #3e3a1f;
+    }
+    .legend-color-box {
+      width: 20px;
+      height: 20px;
+      background-color: #b49450;
+      display: inline-block;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation (consistent with the provided design) -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="ElementariumLogo.png" alt="Website Logo" height="60" width="60" class="me-2">
+        <span class="fw-bold">Elementarium</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active fs-5" href="Index.html">Home</a>
+          <a class="nav-link fs-5" href="AboutUs.html">About Us</a>
+          <a class="nav-link fs-5" href="ContactUs.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Header with group title and color accent -->
+    <div class="element-header">
+      <h1><span class="legend-color-box"></span>Transition Metals</h1>
+      <h3>Groups 3–12 • The d‑block elements</h3>
+    </div>
+
+    <!-- First row: introduction and key properties -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-info-circle"></i> What are Transition Metals?</h3>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-layer-group"></i> Position:</strong> Groups 3 through 12, periods 4–7 (and some in period 6‑7 as part of the d‑block)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-atom"></i> Electron configuration:</strong> partially filled d subshell (or readily form cations with incomplete d‑subshell)
+          </div>
+          
+          <div class="property-box">
+            <strong><i class="fas fa-gem"></i> Typical traits:</strong>
+            <ul class="mt-2 mb-0">
+              <li>Hard, shiny, good conductors of heat & electricity</li>
+              <li>High melting points (except group 12)</li>
+              <li>Multiple oxidation states</li>
+              <li>Form coloured compounds</li>
+              <li>Excellent catalysts</li>
+              <li>Often paramagnetic</li>
+            </ul>
+          </div>
+          
+          <div class="mt-3">
+            <p><i class="fas fa-quote-right"></i> The term "transition" refers to the elements' position in the periodic table – they represent a transition from the highly electropositive group 1&2 metals to the less reactive metals and nonmetals of the p‑block.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-star"></i> Key Properties</h3>
+          <ul>
+            <li><i class="fas fa-palette"></i> <strong>Coloured ions:</strong> due to d‑d electron transitions (e.g. blue Cu²⁺, green Ni²⁺, purple Cr³⁺)</li>
+            <li><i class="fas fa-arrow-up"></i> <strong>Variable oxidation states:</strong> e.g. manganese from +2 to +7</li>
+            <li><i class="fas fa-magnet"></i> <strong>Magnetic behaviour:</strong> many are paramagnetic (unpaired d‑electrons); iron, cobalt, nickel are ferromagnetic</li>
+            <li><i class="fas fa-cogs"></i> <strong>Catalytic activity:</strong> iron in Haber process, platinum in catalytic converters, nickel in hydrogenation</li>
+            <li><i class="fas fa-tachometer-alt"></i> <strong>High density & strength:</strong> tungsten (W) has highest melting point of all metals</li>
+            <li><i class="fas fa-coins"></i> <strong>Coinage metals:</strong> copper, silver, gold (often found in native form)</li>
+          </ul>
+          
+          <div class="alert alert-info mt-3">
+            <i class="fas fa-flask"></i> <strong>Did you know?</strong> Many transition metals are essential for life: iron (haemoglobin), cobalt (vitamin B₁₂), copper, zinc, manganese …
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row: a selection of important transition metals (first row of d‑block) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-list"></i> Representative Transition Metals</h3>
+          <p class="mb-4">The d‑block contains 40 elements. Here are some of the most familiar ones, grouped by period:</p>
+          
+          <div class="row">
+            <!-- period 4 – three columns per element for compactness -->
+            <div class="col-md-4">
+              <div class="element-item">
+                <div class="element-symbol">Sc</div>
+                <div>
+                  <h5 class="mb-1">Scandium (21)</h5>
+                  <p class="mb-0 small"><i class="fas fa-plane"></i> Aerospace alloys • <i class="fas fa-baseball-ball"></i> Sports equipment</p>
+                  <a href="scandium.html" class="text-decoration-none" style="color: #b49450;">details</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="element-item">
+                <div class="element-symbol">Ti</div>
+                <div>
+                  <h5 class="mb-1">Titanium (22)</h5>
+                  <p class="mb-0 small"><i class="fas fa-rocket"></i> Aerospace • <i class="fas fa-bolt"></i> Corrosion‑resistant</p>
+                  <a href="titanium.html" class="text-decoration-none" style="color: #b49450;">details</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="element-item">
+                <div class="element-symbol">V</div>
+                <div>
+                  <h5 class="mb-1">Vanadium (23)</h5>
+                  <p class="mb-0 small"><i class="fas fa-battery-full"></i> Redox batteries • <i class="fas fa-flask"></i> Catalysis</p>
+                  <a href="vanadium.html" class="text-decoration-none" style="color: #b49450;">details</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="element-item">
+                <div class="element-symbol">Cr</div>
+                <div>
+                  <h5 class="mb-1">Chromium (24)</h5>
+                  <p class="mb-0 small"><i class="fas fa-shield-alt"></i> Stainless steel • <i class="fas fa-gem"></i> Rubies</p>
+                  <a href="chromium.html" class="text-decoration-none" style="color: #b49450;">details</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="element-item">
+                <div class="element-symbol">Mn</div>
+                <div>
+                  <h5 class="mb-1">Manganese (25)</h5>
+                  <p class="mb-0 small"><i class="fas fa-bolt"></i> Steel production • <i class="fas fa-battery-three-quarters"></i> Batteries</p>
+                  <a href="manganese.html" class="text-decoration-none" style="color: #b49450;">details</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="element-item">
+                <div class="element-symbol">Fe</div>
+                <div>
+                  <h5 class="mb-1">Iron (26)</h5>
+                  <p class="mb-0 small"><i class="fas fa-tools"></i> Structural steel • <i class="fas fa-heartbeat"></i> Haemoglobin</p>
+                  <a href="iron.html" class="text-decoration-none" style="color: #b49450;">details</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="element-item">
+                <div class="element-symbol">Co</div>
+                <div>
+                  <h5 class="mb-1">Cobalt (27)</h5>
+                  <p class="mb-0 small"><i class="fas fa-magnet"></i> Magnets • <i class="fas fa-pills"></i> Vitamin B₁₂</p>
+                  <a href="cobalt.html" class="text-decoration-none" style="color: #b49450;">details</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="element-item">
+                <div class="element-symbol">Ni</div>
+                <div>
+                  <h5 class="mb-1">Nickel (28)</h5>
+                  <p class="mb-0 small"><i class="fas fa-coins"></i> Coinage • <i class="fas fa-battery-full"></i> NiMH batteries</p>
+                  <a href="nickel.html" class="text-decoration-none" style="color: #b49450;">details</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="element-item">
+                <div class="element-symbol">Cu</div>
+                <div>
+                  <h5 class="mb-1">Copper (29)</h5>
+                  <p class="mb-0 small"><i class="fas fa-bolt"></i> Electrical wiring • <i class="fas fa-pipe"></i> Plumbing</p>
+                  <a href="copper.html" class="text-decoration-none" style="color: #b49450;">details</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="element-item">
+                <div class="element-symbol">Zn</div>
+                <div>
+                  <h5 class="mb-1">Zinc (30)</h5>
+                  <p class="mb-0 small"><i class="fas fa-shield-alt"></i> Galvanising • <i class="fas fa-pills"></i> Dietary mineral</p>
+                  <a href="zinc.html" class="text-decoration-none" style="color: #b49450;">details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row: common uses & interesting facts (two columns) -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-cogs"></i> Everyday uses</h3>
+          <div class="row">
+            <div class="col-6">
+              <div class="use-item"><i class="fas fa-car"></i> Catalytic converters (Pt, Pd, Rh)</div>
+              <div class="use-item"><i class="fas fa-mobile-alt"></i> Electronics (Cu, Au, Ag)</div>
+              <div class="use-item"><i class="fas fa-building"></i> Construction steel (Fe, Cr, Mn)</div>
+              <div class="use-item"><i class="fas fa-gem"></i> Coloured gemstones (Cr, V, Fe)</div>
+            </div>
+            <div class="col-6">
+              <div class="use-item"><i class="fas fa-battery-full"></i> Rechargeable batteries (Ni, Co, Mn)</div>
+              <div class="use-item"><i class="fas fa-paint-brush"></i> Pigments (Cd, Cr, Co)</div>
+              <div class="use-item"><i class="fas fa-cut"></i> Cutting tools (W, Ti, Co)</div>
+              <div class="use-item"><i class="fas fa-dumbbell"></i> High‑strength alloys</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="element-card">
+          <h3><i class="fas fa-lightbulb"></i> Interesting facts</h3>
+          <ul>
+            <li><i class="fas fa-gem"></i> <strong>Emerald</strong> gets its green colour from chromium or vanadium.</li>
+            <li><i class="fas fa-fire"></i> <strong>Tungsten</strong> has the highest melting point (3422 °C) of all metals – used in light bulb filaments.</li>
+            <li><i class="fas fa-tint"></i> <strong>Mercury</strong> (group 12) is the only metal liquid at room temperature.</li>
+            <li><i class="fas fa-magnet"></i> <strong>Gadolinium</strong> (a lanthanide, often studied with transition metals) is used in MRI contrast agents.</li>
+            <li><i class="fas fa-coins"></i> <strong>Gold</strong> is so malleable that one gram can be hammered into a sheet of one square metre.</li>
+            <li><i class="fas fa-flask"></i> Many transition metal compounds are used as <strong>catalysts</strong> in industrial processes (Haber, Ostwald, contact process).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- oxidation states & colour showcase -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-palette"></i> Colourful chemistry – variable oxidation states</h3>
+          <div class="row">
+            <div class="col-md-3 mb-2">
+              <div class="reaction-box text-center">
+                <span class="element-badge" style="background-color:#b49450; color:white;">V</span>
+                <p class="mt-2 mb-0">+2 (violet) · +3 (green) · +4 (blue) · +5 (yellow)</p>
+              </div>
+            </div>
+            <div class="col-md-3 mb-2">
+              <div class="reaction-box text-center">
+                <span class="element-badge" style="background-color:#b49450; color:white;">Cr</span>
+                <p class="mt-2 mb-0">+3 (green/violet) · +6 (orange/yellow)</p>
+              </div>
+            </div>
+            <div class="col-md-3 mb-2">
+              <div class="reaction-box text-center">
+                <span class="element-badge" style="background-color:#b49450; color:white;">Mn</span>
+                <p class="mt-2 mb-0">+2 (pale pink) · +4 (black) · +7 (purple)</p>
+              </div>
+            </div>
+            <div class="col-md-3 mb-2">
+              <div class="reaction-box text-center">
+                <span class="element-badge" style="background-color:#b49450; color:white;">Fe</span>
+                <p class="mt-2 mb-0">+2 (green) · +3 (yellow/brown)</p>
+              </div>
+            </div>
+          </div>
+          <p class="small mt-3 text-center"><i class="fas fa-flask"></i> Colour arises from d‑electron transitions – different oxidation states give different colours.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Abundance / notable data -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="element-card">
+          <h3><i class="fas fa-chart-pie"></i> Abundance & economic importance</h3>
+          <div class="row">
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Iron</strong> ≈ 5.0% crust</div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Titanium</strong> ≈ 0.66%</div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Manganese</strong> ≈ 0.11%</div>
+            </div>
+            <div class="col-md-3 col-6">
+              <div class="trend-box mb-2"><strong>Copper</strong> ≈ 0.0068%</div>
+            </div>
+          </div>
+          <p class="mt-3"><i class="fas fa-database"></i> Despite low percentages, transition metals are economically vital – annual global production of iron exceeds 2.5 billion tonnes.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <small><i class="fas fa-copyright"></i> 2025 Interactive Periodic Table. All rights reserved.</small><br>
+      <small>Unauthorized reproduction or distribution of content is strictly prohibited.</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
